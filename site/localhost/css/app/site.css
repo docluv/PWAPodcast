@@ -320,7 +320,7 @@ ul {
 /* featured product cards */
 
 .productbox {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 10px;
     margin-bottom: 10px;
     -webkit-box-shadow: 0 8px 6px -6px #999;
@@ -425,6 +425,54 @@ ul {
     margin: 2% 0;
 }
 
+/* Hiding the checkbox, but allowing it to be focused */
+.badgebox
+{
+    opacity: 0;
+}
+
+.badgebox + .badge
+{
+    /* Move the check mark away when unchecked */
+    text-indent: -999999px;
+    /* Makes the badge's width stay the same checked and unchecked */
+	width: 27px;
+}
+
+.badgebox:focus + .badge
+{
+    /* Set something to make the badge looks focused */
+    /* This really depends on the application, in my case it was: */
+    
+    /* Adding a light border */
+    box-shadow: inset 0px 0px 5px;
+    /* Taking the difference out of the padding */
+}
+
+.badgebox:checked + .badge
+{
+    /* Move the check mark back when checked */
+	text-indent: 0;
+}
+
+.btn-orange,
+.btn-orange:focus,
+.btn-orange.focus,
+.btn-orange:hover{
+    background-color: #ED7D31;
+    color: #fff;
+}
+
+.btn-orange .badge{
+    background-color: #fff;
+    color: #2F5597;
+}
+
+
+.btn-blue{
+    background-color: #2F5597;
+    color: #fff;
+}
 
 @media(min-width: 768px){
 

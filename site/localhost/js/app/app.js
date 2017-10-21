@@ -35,7 +35,7 @@ if ('serviceWorker' in navigator) {
         //push notification feature detection
         if ("PushManager" in window) {
 
-            //            initialisePush();
+            initialisePush();
 
         }
 
@@ -56,7 +56,6 @@ if ('serviceWorker' in navigator) {
 
 var isSubscribed = false;
 
-/*
 
 function initialisePush() {  // Set the initial subscription value
      
@@ -75,8 +74,6 @@ function initialisePush() {  // Set the initial subscription value
     });
 
 }
-
-*/
 
 
 function subscribeUser() {

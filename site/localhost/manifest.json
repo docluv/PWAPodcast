@@ -98,5 +98,6 @@
             "sizes": "76x76",
             "type": "image/png"
         }
-    ]
+    ],
+    "gcm_sender_id": "<Your Sender ID Here>"
 }
