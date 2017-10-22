@@ -107,6 +107,14 @@ module.exports = {
 
         return value;
 
+    },
+
+    readJSONFile: function(src){
+
+        var obj = fs.readFileSync(src, utf8);
+
+        return JSON.parse(obj);
+
     }
 
 };
