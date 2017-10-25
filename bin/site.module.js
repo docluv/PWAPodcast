@@ -30,13 +30,28 @@ class SiteModule {
 
     }
 
-    pageDefault() {
+    getDefaultPage() {
 
         //load the default page JSON object for the site
+        if (this.defaultPage) {
+
+            return this.defaultPage;
+
+        }
+
+        this.defaultPage = utils.readJSONFile("default.page.json");
+
+        return this.defaultPage;
 
     }
 
-    generatePageJSON(srcObj){}
+    generatePageJSON(srcObj) {
+
+        var pageObj = _.assignIn(this.getDefaultPage(), srcObj);
+        
+        utils.createFile("../data/pages/" + pageObj.slug + ".json", JSON.stringify(pageObj), true);
+
+    }
 
     savePageJSON(key, moduleJSON) {
 

@@ -1,10 +1,15 @@
-var EpisodeModule = require("./make.episode");
+var EpisodesModule = require("./make.episodes");
+var PodcastsModule = require("./make.podcasts");
 
-
-
-var episode = new EpisodeModule("../data/syntax/accepting-money-on-the-internet-.json",
+/*
+var episodes = new EpisodesModule("../data/syntax/accepting-money-on-the-internet-.json",
     "../site/src/html/templates/episode.html");
 
-console.log(episode.render());
+episodes.render("../data/", "../data/pages/");
+*/
+
+//PodcastsModule.render();
+PodcastsModule.transformPodcasts();
+
 
 

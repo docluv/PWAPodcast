@@ -1,4 +1,12 @@
-<h1>{{title}}</h1>
-<img src="{{image}}" alt="{{title}}">
-<audio src="{{link}}"></audio>
-<p>{{{description}}}</p>
+
+<figure class="productbox">
+    <div class="img-box">
+        <img src="{{{image}}}" alt="{{title}}" class="img-responsive">
+    </div>
+    <figcaption>
+        <h3>{{title}}</h3>
+        <audio src="{{link}}"></audio>
+        <p>{{{description}}}</p>
+    </figcaption>
+    <i class="fa fa-plus" aria-hidden="true"></i>
+</figure>

@@ -19,9 +19,7 @@
         "strip-bom": "*",
         "mustache": "*",
         "request": "*",
-        "feedparser": "*"
-    },
-    "dependencies": {
-        "feedparser": "^2.2.2"
+        "feedparser": "*",
+        "image-size": "*"
     }
 }
