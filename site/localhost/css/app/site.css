@@ -1,3 +1,8 @@
+/*
+    blue - 2F5597
+    orange - ED7D31
+*/
+
 html {
     height: 100%;
 }
@@ -180,9 +185,10 @@ hr.dark, .main-footer .footer hr {
     border: none;
 }
 
-.main-content{
+.main-content {
     min-height: 480px;
 }
+
 
 /* Lists
 ---------------------------------- */
@@ -333,10 +339,6 @@ ul {
     padding: 5px 0 5px 0;
 }
 
-.productprice {
-    border-top: 1px solid #dadada;
-    padding-top: 5px;
-}
 
 .pricetext {
     font-weight: bold;
@@ -350,13 +352,20 @@ ul {
     padding: 0;
 }
 
+.navbar-brand {
+    padding: 0;
+}
+
 .navbar-collapse {
     margin-left: -10px;
     margin-right: -10px;
     padding: 0;
 }
 
-
+.container>.navbar-collapse {
+    background-color: #2F5597;
+    color: #fff;
+}
 
 .navbar-default {
     color: #2F5597;
@@ -375,22 +384,22 @@ ul {
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #2F5597;
+    color: #fff;
     font-size: 1.5em;
     font-family: "Open Sans", sans-serif;
 }
 
-.navbar-toggle{
+.navbar-toggle {
     background: transparent;
     border: none;
-    color: #2F5597;
+    color: #fff;
 }
 
-.navbar-toggle .icon-bar{
-    margin:auto;
+.navbar-toggle .icon-bar {
+    margin: auto;
 }
 
-.navbar-nav li{
+.navbar-nav li {
     padding-left: 5%;
 }
 
@@ -425,59 +434,355 @@ ul {
     margin: 2% 0;
 }
 
+
 /* Hiding the checkbox, but allowing it to be focused */
-.badgebox
-{
+
+.badgebox {
     opacity: 0;
 }
 
-.badgebox + .badge
-{
+.badgebox + .badge {
     /* Move the check mark away when unchecked */
     text-indent: -999999px;
     /* Makes the badge's width stay the same checked and unchecked */
-	width: 27px;
+    width: 27px;
 }
 
-.badgebox:focus + .badge
-{
+.badgebox:focus + .badge {
     /* Set something to make the badge looks focused */
     /* This really depends on the application, in my case it was: */
-    
     /* Adding a light border */
     box-shadow: inset 0px 0px 5px;
     /* Taking the difference out of the padding */
 }
 
-.badgebox:checked + .badge
-{
+.badgebox:checked + .badge {
     /* Move the check mark back when checked */
-	text-indent: 0;
+    text-indent: 0;
 }
 
-.btn-orange,
-.btn-orange:focus,
-.btn-orange.focus,
-.btn-orange:hover{
+.btn-orange, .btn-orange:focus, .btn-orange.focus, .btn-orange:hover {
     background-color: #ED7D31;
     color: #fff;
 }
 
-.btn-orange .badge{
+.btn-orange .badge {
     background-color: #fff;
     color: #2F5597;
 }
 
-
-.btn-blue{
+.btn-blue {
     background-color: #2F5597;
     color: #fff;
 }
 
-@media(min-width: 768px){
 
-.navbar-nav li{
-    padding-left: 0;
+/* social */
+
+.social-wrapper.circle a {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 2px 2px 0;
+    width: 45px;
+    height: 45px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 20px;
 }
 
+.social-wrapper a:hover {
+    background-color: transparent;
+    border-color: #2F5597;
+    color: #2F5597;
+    transform: rotate(180deg);
+}
+
+.social-wrapper {
+    padding: 0;
+    margin: 20px 0;
+    min-width: 80px;
+    display: block;
+}
+
+.social-wrapper a[href*="twitter.com"], .article-footer a[href*="twitter.com"] {
+    background-color: #55acee;
+}
+
+.social-wrapper a[href*="facebook.com"], .article-footer a[href*="facebook.com"] {
+    color: #3b5998;
+    background-color: #fff;
+}
+
+.social-wrapper a[href*="google.com"], .article-footer a[href*="google.com"] {
+    background-color: #db4437;
+}
+
+.social-wrapper a[href*="pinterest.com"], .article-footer a[href*="pinterest.com"] {
+    background-color: #c30000;
+}
+
+.social-wrapper a[href*="youtube.com"], .article-footer a[href*="youtube.com"] {
+    background-color: #c30000;
+}
+
+.social-wrapper a[href*="linkedin.com"], .article-footer a[href*="linkedin.com"] {
+    background-color: blue;
+}
+
+.social-wrapper a[href*="rss"], .article-footer a[href*="rss"] {
+    background-color: #f60;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 .25%;
+    color: #fff;
+}
+
+
+/* Social Share Buttons & Bottom of Articles */
+
+.btn-social {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    padding: 1%;
+    margin: 1%;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    width: 30%;
+    min-width: 30%;
+    height: 100%;
+}
+
+ul.share-buttons {
+    list-style: none;
+    padding: 0;
+}
+
+ul.share-buttons li {
+    display: inline;
+}
+
+@media (min-width: 720px) {
+    .social-wrapper {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 960px) {
+    .social-wrapper {
+        margin: 6px 6px 0 0;
+        min-width: 110px;
+    }
+    .btn-social {
+        font-size: 2em;
+        width: 12%;
+        min-width: 12%;
+    }
+}
+
+.podcast-list .card {
+    flex: 0 0 100%
+}
+
+
+/* featured product cards */
+
+.productbox {
+    font-family: 'Oswald', Arial, sans-serif;
+    position: relative;
+    float: left;
+    margin: 10px auto;
+    min-width: 230px;
+    max-width: 100%;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    color: #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+}
+
+.productbox * {
+    -webkit-box-sizing: border-box;
+    box-sizing: padding-box;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.card img, .productbox img {
+    max-width: 100%;
+    min-width: 100%;
+    vertical-align: top;
+    position: relative;
+    background-color: #ED7D31;
+    padding-top: 40px;
+}
+
+.productbox figcaption {
+    padding: 20px;
+}
+
+.productbox h3, .productbox p {
+    margin: 0;
+}
+
+.productbox h3 {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.productbox p {
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.card i, .productbox i {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    width: 56px;
+    line-height: 56px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ED7D31;
+    color: #fff;
+    font-size: 36px;
+}
+
+.productbox a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.card:hover i, .card:hover img, .card:hover img, .productbox:hover i, .productbox.hover i, .productbox:hover img, .productbox.hover img {
+    background-color: #2F5597;
+}
+
+.card:hover i, .card.hover i, .productbox:hover i, .productbox.hover i {
+    -webkit-transform: translate(-50%, 5px);
+    transform: translate(-50%, 5px);
+}
+
+a.episode-list-item {
+    padding: .5%;
+    display: inline-block;
+    width: 100%;
+    margin: 2% 0;
+    font-size: 1.5em;
+    line-height: 1.75em;
+    border-bottom: solid 1px #2F5597;
+}
+
+.playa input[type="range"] {
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    border-radius: 0.5em;
+    opacity: 0.5;
+    height: 1em;
+    top: 2px;
+    position: relative;
+}
+
+.playa .thumbnail {
+    width: 100%;
+}
+
+
+/* sliders and buttons need a uniform height */
+
+.playa .btn-group .btn {
+    display: inline-block;
+    float: none;
+    height: 2.2em;
+}
+
+
+/*  contains the attribution link */
+
+.playa .row:nth-child(4) {
+    overflow: hidden;
+}
+
+
+/* Acknowledgements:
+  To Glyphicons (http://glyphicons.com/) for the Halflings glyphs font */
+
+
+/* .spin is used to rotate glyphicon glyphicon-refresh */
+
+.spin {
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media(min-width: 768px) {
+    .navbar-nav li {
+        padding-left: 0;
+    }
+}
+
+@media(min-width: 768px) {
+    .podcast-list .card {
+        flex: 0 0 50%
+    }
+}
+
+@media(min-width: 992px) {
+    .podcast-list .card {
+        flex: 0 0 33.3333%
+    }
+}
+
+@media(min-width: 1200px) {
+    .podcast-list .card {
+        flex: 0 0 25%
+    }
 }

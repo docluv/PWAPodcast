@@ -1,12 +1,19 @@
-
-<figure class="productbox">
-    <div class="img-box">
-        <img src="{{{image}}}" alt="{{title}}" class="img-responsive">
+<div class="container">
+    <div class="row">
+        <figure class="productbox">
+            <div class="img-box">
+                <img src="{{{image}}}" alt="{{title}}" class="img-responsive">
+            </div>
+            <figcaption>
+                <h3>{{title}}</h3>
+            </figcaption>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </figure>
     </div>
-    <figcaption>
-        <h3>{{title}}</h3>
-        <audio src="{{link}}"></audio>
+    <div class="row">
+        <audio src="{{{link}}}"  controls="controls"></audio>
+    </div>
+    <div class="row">
         <p>{{{description}}}</p>
-    </figcaption>
-    <i class="fa fa-plus" aria-hidden="true"></i>
-</figure>
+    </div>
+</div>

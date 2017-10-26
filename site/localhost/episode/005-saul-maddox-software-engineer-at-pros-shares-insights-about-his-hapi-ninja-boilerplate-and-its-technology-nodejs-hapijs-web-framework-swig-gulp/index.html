@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <base href="http://localhost:57662/">
+    <!-- Stylesheets -->
+    <link href="css/libs/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/libs/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+    <link href="css/app/site.css" rel="stylesheet">
+
+    <title>005 Saul Maddox, Software Engineer at PROS, shares insights about his Hapi-Ninja boilerplate and its technology (Node.js, Hapijs web framework, Swig, Gulp)</title>
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="PWA Pdstr">
+    <link rel="icon" sizes="192x192" href="meta/e75c99a5-4362-760a-8519-25dd4b1ae7e7.webPlatform.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PWA Pdstr">
+    <link rel="apple-touch-icon" href="meta/4eb56734-e805-4709-14d3-907549c2db2e.webPlatform.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="meta/4eb56734-e805-4709-14d3-907549c2db2e.webPlatform.png">
+    <meta name="msapplication-TileColor" content="#ED7D31">
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#F6911E">
+    <meta name="description" content="Podstr">
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="favicon.png" rel="shortcut icon">
+    <link href="humans.txt" rel="author">
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="menu-btn-name">Menu</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                            <a href="/" class="navbar-brand brand-logo col-xs-8">
+                                <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
+                            </a>
+                        </div>
+                        <div class="navbar-collapse collapse navbar-responsive-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="podcasts/">Podcasts</a>
+                                </li>
+                                <li>
+                                    <a href="listenlater/">Listen Later</a>
+                                </li>
+                                <li>
+                                    <a href="search/"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="config/">
+                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-content container-fluid" role="main">
+        <div class="container">  <div class="row">
+    <figure class="productbox">
+      <div class="img-box">
+        <img src="http://codewinds.com/assets/codewinds/codewinds-podcast-300.png" alt="005 Saul Maddox, Software Engineer at PROS, shares insights about his Hapi-Ninja boilerplate and its technology (Node.js, Hapijs web framework, Swig, Gulp)" class="img-responsive">
+      </div>
+      <figcaption>
+        <h3>005 Saul Maddox, Software Engineer at PROS, shares insights about his Hapi-Ninja boilerplate and its technology (Node.js, Hapijs web framework, Swig, Gulp)</h3>
+      </figcaption>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </figure>
+  </div>
+  <div class="row">
+    <audio src="http://codewinds.com/podcast/005.html" controls="controls"></audio>
+  </div>
+  <div class="row">
+    <p><p><img src="https://avatars0.githubusercontent.com/u/1514196" alt="SaulMaddox-Photo" title="Saul Maddox"></p>
+<p>Saul Maddox, a software engineer for <a href="http://pros.com" title="PROS website">PROS</a>, joins me in this episode of CodeWinds to discuss his Hapi-Ninja boilerplate which helps developers get up and running with the Hapi Node.js web framework.</p>
+<p>We discuss in detail the stack he has chosen and the reasons for selecting each:</p>
+<ul>
+<li><a href="http://hapijs.com" title="Hapi Node.js web framework">Hapijs</a> Node.js web framework</li>
+<li><a href="http://paularmstrong.github.io/swig/docs/#browser" title="Swig templates">Swig</a> templates</li>
+<li><a href="http://gulpjs.com/" title="Gulp javascript streaming task runner">Gulp</a> javascript streaming task runner</li>
+<li>Plugins he has included for assets and routes</li>
+</ul>
+<p>Saul explains the file structure of Hapi-Ninja mentioning how to configure and get up and running with Hapi quickly and easily.</p>
+<div id="toc"><ol><li><a href="#episode_info">Episode Info</a></li><li><a href="#episode_notes">Episode Notes</a><ol><li><a href="#episode_timeline">Episode timeline</a></li></ol></li><li><a href="#getting_started_with_hapi-ninja">Getting started with Hapi-Ninja</a></li><li><a href="#links_from_show">Links from Show</a><ol><li><a href="#following_saul_maddox">Following Saul Maddox</a></li></ol></li></ol></div>
+
+<a name="episode_info"></a><h2 id="episode-info">Episode Info</h2>
+<ul>
+<li>Episode: CW 005</li>
+<li>Published: April 6th, 2014</li>
+<li>Tags: js, nodejs,web,framework,boilerplate</li>
+<li>Duration: 34:17</li>
+</ul>
+<a name="episode_notes"></a><h2 id="episode-notes">Episode Notes</h2>
+<a name="episode_timeline"></a><h3 id="episode-timeline">Episode timeline</h3>
+<ul>
+<li>02:06 - Introduction to the Hapi-Ninja boilerplate</li>
+<li>05:44 - Details of Hapi-Ninja stack</li>
+<li>06:00 - Hapi Node.js web framework</li>
+<li>08:34 - Swig javascript templates</li>
+<li>11:17 - Gulp Node.js streaming task runner</li>
+<li>13:52 - Getting started with Hapi-Ninja boilerplate</li>
+<li>14:44 - Using a watcher like node-supervisor to auto reload</li>
+<li>15:47 - Hapi-Ninja file structure</li>
+<li>18:38 - Configuration</li>
+<li>18:55 - Hapi-Assets plugin for minimizing and concatenating assets</li>
+<li>21:42 - Hapi-Named-Routes plugin</li>
+<li>23:31 - Hapi-Cache Buster plugin for easier browser reloading in development</li>
+<li>25:26 - Easy switching from full frontend app (PhoneGap) to a frontend and server using same folder structure</li>
+<li>27:02 - Hapi-Ninja code is commented heavily to help new users learn</li>
+<li>27:41 - Upgrading from Hapi 2.x to 3.x</li>
+<li>28:37 - Contributing</li>
+<li>30:08 - Other projects</li>
+<li>30:25 - Ever Stain project - legacy website for being remembered</li>
+<li>32:16 - Following Saul</li>
+</ul>
+<a name="getting_started_with_hapi-ninja"></a><h2 id="getting-started-with-hapi-ninja">Getting started with Hapi-Ninja</h2>
+<ul>
+<li>Install <a href="http://nodejs.org" title="Node.js">Nodejs</a></li>
+<li>Clone repo from GitHub</li>
+<li>Change working directory into the new path</li>
+<li>Install dependencies from npm</li>
+</ul>
+<pre class="highlight"><code class="hljs bash"><span class="hljs-comment"># after installing Node.js</span>
+git <span class="hljs-built_in">clone</span> https://github.com/poeticninja/hapi-ninja.git
+<span class="hljs-built_in">cd</span> hapi-ninja
+npm install
+</code></pre>
+<a name="links_from_show"></a><h2 id="links-from-show">Links from Show</h2>
+<ul>
+<li><a href="https://github.com/poeticninja/hapi-ninja" title="Hapi-Ninja boilerplate GitHub repo">Hapi-Ninja</a> boilerplate GitHub Repo</li>
+<li><a href="http://hapijs.com" title="Hapi Node.js web framework">Hapijs</a> Node.js web framework</li>
+<li><a href="http://paularmstrong.github.io/swig/docs/#browser" title="Swig templates">Swig</a> templates</li>
+<li><a href="http://gulpjs.com/" title="Gulp javascript streaming task runner">Gulp</a> javascript streaming task runner</li>
+<li><a href="https://github.com/poeticninja/hapi-named-routes">Hapi-Named-Routes</a> plugin for using named routes</li>
+<li><a href="https://npmjs.org/package/hapi-assets">Hapi-Assets</a> plugin for automatically minimizing and concatenating assets</li>
+<li><a href="https://npmjs.org/package/hapi-cache-buster">Hapi-Cache-Buster</a> plugin which helps with serving fresh content in development</li>
+<li><a href="http://everstain.com/" title="Ever Stain legacy website">Ever Stain</a> legacy website coming soon by Saul Maddox. How will you be remembered?</li>
+</ul>
+<a name="following_saul_maddox"></a><h3 id="following-saul-maddox">Following Saul Maddox</h3>
+<ul>
+<li><a href="https://github.com/poeticninja" title="Saul Maddox GitHub">Saul Maddox GitHub</a></li>
+<li><a href="https://twitter.com/poeticninja" title="Saul Maddox Twitter">Saul Maddox Twitter</a></li>
+</ul></p>
+  </div>
+</div>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <!-- edit footer logo here -->
+                    <a href="#" class="logo col-sm-8">
+                        <img src="img/pwa-podstr-logo-144x70.png" class="img-responsive" alt="PWA Pdstr">
+                    </a>
+                    <div class="col-sm-12 text">
+                        <p>
+                            <i class="fa fa-map-pin"></i> 354 MAIN STREET | ANYTOWN USA | 11111</p>
+                        <p>
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:9192515067">Phone : (919) 251-5067</a>
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope"></i> E-mail :
+                            <a href="mailto:info@love2dev.com">info@love2dev.com</a>
+                        </p>
+                    </div>
+                    <span class="col-sm-12 social-wrapper circle">
+                        <a href="http://twitter.com/chrislove" class="social-icon fa fa-twitter"></a>
+                        <a href="https://www.facebook.com/love2dev/" class="social-icon fa fa-facebook"></a>
+                        <a target="_blank" href="https://plus.google.com/b/110904107389779237581/?pageId=110904107389779237581">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/love2dev">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UC3mfh2MN-5D-zOyiRLp9H6g">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+                        <a target="_blank" href="https://www.pinterest.com/docluv/">
+                            <i class="fa fa-pinterest"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="footer-content">
+                        <h2>Links</h2>
+                        <nav>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li>
+                                    <a href="podcasts/">Podcasts</a>
+                                </li>
+                                <li>
+                                    <a href="listenlater/">Listen Later</a>
+                                </li>
+                                <li>
+                                    <a href="search/">Search</a>
+                                </li>
+                                <li>
+                                    <a href="config/">Config</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var scripts = ["js/libs/jquery.small.js",
+            "js/libs/bootstrap.min.js",
+            "js/app/app.js",
+            "js/app/episode&#x2F;005-saul-maddox-software-engineer-at-pros-shares-insights-about-his-hapi-ninja-boilerplate-and-its-technology-nodejs-hapijs-web-framework-swig-gulp.js"
+        ];
+    </script>
+
+    <script src="js/app/app.bootstrap.js"></script>
+</body>
+
+</html>

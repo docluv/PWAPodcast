@@ -30,7 +30,7 @@ class MakeEpisodes {
             for (var i = 0; i < files.length; i++) {
 
                 //read content/article
-                var episode = new EpisodeModule(path.resolve(files[i]),
+                let episode = new EpisodeModule(path.resolve(files[i]),
                     "../site/src/html/templates/episode.html");
 
                 episode = episode.render();

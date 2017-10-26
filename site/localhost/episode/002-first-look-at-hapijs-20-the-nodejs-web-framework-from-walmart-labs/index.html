@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <base href="http://localhost:57662/">
+    <!-- Stylesheets -->
+    <link href="css/libs/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/libs/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+    <link href="css/app/site.css" rel="stylesheet">
+
+    <title>002 First look at Hapijs 2.0, the Node.js web framework from Walmart Labs</title>
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="PWA Pdstr">
+    <link rel="icon" sizes="192x192" href="meta/e75c99a5-4362-760a-8519-25dd4b1ae7e7.webPlatform.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PWA Pdstr">
+    <link rel="apple-touch-icon" href="meta/4eb56734-e805-4709-14d3-907549c2db2e.webPlatform.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="meta/4eb56734-e805-4709-14d3-907549c2db2e.webPlatform.png">
+    <meta name="msapplication-TileColor" content="#ED7D31">
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#F6911E">
+    <meta name="description" content="Podstr">
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="favicon.png" rel="shortcut icon">
+    <link href="humans.txt" rel="author">
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="menu-btn-name">Menu</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                            <a href="/" class="navbar-brand brand-logo col-xs-8">
+                                <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
+                            </a>
+                        </div>
+                        <div class="navbar-collapse collapse navbar-responsive-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="podcasts/">Podcasts</a>
+                                </li>
+                                <li>
+                                    <a href="listenlater/">Listen Later</a>
+                                </li>
+                                <li>
+                                    <a href="search/"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="config/">
+                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-content container-fluid" role="main">
+        <div class="container">  <div class="row">
+    <figure class="productbox">
+      <div class="img-box">
+        <img src="http://codewinds.com/assets/codewinds/codewinds-podcast-300.png" alt="002 First look at Hapijs 2.0, the Node.js web framework from Walmart Labs" class="img-responsive">
+      </div>
+      <figcaption>
+        <h3>002 First look at Hapijs 2.0, the Node.js web framework from Walmart Labs</h3>
+      </figcaption>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </figure>
+  </div>
+  <div class="row">
+    <audio src="https://api.spreaker.com/download/episode/8734727/ep105_mixdown.mp3" controls="controls"></audio>
+  </div>
+  <div class="row">
+    <p><p>This is a review of the <a href="http://hapijs.com" title="Hapijs main site">Hapi</a> 2.0 functionality unveiled last Monday, Jan 27, 2014 at &amp;yet. The event was <a href="http://www.youtube.com/watch?v=B3u0XkbhleA&amp;t=1461" title="Eran Hammer Hapi 2.0 live stream from &amp;yet">live streamed</a> so I was able to watch and take notes. Eran Hammer <a href="https://twitter.com/eranhammer" title="Eran Hammer twitter">@eranhammer</a>, a Walmart labs engineer and lead developer for Hapi shared a top to bottom feature discussion including the new changes for version 2. <a href="https://dl.dropboxusercontent.com/u/52139546/hapi%20yet%3F.pdf" title="Eran&apos;s slides for the Hapi 2.0 live stream">Eran’s Slides</a></p>
+<p>My goal with this podcast is to mention some of the key changes with Hapi 2 and how you would leverage them in your code.</p>
+<p><img src="https://raw.github.com/spumko/hapi/master/images/hapi.png" alt="hapi-png" title="Hapi"></p>
+<p>This review and Eran’s presentation are done such that you do not need have a familiarity with Hapi to get value, new users should come away with some understanding of Hapi and how it can be useful for building robust web applications.</p>
+<div id="toc"><ol><li><a href="#episode_info">Episode Info</a></li><li><a href="#episode_notes">Episode Notes</a><ol><li><a href="#background">Background</a></li><li><a href="#routes_caching_state">Routes, Caching, State</a></li><li><a href="#plugins">Plugins</a></li><li><a href="#authorization">Authorization</a></li><li><a href="#ops">Ops</a></li><li><a href="#postmile_example_app">Postmile example app</a></li></ol></li><li><a href="#major_breaking_changes">Major breaking changes</a></li><li><a href="#resources">Resources</a></li><li><a href="#summary">Summary</a></li></ol></div>
+
+<a name="episode_info"></a><h2 id="episode-info">Episode Info</h2>
+<ul>
+<li>Episode: CW 002</li>
+<li>Published: February 1st, 2014</li>
+<li>Tags: nodejs, hapijs</li>
+<li>Duration: 21:46</li>
+</ul>
+<a name="episode_notes"></a><h2 id="episode-notes">Episode Notes</h2>
+<a name="background"></a><h3 id="background">Background</h3>
+<ul>
+<li>show notes <a href="http://codewinds.com/podcast/002.html">http://codewinds.com/podcast/002.html</a></li>
+<li>I have a link to the original live stream, the content starts at about 24 minutes in, so the URL in the show notes jumps directly to that spot.</li>
+<li>Hapi is the awesome open source web framework created by Walmart Labs.</li>
+<li>The Hapi framework grew out of years of development first at Yahoo as Sled, later renamed Postmile, then at Walmart Labs.</li>
+<li>Initially Eran tried to build on Express a popular web framework, but found issues with plugin order, undocumented dependencies, fragility with large team use.</li>
+<li>Hapi was developed by Walmart Labs for their mobile division</li>
+<li>Hapi is built as a scalable web framework that they could use to evolve their system over time.</li>
+<li>Initiallly used to reverse proxy or pass through requests to their existing backend written in java or other languages.</li>
+<li>Then decorate, batch, and begin to replace legacy code with new code in Node.js</li>
+<li>It ran 100% of their mobile traffic starting with Black Friday and proved its stability running at about 1-2% cpu on 50 servers throughout the highest load. Lasagna graphs flatlines for cpu and memory use</li>
+<li>Walmart starting to replace more of its legacy code with Hapi and even now part of walmart.com</li>
+<li>Hapi has great REST API support as well as infrastructure for building web apps or even serving static content</li>
+<li>Just configure the routes and you are ready, no extra plugins are necessary for the most common functionality</li>
+<li>Liked that Eran provides some quick commentary about features and how they evolved</li>
+<li>Hapi 2.0 isn’t a massive increase in new functionality, in fact it is more about taking out the cruft, eliminating the redundant ways to do things. Names that evolved over time, picking the best and cleaning up the others.</li>
+<li>This strategy shows the wisdom and experience of its architect, to resi the urge to add features by first solidifying the base.</li>
+</ul>
+<a name="routes_caching_state"></a><h3 id="routes-caching-state">Routes, Caching, State</h3>
+<ul>
+<li>Route <code>handler(request, reply)</code> signature changed</li>
+<li><code>server.route({})</code>, can keep routes in one place while config and handler in separate module. validation is configurable, state (cookies)</li>
+<li><code>server.table()</code> gives you the active routing table</li>
+<li>Hapi is a configuration centric framework, set js properties, then it tries to stay out of your way.</li>
+<li>Hapi is written so the meat of your web application can stay pure, you don’t have to deal with the HTTP mechanisms unless you need to for a special case. This leads to clean code which is more focused on your business logic and less on how to deliver via HTTP.</li>
+<li>Helpers can abstract out functionality used in many places like looking up a user profile or users shopping cart</li>
+<li>Caching is changed in 2.0, dropping support for full page caching. You can still configure the client cache headers and expiry but the team removed the page cache since they didn’t want to have a half baked solution, one that didn’t handle all the variety of use cases.</li>
+<li>They still have great support for helper caching which is more straight forward.</li>
+<li>Eran said they will possibly add page caching back in later or I’d expect there to be a basic plugin which provides a basic page cache solving the simple use cases.</li>
+<li>Route prerequesites clean up async handling, can specify arrays for parallel followed by single tasks which are processed serially and any combintion.</li>
+<li><code>handler.bind</code> can be used to share state using object methods</li>
+<li><code>reply().hold()</code>, later calling <code>send()</code> when ready</li>
+<li>Cookie ttl configuration can now be done in a central location cleaninpu up the route config</li>
+<li>Exentensive cookie functionality - automatically encoding in base64 json or even using encryption, hashing, and expiration with Eran’s Iron container</li>
+</ul>
+<a name="plugins"></a><h3 id="plugins">Plugins</h3>
+<ul>
+<li>Plugins are a cornerstone of Hapi. These differ from something like Express in that plugins are just groupings of server functionality that can be mixed together into servers. You can organize a feature’s functionality, its routes, its configuration, and dependencies. This lives like a normal node.js package and only needs a register method to use with Hapi. These can be developed, versioned separately, mixed in to the server.</li>
+<li>Hapi ensures that once they are all registered that the routes are all valid and nothing conflicts, its a large team’s dream. Easy to test new veerions.</li>
+<li>Plugins can do everything you can do with the server, add routes, helpers, etc.</li>
+<li><code>plugin.composer</code> or command line option to hapi allows you to build a server with simply a package.json and a config.json specifying plugins to use.</li>
+<li>If you couple plugins along with Hapi’s Confidence module you can have one setup which can provide server config for all your various environments.</li>
+<li>The Confidence module provides dynamic configs which can be used for server environments or even runtime use for A/B testing</li>
+<li>Plugin cache is now scoped so its data won’t collide with other plugins</li>
+</ul>
+<a name="authorization"></a><h3 id="authorization">Authorization</h3>
+<ul>
+<li>Authorization is now properly extracted into schemes and strategies, basic auth, hawk, etc. It is much easier to setup authentication and you have options to make authentication required and optional.</li>
+<li>Hapi has defined life cycle extension points at which you can register to have your code called during request life cycle. For instance you could hook in at the beginning of the request, before auth, after auth, before response, etc.</li>
+<li>These extensions can specify dependencies and whether they need to go before or after others.</li>
+<li>One change to how the signature for these extensions is that they now have two params (request and reply) just like handlers. You can call the reply(null) to continue response unchanged. Website docs don’t reflect this yet, so look at the code or tests.</li>
+<li>You can now do additional things for streamed responses in your extensions like set headers as well as peek into the packets being sent back</li>
+</ul>
+<a name="ops"></a><h3 id="ops">Ops</h3>
+<ul>
+<li>New ops functionality<ul>
+<li>Can have server load and memory use logged for easy server health montioring</li>
+<li>Configure max input size, timeouts for client and server</li>
+<li>You can register tail methods which run after a response has been sent</li>
+<li><code>server.inject</code> allows you to use the hapi stack without going through the network stack, great for testing and even for production use if you need to call back in like with OAuth 2.0</li>
+<li>There is now a simulate property for simulating connection close issues</li>
+</ul>
+</li>
+</ul>
+<a name="postmile_example_app"></a><h3 id="postmile-example-app">Postmile example app</h3>
+<ul>
+<li>github.com/hueniverse/postmile - large sample app which has been upgraded to Hapi 2.0. It is a collaborative list making tool using hapi 2.0 and Mongo.</li>
+</ul>
+<a name="major_breaking_changes"></a><h2 id="major-breaking-changes">Major breaking changes</h2>
+<ul>
+<li><code>handler(request, reply)</code>, extensions have similar signature</li>
+<li>methods that had many aliases are now simplified like server.route</li>
+<li>page caching removed for now</li>
+<li>route prerequisites now use arrays to designate parallel tasks, and you can mix serial and parallel</li>
+<li>read up on the new auth configuration and mechanisms</li>
+<li><a href="https://github.com/spumko/hapi/issues/1178">https://github.com/spumko/hapi/issues/1178</a> - github issue with all the Hapi 2.0 breaking changes</li>
+</ul>
+<a name="resources"></a><h2 id="resources">Resources</h2>
+<ul>
+<li><a href="http://hapijs.com">http://hapijs.com</a> - main site, docs being added for 2.0</li>
+<li><a href="https://github.com/spumko/hapi">https://github.com/spumko/hapi</a> - git repo for Hapi</li>
+<li><a href="https://github.com/spumko/hapi/issues/1178">https://github.com/spumko/hapi/issues/1178</a> - github issue with all the Hapi 2.0 breaking changes</li>
+<li><a href="https://github.com/spumko">https://github.com/spumko</a> - extracted Hapi functionality for use with Hapi or separately</li>
+<li><a href="https://dl.dropboxusercontent.com/u/52139546/hapi%20yet%3F.pdf">https://dl.dropboxusercontent.com/u/52139546/hapi%20yet%3F.pdf</a> - hapi-yet-slides with lots of code examples which Eran Hammer used for his live stream</li>
+<li><a href="http://www.youtube.com/watch?v=B3u0XkbhleA&amp;t=1461">http://www.youtube.com/watch?v=B3u0XkbhleA&amp;t=1461</a> Eran Hammer Hapi Yet (Hapi 2.0) live stream at &amp;yet, link jumps directly to 24 min where talk starts</li>
+<li><a href="https://github.com/hueniverse/postmile">https://github.com/hueniverse/postmile</a> Eran Hammer’s sizeable hapi example using many of the Hapi features. Postmile is a collaborative list making tool using hapi 2.0 and mongo.</li>
+<li><a href="https://github.com/poeticninja/hapi-ninja">https://github.com/poeticninja/hapi-ninja</a> - Saul Maddox’s <a href="https://twitter.com/poeticninja" title="Saul Maddox twitter">@poeticninja</a> boilerplate Hapi server example Node.js, Hapi 2.0, Swig templates, Gulp task runner</li>
+<li>Follow <a href="http://codewinds.com/">http://codewinds.com/</a> blog and podcast for continuing coverage</li>
+</ul>
+<a name="summary"></a><h2 id="summary">Summary</h2>
+<p>So in summary, Hapi 2.0 is a well thought out release which cleans up and solidifies the codebase while adding some key functionality that can be built on.</p>
+<p> With Walmart putting this framework through the paces and other companies following in its footsteps like the company I am consulting to MasterCard, this framework has evolved with clarity, performance, team usability, and has great deploy and ops support.</p>
+<p>Furthermore, Eran and his team have proved that Hapi can handle Black Friday load with ultimate grace, and this new version solidifies its position among Node web frameworks.</p>
+<p>So I encourage you to check out Hapi, and let me know what you think. Head over to codewinds.com and leave me a comment or send me a tweet.</p></p>
+  </div>
+</div>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <!-- edit footer logo here -->
+                    <a href="#" class="logo col-sm-8">
+                        <img src="img/pwa-podstr-logo-144x70.png" class="img-responsive" alt="PWA Pdstr">
+                    </a>
+                    <div class="col-sm-12 text">
+                        <p>
+                            <i class="fa fa-map-pin"></i> 354 MAIN STREET | ANYTOWN USA | 11111</p>
+                        <p>
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:9192515067">Phone : (919) 251-5067</a>
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope"></i> E-mail :
+                            <a href="mailto:info@love2dev.com">info@love2dev.com</a>
+                        </p>
+                    </div>
+                    <span class="col-sm-12 social-wrapper circle">
+                        <a href="http://twitter.com/chrislove" class="social-icon fa fa-twitter"></a>
+                        <a href="https://www.facebook.com/love2dev/" class="social-icon fa fa-facebook"></a>
+                        <a target="_blank" href="https://plus.google.com/b/110904107389779237581/?pageId=110904107389779237581">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/love2dev">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UC3mfh2MN-5D-zOyiRLp9H6g">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+                        <a target="_blank" href="https://www.pinterest.com/docluv/">
+                            <i class="fa fa-pinterest"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="footer-content">
+                        <h2>Links</h2>
+                        <nav>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li>
+                                    <a href="podcasts/">Podcasts</a>
+                                </li>
+                                <li>
+                                    <a href="listenlater/">Listen Later</a>
+                                </li>
+                                <li>
+                                    <a href="search/">Search</a>
+                                </li>
+                                <li>
+                                    <a href="config/">Config</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var scripts = ["js/libs/jquery.small.js",
+            "js/libs/bootstrap.min.js",
+            "js/app/app.js",
+            "js/app/episode&#x2F;002-first-look-at-hapijs-20-the-nodejs-web-framework-from-walmart-labs.js"
+        ];
+    </script>
+
+    <script src="js/app/app.bootstrap.js"></script>
+</body>
+
+</html>

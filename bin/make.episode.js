@@ -6,7 +6,6 @@ var SiteModule = require("./site.module"),
     _ = require("lodash"),
     sizeOf = require('image-size'),
     mustache = require("mustache"),
-    stripBom = require("strip-bom"),
     url = require('url'),
     http = require('http'),
     https = require('https'),
@@ -28,9 +27,13 @@ class EpisodeModule extends SiteModule {
 
     render() {
 
-        var episodeObj = _.assignIn(this.getDefaultEpisode(), this.getEpisode());
+        let episodeObj = _.assignIn(this.getDefaultEpisode(), this.getEpisode());
 
-        episodeObj.body = mustache.render(this.template, episodeObj);
+        episodeObj.link = "https://api.spreaker.com/download/episode/8734727/ep105_mixdown.mp3";
+        
+        episodeObj.body = mustache.render(this.template, episodeObj).replace(/\r\n/, "").replace(/  /g, " ");
+
+        console.log(episodeObj.title);
 
         this.makePageJSON(episodeObj);
 
@@ -78,14 +81,16 @@ class EpisodeModule extends SiteModule {
 
     }
 
-    makePageJSON(srcObj) {
+    makePageJSON(_src) {
+
+        let srcObj = _src;
 
         srcObj.slug = utils.makeSlug(srcObj.title);
 
-        if(srcObj.slug === "episode-title"){
+        if (srcObj.slug === "episode-title") {
             return;
         }
-        
+
         var self = this,
             method = http;
 
@@ -106,7 +111,7 @@ class EpisodeModule extends SiteModule {
                 }
 
                 console.log("srcObj.slug: ", srcObj.slug);
-                
+
                 method.get(options, function (response) {
 
                     var chunks = [];
@@ -120,6 +125,8 @@ class EpisodeModule extends SiteModule {
                         let buffer = Buffer.concat(chunks);
 
                         let dimensions = sizeOf(buffer);
+
+                        console.log(srcObj.slug);
 
                         srcObj.image = {
                             "url": srcObj.image,
@@ -142,7 +149,7 @@ class EpisodeModule extends SiteModule {
                 };
 
                 self.transformToPage(srcObj);
-                
+
             }
 
         } else {
