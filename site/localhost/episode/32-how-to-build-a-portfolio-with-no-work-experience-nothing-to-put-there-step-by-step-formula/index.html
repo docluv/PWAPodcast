@@ -39,47 +39,50 @@
 </head>
 
 <body>
-    <header class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="menu-btn-name">Menu</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <a href="/" class="navbar-brand brand-logo col-xs-8">
-                                <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="navbar-collapse collapse navbar-responsive-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="podcasts/">Podcasts</a>
-                                </li>
-                                <li>
-                                    <a href="listenlater/">Listen Later</a>
-                                </li>
-                                <li>
-                                    <a href="search/"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="config/">
-                                        <i class="fa fa-cog" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="podcasts/">Podcasts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listenlater/">Listen Later</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="config/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 flex-nowrap">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-    </header>
+    </nav>
+
     <main class="main-content container-fluid" role="main">
-        <figure class="productbox"><div class="img-box"><img src="http://i1.sndcdn.com/avatars-000227802710-27eerh-original.jpg" alt="32. How to Build a Portfolio with NO Work Experience &amp; &quot;Nothing to Put There&quot; - Step by Step Formula" class="img-responsive"></div><figcaption><h3>32. How to Build a Portfolio with NO Work Experience &amp; &quot;Nothing to Put There&quot; - Step by Step Formula</h3><audio src="https:&#x2F;&#x2F;soundcloud.com&#x2F;starthere-webdev&#x2F;website"></audio><p>http://advancedbeginnerchallenge.com – I built a course to get your first job in web development, or upgrade from Junior to mid-level. All done over email for your convenience.
+        <div class="container">  <div class="row">
+    <div class="card">
+      <img src="[object Object]" alt="32. How to Build a Portfolio with NO Work Experience &amp; &quot;Nothing to Put There&quot; - Step by Step Formula" class="card-img-top">
+      <div class="card-body">
+        <h3 class="card-title">32. How to Build a Portfolio with NO Work Experience &amp; &quot;Nothing to Put There&quot; - Step by Step Formula</h3>
+      </div>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="row">
+    <audio src="https://api.spreaker.com/download/episode/8734727/ep105_mixdown.mp3" controls="controls"></audio>
+  </div>
+  <div class="row">
+    <p>http://advancedbeginnerchallenge.com – I built a course to get your first job in web development, or upgrade from Junior to mid-level. All done over email for your convenience.
 
 How do you build a portfolio and website with NO work experience? This episode is for ALL BEGINNERS. MUST LISTEN. 
 
@@ -94,7 +97,9 @@ The Advanced Beginner Challenge Video: https://www.youtube.com/watch?v=NDi9y7R0d
 Visit: http://starthere.fm and http://dain.io
 
 Connect with me on Twitter
-Twitter: http://twitter.com/dainmiller</p></figcaption><i class="fa fa-plus" aria-hidden="true"></i></figure>
+Twitter: http://twitter.com/dainmiller</p>
+  </div>
+</div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -162,7 +167,9 @@ Twitter: http://twitter.com/dainmiller</p></figcaption><i class="fa fa-plus" ari
     </footer>
     <script>
         var scripts = ["js/libs/jquery.small.js",
-            "js/libs/bootstrap.min.js",
+            "js/libs/index.js",
+            "js/libs/collapse.js",
+            "js/libs/util.js",
             "js/app/app.js",
             "js/app/episode&#x2F;32-how-to-build-a-portfolio-with-no-work-experience-nothing-to-put-there-step-by-step-formula.js"
         ];

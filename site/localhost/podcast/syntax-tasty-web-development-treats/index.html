@@ -39,47 +39,85 @@
 </head>
 
 <body>
-    <header class="page-header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="podcasts/">Podcasts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listenlater/">Listen Later</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="config/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 flex-nowrap">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <main class="main-content container-fluid" role="main">
         <div class="container">
-            <div class="row">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="menu-btn-name">Menu</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <a href="/" class="navbar-brand brand-logo col-xs-8">
-                                <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="navbar-collapse collapse navbar-responsive-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="podcasts/">Podcasts</a>
-                                </li>
-                                <li>
-                                    <a href="listenlater/">Listen Later</a>
-                                </li>
-                                <li>
-                                    <a href="search/"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="config/">
-                                        <i class="fa fa-cog" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="row podcast-details">
+                <div class="card">
+                    <img srcset="http://is1.mzstatic.com/image/thumb/Music117/v4/40/e5/ef/40e5ef3c-f5b9-20df-14cc-e5c38d50a8da/source/30x30bb.jpg 30w, http://is1.mzstatic.com/image/thumb/Music117/v4/40/e5/ef/40e5ef3c-f5b9-20df-14cc-e5c38d50a8da/source/60x60bb.jpg 60w, http://is1.mzstatic.com/image/thumb/Music117/v4/40/e5/ef/40e5ef3c-f5b9-20df-14cc-e5c38d50a8da/source/100x100bb.jpg 100w, http://is1.mzstatic.com/image/thumb/Music117/v4/40/e5/ef/40e5ef3c-f5b9-20df-14cc-e5c38d50a8da/source/600x600bb.jpg 600w"
+                        sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw" src="http://is1.mzstatic.com/image/thumb/Music117/v4/40/e5/ef/40e5ef3c-f5b9-20df-14cc-e5c38d50a8da/source/600x600bb.jpg"
+                        alt="Syntax - Tasty Web Development Treats" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Syntax - Tasty Web Development Treats</h3>
+                        <p class="card-text">Wes Bos & Scott Tolinski - Full Stack JavaScript Web Developers</p>
                     </div>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="row episode-list">
+                <a href="/episode/tasty-treats-rems-vs-ems-remote-work-making-money-getting-good-at-design-more-dbae18b20fc88ba5c504ff2c2d5c7bae"
+                    class="episode-list-item">Tasty Treats — Rems VS Ems, Remote Work, Making Money, Getting good at Design + more! 🍬</a>
+                <a href="/episode/advice-for-new-developers-imposter-syndrome-and-interviewing-at-google-9a570de6416c74f7c882396552b59dd0"
+                    class="episode-list-item">Advice for New Developers, Imposter Syndrome and Interviewing at Google</a>
+                <a href="/episode/our-stacks-explained-ef614ef3b274b0a6e51a0353adabe128"
+                    class="episode-list-item">Our Stacks Explained 🖥️ 💪</a>
+                <a href="/episode/the-command-line-for-web-developers-3a9167ca1c34c5ea302ae93da1709729"
+                    class="episode-list-item">The Command Line for Web Developers</a>
+                <a href="/episode/why-is-everyone-switching-to-vs-code-757564dd16d994d4831589254c6b564f"
+                    class="episode-list-item">Why is everyone switching to VS Code?</a>
+                <a href="/episode/our-favourite-productivity-hacks-9bc1809dae6fc0b237c99e54b3598204"
+                    class="episode-list-item">Our favourite Productivity Hacks 🔥</a>
+                <a href="/episode/css-in-js-drama-free-b5c0b4cc7e36fdd3fb8daf141480ceb8"
+                    class="episode-list-item">CSS in JS 💅👩‍🎤💁🚒 (Drama Free!)</a>
+                <a href="/episode/dang-thats-handy-javascript-utility-libraries-cae7752a19684f6afa2147106c69f010"
+                    class="episode-list-item">Dang, that&#39;s handy! JavaScript Utility Libraries 🛠️</a>
+                <a href="/episode/wes-bos-origin-story-5b5dec67b39c766d07f3e23cc6ec7254"
+                    class="episode-list-item">Wes Bos Origin Story 🎸💼💻🔥🐷</a>
+                <a href="/episode/scott-tolinski-origin-story-f71bc1e63c890248416278bdf3307497"
+                    class="episode-list-item">Scott Tolinski Origin Story 🎧 📹 💻 🕺</a>
+                <a href="/episode/accepting-money-on-the-internet-c47fbf6911463017dbc81fc2a90e5ebc"
+                    class="episode-list-item">Accepting Money on the Internet 💰💸</a>
+                <a href="/episode/how-to-slam-dunk-freelancing-d9cdb5913780b7bd1952a83f9375ac79"
+                    class="episode-list-item">How to Slam Dunk Freelancing 🏀🤑</a>
+                <a href="/episode/javascript-tooling-004-7e5dbc453f1cfba567cc158c4ad3f5ce"
+                    class="episode-list-item">JavaScript Tooling - 004</a>
+                <a href="/episode/css-preprocessors-and-structuring-css-003-116f0b7c607fee94ff6949bc3f2f86d4"
+                    class="episode-list-item">CSS Preprocessors and Structuring CSS - 003</a>
+                <a href="/episode/webcam-and-audio-access-with-webrtc-and-getusermedia-002-abe8cb60682a8127644f0927afea4adc"
+                    class="episode-list-item">Webcam and audio access with WebRTC and getUserMedia() - 002</a>
+                <a href="/episode/react-tools-001-4cb16f0b4d505ab92cc9dbfc23736640"
+                    class="episode-list-item">React Tools - 001</a>
+                <a href="/episode/syntax-000-preview-39cdb0e187c02a0eb28d0c7744adae64" class="episode-list-item">Syntax 000 - PREVIEW</a>
+            </div>
         </div>
-    </header>
-    <main class="main-content container-fluid" role="main">
-        <div class="container">    <div class="row">        <figure class="productbox">            <div class="img-box">                <img srcset="http://is1.mzstatic.com/image/thumb/Music117/v4/40/e5/ef/40e5ef3c-f5b9-20df-14cc-e5c38d50a8da/source/30x30bb.jpg 30w, http://is1.mzstatic.com/image/thumb/Music117/v4/40/e5/ef/40e5ef3c-f5b9-20df-14cc-e5c38d50a8da/source/60x60bb.jpg 60w, http://is1.mzstatic.com/image/thumb/Music117/v4/40/e5/ef/40e5ef3c-f5b9-20df-14cc-e5c38d50a8da/source/100x100bb.jpg 100w, http://is1.mzstatic.com/image/thumb/Music117/v4/40/e5/ef/40e5ef3c-f5b9-20df-14cc-e5c38d50a8da/source/600x600bb.jpg 600w" sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw"                    src="http://is1.mzstatic.com/image/thumb/Music117/v4/40/e5/ef/40e5ef3c-f5b9-20df-14cc-e5c38d50a8da/source/600x600bb.jpg" alt="Syntax - Tasty Web Development Treats" class="img-responsive">            </div>            <figcaption>                <h3>Syntax - Tasty Web Development Treats</h3>                <p>Wes Bos & Scott Tolinski - Full Stack JavaScript Web Developers</p>            </figcaption>            <i class="fa fa-plus" aria-hidden="true"></i>        </figure>    </div>    <div class="row episode-list">        <a href="/episode/tasty-treats-rems-vs-ems-remote-work-making-money-getting-good-at-design-more-dbae18b20fc88ba5c504ff2c2d5c7bae" class="episode-list-item">Tasty Treats — Rems VS Ems, Remote Work, Making Money, Getting good at Design + more! 🍬</a>        <a href="/episode/advice-for-new-developers-imposter-syndrome-and-interviewing-at-google-9a570de6416c74f7c882396552b59dd0" class="episode-list-item">Advice for New Developers, Imposter Syndrome and Interviewing at Google</a>        <a href="/episode/our-stacks-explained-ef614ef3b274b0a6e51a0353adabe128" class="episode-list-item">Our Stacks Explained 🖥️ 💪</a>        <a href="/episode/the-command-line-for-web-developers-3a9167ca1c34c5ea302ae93da1709729" class="episode-list-item">The Command Line for Web Developers</a>        <a href="/episode/why-is-everyone-switching-to-vs-code-757564dd16d994d4831589254c6b564f" class="episode-list-item">Why is everyone switching to VS Code?</a>        <a href="/episode/our-favourite-productivity-hacks-9bc1809dae6fc0b237c99e54b3598204" class="episode-list-item">Our favourite Productivity Hacks 🔥</a>        <a href="/episode/css-in-js-drama-free-b5c0b4cc7e36fdd3fb8daf141480ceb8" class="episode-list-item">CSS in JS 💅👩‍🎤💁🚒 (Drama Free!)</a>        <a href="/episode/dang-thats-handy-javascript-utility-libraries-cae7752a19684f6afa2147106c69f010" class="episode-list-item">Dang, that&#39;s handy! JavaScript Utility Libraries 🛠️</a>        <a href="/episode/wes-bos-origin-story-5b5dec67b39c766d07f3e23cc6ec7254" class="episode-list-item">Wes Bos Origin Story 🎸💼💻🔥🐷</a>        <a href="/episode/scott-tolinski-origin-story-f71bc1e63c890248416278bdf3307497" class="episode-list-item">Scott Tolinski Origin Story 🎧 📹 💻 🕺</a>        <a href="/episode/accepting-money-on-the-internet-c47fbf6911463017dbc81fc2a90e5ebc" class="episode-list-item">Accepting Money on the Internet 💰💸</a>        <a href="/episode/how-to-slam-dunk-freelancing-d9cdb5913780b7bd1952a83f9375ac79" class="episode-list-item">How to Slam Dunk Freelancing 🏀🤑</a>        <a href="/episode/javascript-tooling-004-7e5dbc453f1cfba567cc158c4ad3f5ce" class="episode-list-item">JavaScript Tooling - 004</a>        <a href="/episode/css-preprocessors-and-structuring-css-003-116f0b7c607fee94ff6949bc3f2f86d4" class="episode-list-item">CSS Preprocessors and Structuring CSS - 003</a>        <a href="/episode/webcam-and-audio-access-with-webrtc-and-getusermedia-002-abe8cb60682a8127644f0927afea4adc" class="episode-list-item">Webcam and audio access with WebRTC and getUserMedia() - 002</a>        <a href="/episode/react-tools-001-4cb16f0b4d505ab92cc9dbfc23736640" class="episode-list-item">React Tools - 001</a>        <a href="/episode/syntax-000-preview-39cdb0e187c02a0eb28d0c7744adae64" class="episode-list-item">Syntax 000 - PREVIEW</a>    </div></div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -147,7 +185,9 @@
     </footer>
     <script>
         var scripts = ["js/libs/jquery.small.js",
-            "js/libs/bootstrap.min.js",
+            "js/libs/index.js",
+            "js/libs/collapse.js",
+            "js/libs/util.js",
             "js/app/app.js",
             "js/app/podcast&#x2F;syntax-tasty-web-development-treats.js"
         ];

@@ -1,5 +1,7 @@
 try {
 
+    // borrowed from https://www.html5rocks.com/en/tutorials/speed/script-loading/#toc-aggressive-optimisation
+
     var src,
         script,
         pendingScripts = [],

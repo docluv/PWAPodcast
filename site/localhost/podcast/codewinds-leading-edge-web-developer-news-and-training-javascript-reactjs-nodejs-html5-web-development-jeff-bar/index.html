@@ -11,7 +11,8 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
     <link href="css/app/site.css" rel="stylesheet">
 
-    <title>CodeWinds - Leading edge web developer news and training | javascript &#x2F; React.js &#x2F; Node.js &#x2F; HTML5 &#x2F; web development - Jeff Bar</title>
+    <title>CodeWinds - Leading edge web developer news and training | javascript &#x2F; React.js &#x2F; Node.js &#x2F; HTML5 &#x2F;
+        web development - Jeff Bar</title>
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
     <!-- Web Application Manifest -->
@@ -39,47 +40,87 @@
 </head>
 
 <body>
-    <header class="page-header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="podcasts/">Podcasts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listenlater/">Listen Later</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="config/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 flex-nowrap">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <main class="main-content container-fluid" role="main">
         <div class="container">
-            <div class="row">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="menu-btn-name">Menu</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <a href="/" class="navbar-brand brand-logo col-xs-8">
-                                <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="navbar-collapse collapse navbar-responsive-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="podcasts/">Podcasts</a>
-                                </li>
-                                <li>
-                                    <a href="listenlater/">Listen Later</a>
-                                </li>
-                                <li>
-                                    <a href="search/"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="config/">
-                                        <i class="fa fa-cog" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="row podcast-details">
+                <div class="card">
+                    <img srcset="http://is2.mzstatic.com/image/thumb/Music62/v4/54/d6/cc/54d6cc46-06cf-d7db-b97c-f8549e3d624c/source/30x30bb.jpg 30w, http://is2.mzstatic.com/image/thumb/Music62/v4/54/d6/cc/54d6cc46-06cf-d7db-b97c-f8549e3d624c/source/60x60bb.jpg 60w, http://is2.mzstatic.com/image/thumb/Music62/v4/54/d6/cc/54d6cc46-06cf-d7db-b97c-f8549e3d624c/source/100x100bb.jpg 100w, http://is2.mzstatic.com/image/thumb/Music62/v4/54/d6/cc/54d6cc46-06cf-d7db-b97c-f8549e3d624c/source/600x600bb.jpg 600w"
+                        sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw" src="http://is2.mzstatic.com/image/thumb/Music62/v4/54/d6/cc/54d6cc46-06cf-d7db-b97c-f8549e3d624c/source/600x600bb.jpg"
+                        alt="CodeWinds - Leading edge web developer news and training | javascript &#x2F; React.js &#x2F; Node.js &#x2F; HTML5 &#x2F; web development - Jeff Bar"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">CodeWinds - Leading edge web developer news and training | javascript &#x2F; React.js &#x2F; Node.js
+                            &#x2F; HTML5 &#x2F; web development - Jeff Bar</h3>
+                        <p class="card-text">Jeff Barczewski</p>
                     </div>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="row episode-list">
+                <a href="/episode/015-michael-jackson-and-ryan-florence-explain-that-reactjs-really-changes-how-we-think-about-building-web-and-mobile-apps-httpcodewindscompodcast015html"
+                    class="episode-list-item">015 Michael Jackson and Ryan Florence explain that React.js really changes how we think about building web
+                    and mobile apps</a>
+                <a href="/episode/014-successful-launch-and-im-back-codewinds-content-plans-for-2015-provide-your-input-httpcodewindscompodcast014html"
+                    class="episode-list-item">014 Successful launch and I&#39;m back, CodeWinds content plans for 2015, provide your input</a>
+                <a href="/episode/013-reflections-of-jsconf-2014-part-2-httpcodewindscompodcast013html"
+                    class="episode-list-item">013 Reflections of JSConf 2014 - Part 2</a>
+                <a href="/episode/012-reflections-of-jsconf-2014-part-1-httpcodewindscompodcast012html"
+                    class="episode-list-item">012 Reflections of JSConf 2014 - Part 1</a>
+                <a href="/episode/011-kassandra-perch-modular-javascript-application-architectures-and-insights-from-teaching-httpcodewindscompodcast011html"
+                    class="episode-list-item">011 Kassandra Perch - Modular JavaScript application architectures and insights from teaching</a>
+                <a href="/episode/010-nico-bevacqua-js-build-tooling-development-workflow-and-his-new-book-javascript-application-design-httpcodewindscompodcast010html"
+                    class="episode-list-item">010 Nico Bevacqua - JS build tooling, development workflow, and his new book JavaScript Application Design</a>
+                <a href="/episode/009-spike-brehm-sharing-javascript-in-browser-and-server-building-isomorphic-apps-httpcodewindscompodcast009html"
+                    class="episode-list-item">009 Spike Brehm - Sharing javascript in browser and server - building isomorphic apps</a>
+                <a href="/episode/008-guy-bedford-jspm-systemjs-unity-and-simplicity-in-loading-commonjs-amd-and-es6-js-packages-httpcodewindscompodcast008html"
+                    class="episode-list-item">008 Guy Bedford - jspm &amp; SystemJS - Unity and simplicity in loading CommonJS, AMD, and ES6 JS packages</a>
+                <a href="/episode/007-forrest-norvell-on-es6-and-our-communitys-role-at-jsconf-2014-httpcodewindscompodcast007html"
+                    class="episode-list-item">007 Forrest Norvell on ES6 and our community&#39;s role at JSConf 2014</a>
+                <a href="/episode/006-daniel-shaw-dshaw-introduces-nodesource-at-jsconf-2014-httpcodewindscompodcast006html"
+                    class="episode-list-item">006 Daniel Shaw (@dshaw) introduces NodeSource at JSConf 2014</a>
+                <a href="/episode/005-saul-maddox-software-engineer-at-pros-shares-insights-about-his-hapi-ninja-boilerplate-and-its-technology-nodejs-hapijs-web-framework-swig-gulp-httpcodewindscompodcast005html"
+                    class="episode-list-item">005 Saul Maddox, Software Engineer at PROS, shares insights about his Hapi-Ninja boilerplate and its technology
+                    (Node.js, Hapijs web framework, Swig, Gulp)</a>
+                <a href="/episode/004-pete-hunt-software-engineer-for-facebook-discussing-facebooks-open-source-js-ui-framework-react-httpcodewindscompodcast004html"
+                    class="episode-list-item">004 Pete Hunt, Software Engineer for Facebook, discussing Facebook&#39;s open source js UI framework, React</a>
+                <a href="/episode/003-sqlbits-lightweight-sql-builder-for-nodejs-for-use-with-postgres-or-other-ansi-sql-databases-httpcodewindscompodcast003html"
+                    class="episode-list-item">003 SQLBits - lightweight SQL builder for Node.js for use with Postgres or other ANSI SQL databases</a>
+                <a
+                    href="/episode/002-first-look-at-hapijs-20-the-nodejs-web-framework-from-walmart-labs-httpcodewindscompodcast002html"
+                    class="episode-list-item">002 First look at Hapijs 2.0, the Node.js web framework from Walmart Labs</a>
+                    <a href="/episode/001-daniel-shaw-interview-discussing-the-node-firms-public-nodejs-training-courses-httpcodewindscompodcast001html"
+                        class="episode-list-item">001 Daniel Shaw interview discussing The Node Firm&#39;s public Node.js training courses</a>
+            </div>
         </div>
-    </header>
-    <main class="main-content container-fluid" role="main">
-        <div class="container"><div class="row"><figure class="productbox"><div class="img-box"><img srcset="http://is2.mzstatic.com/image/thumb/Music62/v4/54/d6/cc/54d6cc46-06cf-d7db-b97c-f8549e3d624c/source/30x30bb.jpg 30w, http://is2.mzstatic.com/image/thumb/Music62/v4/54/d6/cc/54d6cc46-06cf-d7db-b97c-f8549e3d624c/source/60x60bb.jpg 60w, http://is2.mzstatic.com/image/thumb/Music62/v4/54/d6/cc/54d6cc46-06cf-d7db-b97c-f8549e3d624c/source/100x100bb.jpg 100w, http://is2.mzstatic.com/image/thumb/Music62/v4/54/d6/cc/54d6cc46-06cf-d7db-b97c-f8549e3d624c/source/600x600bb.jpg 600w" sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw"src="http://is2.mzstatic.com/image/thumb/Music62/v4/54/d6/cc/54d6cc46-06cf-d7db-b97c-f8549e3d624c/source/600x600bb.jpg" alt="CodeWinds - Leading edge web developer news and training | javascript &#x2F; React.js &#x2F; Node.js &#x2F; HTML5 &#x2F; web development - Jeff Bar" class="img-responsive"></div><figcaption><h3>CodeWinds - Leading edge web developer news and training | javascript &#x2F; React.js &#x2F; Node.js &#x2F; HTML5 &#x2F; web development - Jeff Bar</h3><p>Jeff Barczewski</p></figcaption><i class="fa fa-plus" aria-hidden="true"></i></figure></div><div class="row episode-list"><a href="/episode/015-michael-jackson-and-ryan-florence-explain-that-reactjs-really-changes-how-we-think-about-building-web-and-mobile-apps-httpcodewindscompodcast015html" class="episode-list-item">015 Michael Jackson and Ryan Florence explain that React.js really changes how we think about building web and mobile apps</a><a href="/episode/014-successful-launch-and-im-back-codewinds-content-plans-for-2015-provide-your-input-httpcodewindscompodcast014html" class="episode-list-item">014 Successful launch and I&#39;m back, CodeWinds content plans for 2015, provide your input</a><a href="/episode/013-reflections-of-jsconf-2014-part-2-httpcodewindscompodcast013html" class="episode-list-item">013 Reflections of JSConf 2014 - Part 2</a><a href="/episode/012-reflections-of-jsconf-2014-part-1-httpcodewindscompodcast012html" class="episode-list-item">012 Reflections of JSConf 2014 - Part 1</a><a href="/episode/011-kassandra-perch-modular-javascript-application-architectures-and-insights-from-teaching-httpcodewindscompodcast011html" class="episode-list-item">011 Kassandra Perch - Modular JavaScript application architectures and insights from teaching</a><a href="/episode/010-nico-bevacqua-js-build-tooling-development-workflow-and-his-new-book-javascript-application-design-httpcodewindscompodcast010html" class="episode-list-item">010 Nico Bevacqua - JS build tooling, development workflow, and his new book JavaScript Application Design</a><a href="/episode/009-spike-brehm-sharing-javascript-in-browser-and-server-building-isomorphic-apps-httpcodewindscompodcast009html" class="episode-list-item">009 Spike Brehm - Sharing javascript in browser and server - building isomorphic apps</a><a href="/episode/008-guy-bedford-jspm-systemjs-unity-and-simplicity-in-loading-commonjs-amd-and-es6-js-packages-httpcodewindscompodcast008html" class="episode-list-item">008 Guy Bedford - jspm &amp; SystemJS - Unity and simplicity in loading CommonJS, AMD, and ES6 JS packages</a><a href="/episode/007-forrest-norvell-on-es6-and-our-communitys-role-at-jsconf-2014-httpcodewindscompodcast007html" class="episode-list-item">007 Forrest Norvell on ES6 and our community&#39;s role at JSConf 2014</a><a href="/episode/006-daniel-shaw-dshaw-introduces-nodesource-at-jsconf-2014-httpcodewindscompodcast006html" class="episode-list-item">006 Daniel Shaw (@dshaw) introduces NodeSource at JSConf 2014</a><a href="/episode/005-saul-maddox-software-engineer-at-pros-shares-insights-about-his-hapi-ninja-boilerplate-and-its-technology-nodejs-hapijs-web-framework-swig-gulp-httpcodewindscompodcast005html" class="episode-list-item">005 Saul Maddox, Software Engineer at PROS, shares insights about his Hapi-Ninja boilerplate and its technology (Node.js, Hapijs web framework, Swig, Gulp)</a><a href="/episode/004-pete-hunt-software-engineer-for-facebook-discussing-facebooks-open-source-js-ui-framework-react-httpcodewindscompodcast004html" class="episode-list-item">004 Pete Hunt, Software Engineer for Facebook, discussing Facebook&#39;s open source js UI framework, React</a><a href="/episode/003-sqlbits-lightweight-sql-builder-for-nodejs-for-use-with-postgres-or-other-ansi-sql-databases-httpcodewindscompodcast003html" class="episode-list-item">003 SQLBits - lightweight SQL builder for Node.js for use with Postgres or other ANSI SQL databases</a><a href="/episode/002-first-look-at-hapijs-20-the-nodejs-web-framework-from-walmart-labs-httpcodewindscompodcast002html" class="episode-list-item">002 First look at Hapijs 2.0, the Node.js web framework from Walmart Labs</a><a href="/episode/001-daniel-shaw-interview-discussing-the-node-firms-public-nodejs-training-courses-httpcodewindscompodcast001html" class="episode-list-item">001 Daniel Shaw interview discussing The Node Firm&#39;s public Node.js training courses</a></div></div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -147,7 +188,9 @@
     </footer>
     <script>
         var scripts = ["js/libs/jquery.small.js",
-            "js/libs/bootstrap.min.js",
+            "js/libs/index.js",
+            "js/libs/collapse.js",
+            "js/libs/util.js",
             "js/app/app.js",
             "js/app/podcast&#x2F;codewinds-leading-edge-web-developer-news-and-training-javascript-reactjs-nodejs-html5-web-development-jeff-bar.js"
         ];

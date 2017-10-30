@@ -39,47 +39,63 @@
 </head>
 
 <body>
-    <header class="page-header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="podcasts/">Podcasts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listenlater/">Listen Later</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="config/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 flex-nowrap">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <main class="main-content container-fluid" role="main">
         <div class="container">
-            <div class="row">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="menu-btn-name">Menu</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <a href="/" class="navbar-brand brand-logo col-xs-8">
-                                <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="navbar-collapse collapse navbar-responsive-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="podcasts/">Podcasts</a>
-                                </li>
-                                <li>
-                                    <a href="listenlater/">Listen Later</a>
-                                </li>
-                                <li>
-                                    <a href="search/"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="config/">
-                                        <i class="fa fa-cog" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="row podcast-details">
+                <div class="card">
+                    <img srcset="http://is4.mzstatic.com/image/thumb/Music6/v4/00/83/44/008344f6-7d9f-2031-39c1-107020839411/source/30x30bb.jpg 30w, http://is4.mzstatic.com/image/thumb/Music6/v4/00/83/44/008344f6-7d9f-2031-39c1-107020839411/source/60x60bb.jpg 60w, http://is4.mzstatic.com/image/thumb/Music6/v4/00/83/44/008344f6-7d9f-2031-39c1-107020839411/source/100x100bb.jpg 100w, http://is4.mzstatic.com/image/thumb/Music6/v4/00/83/44/008344f6-7d9f-2031-39c1-107020839411/source/600x600bb.jpg 600w"
+                        sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw" src="http://is4.mzstatic.com/image/thumb/Music6/v4/00/83/44/008344f6-7d9f-2031-39c1-107020839411/source/600x600bb.jpg"
+                        alt="OCDevel Web Development Podcast" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">OCDevel Web Development Podcast</h3>
+                        <p class="card-text">OCDevel</p>
                     </div>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="row episode-list">
+                <a href="/episode/podcast-8-linux-6c6e80f9-a105-4adc-83ca-53e7ed46f402" class="episode-list-item">Podcast 8: Linux</a>
+                <a href="/episode/podcast-7-internet-marketing-e5fc6d42-a6be-4fd3-80a5-c9f35ee89785"
+                    class="episode-list-item">Podcast 7: Internet Marketing</a>
+                <a href="/episode/podcast-6-cms-frameworks-bd5bb5f1-d54a-467a-b371-74fac60991dc"
+                    class="episode-list-item">Podcast 6: CMS &amp; Frameworks</a>
+                <a href="/episode/podcast-5-tools-b9494d40-7a44-4503-8d21-ad026fbff60b"
+                    class="episode-list-item">Podcast 5: Tools</a>
+                <a href="/episode/podcast-4-your-first-site-7d63b52b-0da4-4de4-b6bf-43cfe7ec025c" class="episode-list-item">Podcast 4: Your First Site</a>
+                <a href="/episode/podcast-3-client-161c6d75-a70b-4e0c-b1a9-c5c74ec9c588" class="episode-list-item">Podcast 3: Client</a>
+                <a href="/episode/podcast-2-server-c9410e32-59c3-4292-9557-d6df2720647b" class="episode-list-item">Podcast 2: Server</a>
+                <a href="/episode/podcast-1-introduction-51ba2a8a-d0cc-4ead-8cb2-ba8e4fe0ecdd" class="episode-list-item">Podcast 1: Introduction</a>
+            </div>
         </div>
-    </header>
-    <main class="main-content container-fluid" role="main">
-        <div class="container"><div class="row"><figure class="productbox"><div class="img-box"><img srcset="http://is4.mzstatic.com/image/thumb/Music6/v4/00/83/44/008344f6-7d9f-2031-39c1-107020839411/source/30x30bb.jpg 30w, http://is4.mzstatic.com/image/thumb/Music6/v4/00/83/44/008344f6-7d9f-2031-39c1-107020839411/source/60x60bb.jpg 60w, http://is4.mzstatic.com/image/thumb/Music6/v4/00/83/44/008344f6-7d9f-2031-39c1-107020839411/source/100x100bb.jpg 100w, http://is4.mzstatic.com/image/thumb/Music6/v4/00/83/44/008344f6-7d9f-2031-39c1-107020839411/source/600x600bb.jpg 600w" sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw"src="http://is4.mzstatic.com/image/thumb/Music6/v4/00/83/44/008344f6-7d9f-2031-39c1-107020839411/source/600x600bb.jpg" alt="OCDevel Web Development Podcast" class="img-responsive"></div><figcaption><h3>OCDevel Web Development Podcast</h3><p>OCDevel</p></figcaption><i class="fa fa-plus" aria-hidden="true"></i></figure></div><div class="row episode-list"><a href="/episode/podcast-8-linux-6c6e80f9-a105-4adc-83ca-53e7ed46f402" class="episode-list-item">Podcast 8: Linux</a><a href="/episode/podcast-7-internet-marketing-e5fc6d42-a6be-4fd3-80a5-c9f35ee89785" class="episode-list-item">Podcast 7: Internet Marketing</a><a href="/episode/podcast-6-cms-frameworks-bd5bb5f1-d54a-467a-b371-74fac60991dc" class="episode-list-item">Podcast 6: CMS &amp; Frameworks</a><a href="/episode/podcast-5-tools-b9494d40-7a44-4503-8d21-ad026fbff60b" class="episode-list-item">Podcast 5: Tools</a><a href="/episode/podcast-4-your-first-site-7d63b52b-0da4-4de4-b6bf-43cfe7ec025c" class="episode-list-item">Podcast 4: Your First Site</a><a href="/episode/podcast-3-client-161c6d75-a70b-4e0c-b1a9-c5c74ec9c588" class="episode-list-item">Podcast 3: Client</a><a href="/episode/podcast-2-server-c9410e32-59c3-4292-9557-d6df2720647b" class="episode-list-item">Podcast 2: Server</a><a href="/episode/podcast-1-introduction-51ba2a8a-d0cc-4ead-8cb2-ba8e4fe0ecdd" class="episode-list-item">Podcast 1: Introduction</a></div></div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -147,7 +163,9 @@
     </footer>
     <script>
         var scripts = ["js/libs/jquery.small.js",
-            "js/libs/bootstrap.min.js",
+            "js/libs/index.js",
+            "js/libs/collapse.js",
+            "js/libs/util.js",
             "js/app/app.js",
             "js/app/podcast&#x2F;ocdevel-web-development-podcast.js"
         ];

@@ -30,21 +30,7 @@
     <meta name="msapplication-TileColor" content="#ED7D31">
     <!-- Color the status bar on mobile devices -->
     <meta name="theme-color" content="#F6911E">
-    <meta name="description" content="http://advancedbeginnerchallenge.com – I built a course to get your first job in web development, or upgrade from Junior to mid-level. All done over email for your convenience.
-
-Tasks
-
-- Read Steps 1 &amp; 2 from DevelopAJob.com
-
-This site is a good overview of web development. The author provides additional resources some of which you can purchase. We don&#39;t believe you need to pay for an education in web development so bypass those resources. In step 2 we&#39;d ask you to skip the Build Your First Website section. Our second resource provides a more thorough lesson.
-
-- Work through Lesson 1, Building Your First Web Page, from learn.shayhowe.com
-
-Shay&#39;s lesson is a crash course and a fantastic introduction to HTML and CSS. Technically, it&#39;s a lesson about building for the front-end but we think every web developer should know these things.
-
-- Talk to Us
-
-Please tell us why you want to be a web developer. What are your reasons and what job are you switching from? Leave us a comment below. If you have questions about web dev please ask away. You can also Contact us directly.">
+    <meta name="description" content="Podstr">
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
@@ -53,69 +39,66 @@ Please tell us why you want to be a web developer. What are your reasons and wha
 </head>
 
 <body>
-    <header class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="menu-btn-name">Menu</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <a href="/" class="navbar-brand brand-logo col-xs-8">
-                                <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="navbar-collapse collapse navbar-responsive-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="podcasts/">Podcasts</a>
-                                </li>
-                                <li>
-                                    <a href="listenlater/">Listen Later</a>
-                                </li>
-                                <li>
-                                    <a href="search/">
-                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="config/">
-                                        <i class="fa fa-cog" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="podcasts/">Podcasts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listenlater/">Listen Later</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="config/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 flex-nowrap">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-    </header>
+    </nav>
+
     <main class="main-content container-fluid" role="main">
-        <figure class="productbox">
-            <div class="img-box">
-                <img src="http://i1.sndcdn.com/avatars-000227802710-27eerh-original.jpg" alt="1. Start Here to Build a Career in Web Development"
-                    class="img-responsive"> </div>
-            <figcaption>
-                <h3>1. Start Here to Build a Career in Web Development</h3>
-                <audio src="https://soundcloud.com/starthere-webdev/1-start-here-to-build-a-career-in-web-development"></audio>
-                <p>http://advancedbeginnerchallenge.com – I built a course to get your first job in web development, or upgrade
-                    from Junior to mid-level. All done over email for your convenience. Tasks - Read Steps 1 & 2 from DevelopAJob.com
-                    This site is a good overview of web development. The author provides additional resources some of which
-                    you can purchase. We don't believe you need to pay for an education in web development so bypass those
-                    resources. In step 2 we'd ask you to skip the Build Your First Website section. Our second resource provides
-                    a more thorough lesson. - Work through Lesson 1, Building Your First Web Page, from learn.shayhowe.com
-                    Shay's lesson is a crash course and a fantastic introduction to HTML and CSS. Technically, it's a lesson
-                    about building for the front-end but we think every web developer should know these things. - Talk to
-                    Us Please tell us why you want to be a web developer. What are your reasons and what job are you switching
-                    from? Leave us a comment below. If you have questions about web dev please ask away. You can also Contact
-                    us directly.</p>
-            </figcaption>
-            <i class="fa fa-plus" aria-hidden="true"></i>
-        </figure>
+        <div class="container">  <div class="row">
+    <div class="card">
+      <img src="http://i1.sndcdn.com/avatars-000227802710-27eerh-original.jpg" alt="1. Start Here to Build a Career in Web Development" class="card-img-top">
+      <div class="card-body">
+        <h3 class="card-title">1. Start Here to Build a Career in Web Development</h3>
+      </div>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="row">
+    <audio src="https://api.spreaker.com/download/episode/8734727/ep105_mixdown.mp3" controls="controls"></audio>
+  </div>
+  <div class="row">
+    <p>http://advancedbeginnerchallenge.com – I built a course to get your first job in web development, or upgrade from Junior to mid-level. All done over email for your convenience.
+
+Tasks
+
+- Read Steps 1 & 2 from DevelopAJob.com
+
+This site is a good overview of web development. The author provides additional resources some of which you can purchase. We don't believe you need to pay for an education in web development so bypass those resources. In step 2 we'd ask you to skip the Build Your First Website section. Our second resource provides a more thorough lesson.
+
+- Work through Lesson 1, Building Your First Web Page, from learn.shayhowe.com
+
+Shay's lesson is a crash course and a fantastic introduction to HTML and CSS. Technically, it's a lesson about building for the front-end but we think every web developer should know these things.
+
+- Talk to Us
+
+Please tell us why you want to be a web developer. What are your reasons and what job are you switching from? Leave us a comment below. If you have questions about web dev please ask away. You can also Contact us directly.</p>
+  </div>
+</div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -137,7 +120,7 @@ Please tell us why you want to be a web developer. What are your reasons and wha
                             <a href="mailto:info@love2dev.com">info@love2dev.com</a>
                         </p>
                     </div>
-                    <span class="col-sm-12 social-wrapper">
+                    <span class="col-sm-12 social-wrapper circle">
                         <a href="http://twitter.com/chrislove" class="social-icon fa fa-twitter"></a>
                         <a href="https://www.facebook.com/love2dev/" class="social-icon fa fa-facebook"></a>
                         <a target="_blank" href="https://plus.google.com/b/110904107389779237581/?pageId=110904107389779237581">
@@ -176,34 +159,18 @@ Please tell us why you want to be a web developer. What are your reasons and wha
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12">
-                    <!-- begin newsletter form area -->
-                    <h3>Contact Us</h3>
-                    <div class="subscribe">
-                        <form action="/" method="post" name="footer-contact">
-                            <div class="col-sm-11 form-group">
-                                <input class="col-xs-12" type="text" placeholder="Name" name="contact-name" />
-                            </div>
-                            <div class="col-sm-11 form-group">
-                                <input class="col-xs-12" type="email" placeholder="Email Address" name="contact-email" />
-                            </div>
-                            <div class="col-sm-11 form-group">
-                                <textarea class="col-xs-12" rows="3" name="contact-message"></textarea>
-                            </div>
-                            <div class="col-sm-11 form-group">
-                                <input type="submit" value="Connect" class="btn btn-info pull-right" />
-                            </div>
-                        </form>
-                    </div>
-                    <!-- /end newsletter form area -->
+
                 </div>
             </div>
         </div>
     </footer>
     <script>
         var scripts = ["js/libs/jquery.small.js",
-            "js/libs/bootstrap.min.js",
+            "js/libs/index.js",
+            "js/libs/collapse.js",
+            "js/libs/util.js",
             "js/app/app.js",
-            "js/app/episode/1-start-here-to-build-a-career-in-web-development.js"
+            "js/app/episode&#x2F;1-start-here-to-build-a-career-in-web-development.js"
         ];
     </script>
 

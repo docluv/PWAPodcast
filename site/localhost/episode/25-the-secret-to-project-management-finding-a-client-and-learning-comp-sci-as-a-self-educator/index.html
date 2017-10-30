@@ -39,47 +39,50 @@
 </head>
 
 <body>
-    <header class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="menu-btn-name">Menu</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <a href="/" class="navbar-brand brand-logo col-xs-8">
-                                <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="navbar-collapse collapse navbar-responsive-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="podcasts/">Podcasts</a>
-                                </li>
-                                <li>
-                                    <a href="listenlater/">Listen Later</a>
-                                </li>
-                                <li>
-                                    <a href="search/"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="config/">
-                                        <i class="fa fa-cog" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="podcasts/">Podcasts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listenlater/">Listen Later</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="config/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 flex-nowrap">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-    </header>
+    </nav>
+
     <main class="main-content container-fluid" role="main">
-        <figure class="productbox"><div class="img-box"><img src="http://i1.sndcdn.com/avatars-000227802710-27eerh-original.jpg" alt="25. The Secret to Project Management, Finding a Client, and Learning Comp-Sci as a Self Educator" class="img-responsive"></div><figcaption><h3>25. The Secret to Project Management, Finding a Client, and Learning Comp-Sci as a Self Educator</h3><audio src="https:&#x2F;&#x2F;soundcloud.com&#x2F;starthere-webdev&#x2F;how-to-manage-web-dev-projects-how-to-get-a-client-and-practical-experience-vs-computer-science"></audio><p>http://advancedbeginnerchallenge.com – I built a course to get your first job in web development, or upgrade from Junior to mid-level. All done over email for your convenience.
+        <div class="container">  <div class="row">
+    <div class="card">
+      <img src="http://i1.sndcdn.com/avatars-000227802710-27eerh-original.jpg" alt="25. The Secret to Project Management, Finding a Client, and Learning Comp-Sci as a Self Educator" class="card-img-top">
+      <div class="card-body">
+        <h3 class="card-title">25. The Secret to Project Management, Finding a Client, and Learning Comp-Sci as a Self Educator</h3>
+      </div>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="row">
+    <audio src="https://api.spreaker.com/download/episode/8734727/ep105_mixdown.mp3" controls="controls"></audio>
+  </div>
+  <div class="row">
+    <p>http://advancedbeginnerchallenge.com – I built a course to get your first job in web development, or upgrade from Junior to mid-level. All done over email for your convenience.
 
 Resources:
 - http://dain.io
@@ -87,7 +90,9 @@ Resources:
 - http://starthere.fm All of our episodes, shows, and books
 - Ruby on Rails episode 1 mentioned many times in episode here https://soundcloud.com/starthere-rubyonrails/1-bootcamps-vs-learning-solo-how-to-begin-with-ruby-on-rails
 - Discrete Mathematics Textbook. For this one guys, there are like 40 options on Amazon. So what you want to do is find a book called "Discreet Mathematics and Its Applications". Unfortunately though some versions of this book cost $240 USD, but the good news is some only cost 40 cents. So it varies wildly, and really you can select any version at whatever price you can afford. Here is a direct amazon link to the search result where you can select from the price point you can afford. http://bit.ly/search-for-discrete-text-on-amazon
-- Analysis of Algorithms. For this one, I recommend this book http://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/ref=sr_1_3?ie=UTF8&qid=1463417791&sr=8-3&keywords=analysis+of+algorithms which is about $60 USD. Worth every penny.</p></figcaption><i class="fa fa-plus" aria-hidden="true"></i></figure>
+- Analysis of Algorithms. For this one, I recommend this book http://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/ref=sr_1_3?ie=UTF8&qid=1463417791&sr=8-3&keywords=analysis+of+algorithms which is about $60 USD. Worth every penny.</p>
+  </div>
+</div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -155,7 +160,9 @@ Resources:
     </footer>
     <script>
         var scripts = ["js/libs/jquery.small.js",
-            "js/libs/bootstrap.min.js",
+            "js/libs/index.js",
+            "js/libs/collapse.js",
+            "js/libs/util.js",
             "js/app/app.js",
             "js/app/episode&#x2F;25-the-secret-to-project-management-finding-a-client-and-learning-comp-sci-as-a-self-educator.js"
         ];

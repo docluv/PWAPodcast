@@ -39,47 +39,84 @@
 </head>
 
 <body>
-    <header class="page-header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="podcasts/">Podcasts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listenlater/">Listen Later</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="config/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 flex-nowrap">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <main class="main-content container-fluid" role="main">
         <div class="container">
-            <div class="row">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="menu-btn-name">Menu</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <a href="/" class="navbar-brand brand-logo col-xs-8">
-                                <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="navbar-collapse collapse navbar-responsive-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="podcasts/">Podcasts</a>
-                                </li>
-                                <li>
-                                    <a href="listenlater/">Listen Later</a>
-                                </li>
-                                <li>
-                                    <a href="search/"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="config/">
-                                        <i class="fa fa-cog" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="row podcast-details">
+                <div class="card">
+                    <img srcset="http://is5.mzstatic.com/image/thumb/Music4/v4/ef/cb/c6/efcbc6fd-49a1-cc83-eee5-55a1fb55dae5/source/30x30bb.jpg 30w, http://is5.mzstatic.com/image/thumb/Music4/v4/ef/cb/c6/efcbc6fd-49a1-cc83-eee5-55a1fb55dae5/source/60x60bb.jpg 60w, http://is5.mzstatic.com/image/thumb/Music4/v4/ef/cb/c6/efcbc6fd-49a1-cc83-eee5-55a1fb55dae5/source/100x100bb.jpg 100w, http://is5.mzstatic.com/image/thumb/Music4/v4/ef/cb/c6/efcbc6fd-49a1-cc83-eee5-55a1fb55dae5/source/600x600bb.jpg 600w"
+                        sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw" src="http://is5.mzstatic.com/image/thumb/Music4/v4/ef/cb/c6/efcbc6fd-49a1-cc83-eee5-55a1fb55dae5/source/600x600bb.jpg"
+                        alt="Web Development Fundamentals - SOFT6007 Dcom1" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Web Development Fundamentals - SOFT6007 Dcom1</h3>
+                        <p class="card-text">Colin Manning</p>
                     </div>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="row episode-list">
+                <a href="/episode/class-01-14220563095" class="episode-list-item">Class 01</a>
+                <a href="/episode/soft6007-slides01pdf-14240032511" class="episode-list-item">SOFT6007-Slides01.pdf</a>
+                <a href="/episode/class-02-part-a-14220563093" class="episode-list-item">Class 02 Part A</a>
+                <a href="/episode/class-02-part-b-14220563091" class="episode-list-item">Class 02 Part B</a>
+                <a href="/episode/soft6007-slides02pdf-14240032514" class="episode-list-item">SOFT6007-Slides02.pdf</a>
+                <a href="/episode/class-03-14240032517" class="episode-list-item">Class 03</a>
+                <a href="/episode/soft6007-slides03pdf-14240032520" class="episode-list-item">SOFT6007-Slides03.pdf</a>
+                <a href="/episode/class-04-14240032523" class="episode-list-item">Class 04</a>
+                <a href="/episode/soft6007-slides04pdf-14240032526" class="episode-list-item">SOFT6007-Slides04.pdf</a>
+                <a href="/episode/class-05-14240032529" class="episode-list-item">Class 05</a>
+                <a href="/episode/soft6007-slides05pdf-14240032532" class="episode-list-item">SOFT6007-Slides05.pdf</a>
+                <a href="/episode/class-06-14240032535" class="episode-list-item">Class 06</a>
+                <a href="/episode/soft6007-slides06pdf-14240032538" class="episode-list-item">SOFT6007-Slides06.pdf</a>
+                <a href="/episode/soft6007-slides07pdf-14240032541" class="episode-list-item">SOFT6007-Slides07.pdf</a>
+                <a href="/episode/soft6007-slides08pdf-14240032544" class="episode-list-item">SOFT6007-Slides08.pdf</a>
+                <a href="/episode/class-09-14240032547" class="episode-list-item">Class 09</a>
+                <a href="/episode/class-12-14240032550" class="episode-list-item">Class 12</a>
+                <a href="/episode/class-13-14240032553" class="episode-list-item">Class 13</a>
+                <a href="/episode/class-14-14240032556" class="episode-list-item">Class 14</a>
+                <a href="/episode/class-17-14240032559" class="episode-list-item">Class 17</a>
+                <a href="/episode/class-18-14240032562" class="episode-list-item">Class 18</a>
+                <a href="/episode/class-19-14240032565" class="episode-list-item">Class 19</a>
+                <a href="/episode/class-20-14240032568" class="episode-list-item">Class 20</a>
+                <a href="/episode/class-21-14240032571" class="episode-list-item">Class 21</a>
+                <a href="/episode/class-23-lab-14372653007" class="episode-list-item">Class 23 Lab</a>
+                <a href="/episode/class-24-14372653009" class="episode-list-item">Class 24</a>
+                <a href="/episode/class-25-14372653011" class="episode-list-item">Class 25</a>
+                <a href="/episode/class-27-14783319439" class="episode-list-item">Class 27</a>
+                <a href="/episode/soft6008-01bpdf-14271043742" class="episode-list-item">SOFT6008-01b.pdf</a>
+                <a href="/episode/soft6008-02jpdf-14271043745" class="episode-list-item">SOFT6008-02j.pdf</a>
+                <a href="/episode/html-12-formspdf-14271043748" class="episode-list-item">html-12-forms.pdf</a>
+                <a href="/episode/special-charspdf-14271043751" class="episode-list-item">special-chars.pdf</a>
+            </div>
         </div>
-    </header>
-    <main class="main-content container-fluid" role="main">
-        <div class="container">    <div class="row">        <figure class="productbox">            <div class="img-box">                <img srcset="http://is5.mzstatic.com/image/thumb/Music4/v4/ef/cb/c6/efcbc6fd-49a1-cc83-eee5-55a1fb55dae5/source/30x30bb.jpg 30w, http://is5.mzstatic.com/image/thumb/Music4/v4/ef/cb/c6/efcbc6fd-49a1-cc83-eee5-55a1fb55dae5/source/60x60bb.jpg 60w, http://is5.mzstatic.com/image/thumb/Music4/v4/ef/cb/c6/efcbc6fd-49a1-cc83-eee5-55a1fb55dae5/source/100x100bb.jpg 100w, http://is5.mzstatic.com/image/thumb/Music4/v4/ef/cb/c6/efcbc6fd-49a1-cc83-eee5-55a1fb55dae5/source/600x600bb.jpg 600w" sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw"                    src="http://is5.mzstatic.com/image/thumb/Music4/v4/ef/cb/c6/efcbc6fd-49a1-cc83-eee5-55a1fb55dae5/source/600x600bb.jpg" alt="Web Development Fundamentals - SOFT6007 Dcom1" class="img-responsive">            </div>            <figcaption>                <h3>Web Development Fundamentals - SOFT6007 Dcom1</h3>                <p>Colin Manning</p>            </figcaption>            <i class="fa fa-plus" aria-hidden="true"></i>        </figure>    </div>    <div class="row episode-list">        <a href="/episode/class-01-14220563095" class="episode-list-item">Class 01</a>        <a href="/episode/soft6007-slides01pdf-14240032511" class="episode-list-item">SOFT6007-Slides01.pdf</a>        <a href="/episode/class-02-part-a-14220563093" class="episode-list-item">Class 02 Part A</a>        <a href="/episode/class-02-part-b-14220563091" class="episode-list-item">Class 02 Part B</a>        <a href="/episode/soft6007-slides02pdf-14240032514" class="episode-list-item">SOFT6007-Slides02.pdf</a>        <a href="/episode/class-03-14240032517" class="episode-list-item">Class 03</a>        <a href="/episode/soft6007-slides03pdf-14240032520" class="episode-list-item">SOFT6007-Slides03.pdf</a>        <a href="/episode/class-04-14240032523" class="episode-list-item">Class 04</a>        <a href="/episode/soft6007-slides04pdf-14240032526" class="episode-list-item">SOFT6007-Slides04.pdf</a>        <a href="/episode/class-05-14240032529" class="episode-list-item">Class 05</a>        <a href="/episode/soft6007-slides05pdf-14240032532" class="episode-list-item">SOFT6007-Slides05.pdf</a>        <a href="/episode/class-06-14240032535" class="episode-list-item">Class 06</a>        <a href="/episode/soft6007-slides06pdf-14240032538" class="episode-list-item">SOFT6007-Slides06.pdf</a>        <a href="/episode/soft6007-slides07pdf-14240032541" class="episode-list-item">SOFT6007-Slides07.pdf</a>        <a href="/episode/soft6007-slides08pdf-14240032544" class="episode-list-item">SOFT6007-Slides08.pdf</a>        <a href="/episode/class-09-14240032547" class="episode-list-item">Class 09</a>        <a href="/episode/class-12-14240032550" class="episode-list-item">Class 12</a>        <a href="/episode/class-13-14240032553" class="episode-list-item">Class 13</a>        <a href="/episode/class-14-14240032556" class="episode-list-item">Class 14</a>        <a href="/episode/class-17-14240032559" class="episode-list-item">Class 17</a>        <a href="/episode/class-18-14240032562" class="episode-list-item">Class 18</a>        <a href="/episode/class-19-14240032565" class="episode-list-item">Class 19</a>        <a href="/episode/class-20-14240032568" class="episode-list-item">Class 20</a>        <a href="/episode/class-21-14240032571" class="episode-list-item">Class 21</a>        <a href="/episode/class-23-lab-14372653007" class="episode-list-item">Class 23 Lab</a>        <a href="/episode/class-24-14372653009" class="episode-list-item">Class 24</a>        <a href="/episode/class-25-14372653011" class="episode-list-item">Class 25</a>        <a href="/episode/class-27-14783319439" class="episode-list-item">Class 27</a>        <a href="/episode/soft6008-01bpdf-14271043742" class="episode-list-item">SOFT6008-01b.pdf</a>        <a href="/episode/soft6008-02jpdf-14271043745" class="episode-list-item">SOFT6008-02j.pdf</a>        <a href="/episode/html-12-formspdf-14271043748" class="episode-list-item">html-12-forms.pdf</a>        <a href="/episode/special-charspdf-14271043751" class="episode-list-item">special-chars.pdf</a>    </div></div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -147,7 +184,9 @@
     </footer>
     <script>
         var scripts = ["js/libs/jquery.small.js",
-            "js/libs/bootstrap.min.js",
+            "js/libs/index.js",
+            "js/libs/collapse.js",
+            "js/libs/util.js",
             "js/app/app.js",
             "js/app/podcast&#x2F;web-development-fundamentals-soft6007-dcom1.js"
         ];

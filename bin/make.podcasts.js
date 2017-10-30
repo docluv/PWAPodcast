@@ -13,15 +13,17 @@ class Podcasts {
             podcastList = utils.readJSONFile("../data/podcasts/javascript.podcasts.json"),
             template = fs.readFileSync("../site/src/html/templates/podcast-list-item.html", "utf-8");
 
-        for (let i = 0; i < podcastList.results.length; i++) {
+        //        for (let i = 0; i < podcastList.results.length; i++) {
 
-            if (podcastList.results[i].feedUrl && typeof podcastList.results[i].feedUrl === "string") {
+        let i = 0;
 
-                postcasts.push(PodcastModule.makePageJSON(podcastList.results[i]));
+        if (podcastList.results[i].feedUrl && typeof podcastList.results[i].feedUrl === "string") {
 
-            }
+            postcasts.push(PodcastModule.makePageJSON(podcastList.results[i]));
 
         }
+
+        //        }
 
         let page = this.getDefaultPage();
 
@@ -59,12 +61,16 @@ class Podcasts {
 
         const defaultPodcast = utils.readJSONFile("default.podcast.json");
 
+        let podcastList = utils.readJSONFile("../data/podcasts/javascript.podcasts.json");
+
         //        for (let i = 0; i < podcastList.results.length; i++) {
 
         //            console.log(podcastList.results[i].collectionName);
 
+        
         //read content/article
-        let podcastModule = new PodcastModule(podcastList.results[31], "../site/src/html/templates/podcast.html");
+        let podcastModule = new PodcastModule(podcastList.results[30],
+            "../site/src/html/templates/podcast.html");
 
         podcastModule.render(defaultPodcast);
 

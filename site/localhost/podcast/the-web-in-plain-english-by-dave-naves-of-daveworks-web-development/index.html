@@ -39,47 +39,117 @@
 </head>
 
 <body>
-    <header class="page-header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="podcasts/">Podcasts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listenlater/">Listen Later</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="config/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 flex-nowrap">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <main class="main-content container-fluid" role="main">
         <div class="container">
-            <div class="row">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="menu-btn-name">Menu</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <a href="/" class="navbar-brand brand-logo col-xs-8">
-                                <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="navbar-collapse collapse navbar-responsive-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="podcasts/">Podcasts</a>
-                                </li>
-                                <li>
-                                    <a href="listenlater/">Listen Later</a>
-                                </li>
-                                <li>
-                                    <a href="search/"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="config/">
-                                        <i class="fa fa-cog" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="row podcast-details">
+                <div class="card">
+                    <img srcset="http://is1.mzstatic.com/image/thumb/Music71/v4/6b/ec/53/6bec535b-1407-0b56-b8a1-9466e44f21a7/source/30x30bb.jpg 30w, http://is1.mzstatic.com/image/thumb/Music71/v4/6b/ec/53/6bec535b-1407-0b56-b8a1-9466e44f21a7/source/60x60bb.jpg 60w, http://is1.mzstatic.com/image/thumb/Music71/v4/6b/ec/53/6bec535b-1407-0b56-b8a1-9466e44f21a7/source/100x100bb.jpg 100w, http://is1.mzstatic.com/image/thumb/Music71/v4/6b/ec/53/6bec535b-1407-0b56-b8a1-9466e44f21a7/source/600x600bb.jpg 600w"
+                        sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw" src="http://is1.mzstatic.com/image/thumb/Music71/v4/6b/ec/53/6bec535b-1407-0b56-b8a1-9466e44f21a7/source/600x600bb.jpg"
+                        alt="The Web in Plain English - by Dave Naves of Daveworks Web Development" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">The Web in Plain English - by Dave Naves of Daveworks Web Development</h3>
+                        <p class="card-text">Dave Naves</p>
                     </div>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="row episode-list">
+                <a href="/episode/social-lurking-explained-in-plain-english-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3613"
+                    class="episode-list-item">Social Lurking – Explained in Plain English - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                <a href="/episode/google-analytics-in-plain-english-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3603"
+                    class="episode-list-item">Google Analytics in Plain English - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                <a href="/episode/sexy-bookmarks-wordpress-plug-in-explained-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3591"
+                    class="episode-list-item">Sexy Bookmarks WordPress Plug-in Explained - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                <a href="/episode/breaking-down-the-lies-from-marketers-seos-that-guarantee-page-one-results-on-google-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3581"
+                    class="episode-list-item">Breaking Down the LIES from Marketers &amp; SEOs that ~Guarantee page one results on Google~ - The Web in
+                    Plain English - by Dave Naves of Daveworks Web Development</a>
+                <a href="/episode/how-to-use-google-calendar-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3558"
+                    class="episode-list-item">How to Use Google Calendar - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                <a
+                    href="/episode/selling-services-on-amazon-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3562"
+                    class="episode-list-item">Selling Services on Amazon - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                    <a
+                        href="/episode/how-to-advertise-products-on-amazon-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3545"
+                        class="episode-list-item">How to Advertise Products on Amazon - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                        <a href="/episode/what-is-fulfillment-by-amazon-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3537"
+                            class="episode-list-item">What is Fulfillment by Amazon? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                        <a href="/episode/how-to-sell-on-amazoncom-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3530"
+                            class="episode-list-item">How to Sell on Amazon.com - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                        <a href="/episode/how-to-make-money-via-amazon-associates-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3511"
+                            class="episode-list-item">How to Make Money via Amazon Associates - The Web in Plain English - by Dave Naves of Daveworks Web
+                            Development</a>
+                        <a href="/episode/advanced-google-searching-techniques-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3505"
+                            class="episode-list-item">Advanced Google Searching Techniques - The Web in Plain English - by Dave Naves of Daveworks Web
+                            Development</a>
+                        <a href="/episode/amazon-prime-in-plain-english-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3498"
+                            class="episode-list-item">Amazon Prime in Plain English - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                        <a href="/episode/advanced-blogging-techniques-using-wordpress-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3398"
+                            class="episode-list-item">Advanced Blogging Techniques Using WordPress - The Web in Plain English - by Dave Naves of Daveworks
+                            Web Development</a>
+                        <a href="/episode/advanced-gmail-techniques-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3405"
+                            class="episode-list-item">Advanced Gmail Techniques - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                        <a href="/episode/youtube-for-business-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3403"
+                            class="episode-list-item">YouTube for Business - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                        <a href="/episode/how-to-use-linkedin-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3396"
+                            class="episode-list-item">How to Use Linkedin - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                        <a
+                            href="/episode/what-is-google-hangouts-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3368"
+                            class="episode-list-item">What is Google Hangouts? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                            <a href="/episode/seo-in-plain-english-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3336"
+                                class="episode-list-item">SEO in Plain English - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                            <a href="/episode/what-is-hootsuite-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3315"
+                                class="episode-list-item">What is Hootsuite? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                            <a href="/episode/social-networking-explained-in-plain-english-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3293"
+                                class="episode-list-item">Social Networking Explained in Plain English - The Web in Plain English - by Dave Naves of Daveworks
+                                Web Development</a>
+                            <a href="/episode/facebook-hidden-features-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3296"
+                                class="episode-list-item">Facebook Hidden Features - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                            <a href="/episode/how-to-make-money-using-pinterest-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3254"
+                                class="episode-list-item">How to Make Money Using Pinterest - The Web in Plain English - by Dave Naves of Daveworks Web
+                                Development</a>
+                            <a href="/episode/how-to-use-twitter-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3309"
+                                class="episode-list-item">How to Use Twitter - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                            <a href="/episode/why-you-might-want-your-next-computer-to-be-a-google-chromebook-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp2493"
+                                class="episode-list-item">Why You Might Want Your Next Computer to be a Google Chromebook - The Web in Plain English -
+                                by Dave Naves of Daveworks Web Development</a>
+                            <a href="/episode/what-is-buffer-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp1990"
+                                class="episode-list-item">What is Buffer? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                            <a
+                                href="/episode/what-is-google-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp1793"
+                                class="episode-list-item">What is Google+? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+                                <a href="/episode/what-is-google-voice-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp1663"
+                                    class="episode-list-item">What is Google Voice? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>
+            </div>
         </div>
-    </header>
-    <main class="main-content container-fluid" role="main">
-        <div class="container">    <div class="row">        <figure class="productbox">            <div class="img-box">                <img srcset="http://is1.mzstatic.com/image/thumb/Music71/v4/6b/ec/53/6bec535b-1407-0b56-b8a1-9466e44f21a7/source/30x30bb.jpg 30w, http://is1.mzstatic.com/image/thumb/Music71/v4/6b/ec/53/6bec535b-1407-0b56-b8a1-9466e44f21a7/source/60x60bb.jpg 60w, http://is1.mzstatic.com/image/thumb/Music71/v4/6b/ec/53/6bec535b-1407-0b56-b8a1-9466e44f21a7/source/100x100bb.jpg 100w, http://is1.mzstatic.com/image/thumb/Music71/v4/6b/ec/53/6bec535b-1407-0b56-b8a1-9466e44f21a7/source/600x600bb.jpg 600w" sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw"                    src="http://is1.mzstatic.com/image/thumb/Music71/v4/6b/ec/53/6bec535b-1407-0b56-b8a1-9466e44f21a7/source/600x600bb.jpg" alt="The Web in Plain English - by Dave Naves of Daveworks Web Development" class="img-responsive">            </div>            <figcaption>                <h3>The Web in Plain English - by Dave Naves of Daveworks Web Development</h3>                <p>Dave Naves</p>            </figcaption>            <i class="fa fa-plus" aria-hidden="true"></i>        </figure>    </div>    <div class="row episode-list">        <a href="/episode/social-lurking-explained-in-plain-english-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3613" class="episode-list-item">Social Lurking – Explained in Plain English - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/google-analytics-in-plain-english-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3603" class="episode-list-item">Google Analytics in Plain English - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/sexy-bookmarks-wordpress-plug-in-explained-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3591" class="episode-list-item">Sexy Bookmarks WordPress Plug-in Explained - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/breaking-down-the-lies-from-marketers-seos-that-guarantee-page-one-results-on-google-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3581" class="episode-list-item">Breaking Down the LIES from Marketers &amp; SEOs that ~Guarantee page one results on Google~ - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/how-to-use-google-calendar-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3558" class="episode-list-item">How to Use Google Calendar - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/selling-services-on-amazon-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3562" class="episode-list-item">Selling Services on Amazon - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/how-to-advertise-products-on-amazon-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3545" class="episode-list-item">How to Advertise Products on Amazon - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/what-is-fulfillment-by-amazon-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3537" class="episode-list-item">What is Fulfillment by Amazon? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/how-to-sell-on-amazoncom-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3530" class="episode-list-item">How to Sell on Amazon.com - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/how-to-make-money-via-amazon-associates-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3511" class="episode-list-item">How to Make Money via Amazon Associates - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/advanced-google-searching-techniques-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3505" class="episode-list-item">Advanced Google Searching Techniques - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/amazon-prime-in-plain-english-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3498" class="episode-list-item">Amazon Prime in Plain English - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/advanced-blogging-techniques-using-wordpress-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3398" class="episode-list-item">Advanced Blogging Techniques Using WordPress - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/advanced-gmail-techniques-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3405" class="episode-list-item">Advanced Gmail Techniques - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/youtube-for-business-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3403" class="episode-list-item">YouTube for Business - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/how-to-use-linkedin-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3396" class="episode-list-item">How to Use Linkedin - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/what-is-google-hangouts-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3368" class="episode-list-item">What is Google Hangouts? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/seo-in-plain-english-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3336" class="episode-list-item">SEO in Plain English - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/what-is-hootsuite-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3315" class="episode-list-item">What is Hootsuite? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/social-networking-explained-in-plain-english-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3293" class="episode-list-item">Social Networking Explained in Plain English - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/facebook-hidden-features-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3296" class="episode-list-item">Facebook Hidden Features - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/how-to-make-money-using-pinterest-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3254" class="episode-list-item">How to Make Money Using Pinterest - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/how-to-use-twitter-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp3309" class="episode-list-item">How to Use Twitter - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/why-you-might-want-your-next-computer-to-be-a-google-chromebook-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp2493" class="episode-list-item">Why You Might Want Your Next Computer to be a Google Chromebook - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/what-is-buffer-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp1990" class="episode-list-item">What is Buffer? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/what-is-google-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp1793" class="episode-list-item">What is Google+? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>        <a href="/episode/what-is-google-voice-the-web-in-plain-english-by-dave-naves-of-daveworks-web-development-httpdaveworksnetweb-design-development-tipsp1663" class="episode-list-item">What is Google Voice? - The Web in Plain English - by Dave Naves of Daveworks Web Development</a>    </div></div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -147,7 +217,9 @@
     </footer>
     <script>
         var scripts = ["js/libs/jquery.small.js",
-            "js/libs/bootstrap.min.js",
+            "js/libs/index.js",
+            "js/libs/collapse.js",
+            "js/libs/util.js",
             "js/app/app.js",
             "js/app/podcast&#x2F;the-web-in-plain-english-by-dave-naves-of-daveworks-web-development.js"
         ];

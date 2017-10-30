@@ -39,47 +39,120 @@
 </head>
 
 <body>
-    <header class="page-header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="podcasts/">Podcasts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listenlater/">Listen Later</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="config/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 flex-nowrap">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <main class="main-content container-fluid" role="main">
         <div class="container">
-            <div class="row">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="menu-btn-name">Menu</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <a href="/" class="navbar-brand brand-logo col-xs-8">
-                                <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="navbar-collapse collapse navbar-responsive-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="podcasts/">Podcasts</a>
-                                </li>
-                                <li>
-                                    <a href="listenlater/">Listen Later</a>
-                                </li>
-                                <li>
-                                    <a href="search/"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="config/">
-                                        <i class="fa fa-cog" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="row podcast-details">
+                <div class="card">
+                    <img srcset="http://is1.mzstatic.com/image/thumb/Music62/v4/b5/de/da/b5deda61-0b77-41e3-04ca-0eb288ab1d7c/source/30x30bb.jpg 30w, http://is1.mzstatic.com/image/thumb/Music62/v4/b5/de/da/b5deda61-0b77-41e3-04ca-0eb288ab1d7c/source/60x60bb.jpg 60w, http://is1.mzstatic.com/image/thumb/Music62/v4/b5/de/da/b5deda61-0b77-41e3-04ca-0eb288ab1d7c/source/100x100bb.jpg 100w, http://is1.mzstatic.com/image/thumb/Music62/v4/b5/de/da/b5deda61-0b77-41e3-04ca-0eb288ab1d7c/source/600x600bb.jpg 600w"
+                        sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw" src="http://is1.mzstatic.com/image/thumb/Music62/v4/b5/de/da/b5deda61-0b77-41e3-04ca-0eb288ab1d7c/source/600x600bb.jpg"
+                        alt="Cork Institute of Technology: Computing: SOFT6007 Web Development Fundamentals" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Cork Institute of Technology: Computing: SOFT6007 Web Development Fundamentals</h3>
+                        <p class="card-text">Colin Manning</p>
                     </div>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="row episode-list">
+                <a href="/episode/2011-soft6007-class-16-null" class="episode-list-item">2011 SOFT6007 Class 16</a>
+                <a href="/episode/2011-soft6007-class-13-null" class="episode-list-item">2011 SOFT6007 Class 13</a>
+                <a href="/episode/2011-soft6007-class-12-null" class="episode-list-item">2011 SOFT6007 Class 12</a>
+                <a href="/episode/online-class-image-maps-notes-null" class="episode-list-item">Online Class: Image maps Notes</a>
+                <a href="/episode/online-class-image-maps-null" class="episode-list-item">Online Class: Image maps</a>
+                <a href="/episode/2011-soft6007-class-08-null" class="episode-list-item">2011 SOFT6007 Class 08</a>
+                <a href="/episode/online-class-tables-notes-null" class="episode-list-item">Online Class: Tables Notes</a>
+                <a href="/episode/online-class-tables-null" class="episode-list-item">Online Class: Tables</a>
+                <a href="/episode/2011-soft6007-class-05-null" class="episode-list-item">2011 SOFT6007 Class 05</a>
+                <a href="/episode/online-class-lists-null" class="episode-list-item">Online Class: Lists</a>
+                <a href="/episode/online-class-images-in-html-documents-null" class="episode-list-item">Online Class: Images in HTML documents</a>
+                <a href="/episode/2011-soft6007-class-01-null" class="episode-list-item">2011 SOFT6007 Class 01</a>
+                <a href="/episode/online-class-introduction-to-the-internet-notes-null" class="episode-list-item">Online Class: Introduction to the Internet Notes</a>
+                <a href="/episode/online-class-introduction-to-the-internet-null"
+                    class="episode-list-item">Online Class: Introduction to the Internet</a>
+                <a href="/episode/soft6007-ev-week-10-part-2-video-null" class="episode-list-item">SOFT6007 Ev Week 10 Part 2 Video</a>
+                <a href="/episode/soft6007-ev-week-10-part-1-video-null" class="episode-list-item">SOFT6007 Ev Week 10 Part 1 Video</a>
+                <a href="/episode/soft6007-class-37-audio-null" class="episode-list-item">SOFT6007 Class 37 Audio</a>
+                <a href="/episode/soft6007-class-35-a-video-null" class="episode-list-item">SOFT6007 Class 35 A Video</a>
+                <a href="/episode/soft6007-class-34-a-video-null" class="episode-list-item">SOFT6007 Class 34 A Video</a>
+                <a href="/episode/soft6007-class-34-b-video-null" class="episode-list-item">SOFT6007 Class 34 B Video</a>
+                <a href="/episode/soft6007-ev-week-09-video-part-2-null" class="episode-list-item">SOFT6007 EV Week 09 Video Part 2</a>
+                <a href="/episode/soft6007-ev-week-09-video-part-1-null" class="episode-list-item">SOFT6007 EV Week 09 Video Part 1</a>
+                <a href="/episode/soft6007-class-33-video-null" class="episode-list-item">SOFT6007 Class 33 Video</a>
+                <a href="/episode/soft6007-class-30-a-video-null" class="episode-list-item">SOFT6007 Class 30 A Video</a>
+                <a href="/episode/soft6007-class-29-audio-null" class="episode-list-item">SOFT6007 Class 29 Audio</a>
+                <a href="/episode/soft6007-class-28-video-null" class="episode-list-item">SOFT6007 Class 28 Video</a>
+                <a href="/episode/soft6007-class-25-video-null" class="episode-list-item">SOFT6007 Class 25 Video</a>
+                <a href="/episode/css-slides-null" class="episode-list-item">CSS Slides</a>
+                <a href="/episode/soft6007-class-21-video-null" class="episode-list-item">SOFT6007 Class 21 Video</a>
+                <a href="/episode/soft6007-ev-week-06-video-null" class="episode-list-item">SOFT6007 EV Week 06 Video</a>
+                <a href="/episode/soft6007-ev-week-05-video-null" class="episode-list-item">SOFT6007 EV Week 05 Video</a>
+                <a href="/episode/class-17-audio-recorded-20100302-null" class="episode-list-item">Class 17 Audio Recorded 2010.03.02</a>
+                <a href="/episode/soft6007-ev-week-04-video-null" class="episode-list-item">SOFT6007 EV Week 04 Video</a>
+                <a href="/episode/soft6007-class-15-b-video-null" class="episode-list-item">SOFT6007 Class 15 B Video</a>
+                <a href="/episode/soft6007-class-14-b-video-null" class="episode-list-item">SOFT6007 Class 14 B Video</a>
+                <a href="/episode/soft6007-ev-week-03-video-null" class="episode-list-item">SOFT6007 EV Week 03 Video</a>
+                <a href="/episode/soft6007-class-07b-video-null" class="episode-list-item">SOFT6007 Class 07B Video</a>
+                <a href="/episode/soft6007-class-06b-video-null" class="episode-list-item">SOFT6007 Class 06B Video</a>
+                <a href="/episode/soft6007-class-06b-video-null" class="episode-list-item">SOFT6007 Class 06B Video</a>
+                <a href="/episode/soft6007-ev-week-02-video-null" class="episode-list-item">SOFT6007 EV Week 02 Video</a>
+                <a href="/episode/soft6007-class-05-null" class="episode-list-item">SOFT6007 Class 05</a>
+                <a href="/episode/soft6007-class-04-sample-page-3-source-null" class="episode-list-item">SOFT6007 Class 04 Sample Page 3 Source</a>
+                <a href="/episode/soft6007-class-04-sample-page-3-null" class="episode-list-item">SOFT6007 Class 04 Sample Page 3</a>
+                <a href="/episode/soft6007-class-04-audio-null" class="episode-list-item">SOFT6007 Class 04 Audio</a>
+                <a href="/episode/soft6007-class-03b-video-null" class="episode-list-item">SOFT6007 Class 03B Video</a>
+                <a href="/episode/soft6007-class-03a-video-null" class="episode-list-item">SOFT6007 Class 03A Video</a>
+                <a href="/episode/soft6007-class-02b-video-null" class="episode-list-item">SOFT6007 Class 02B Video</a>
+                <a href="/episode/soft6007-class-02a-video-null" class="episode-list-item">SOFT6007 Class 02A Video</a>
+                <a href="/episode/soft6007-evening-week-01-null" class="episode-list-item">SOFT6007 Evening Week 01</a>
+                <a href="/episode/soft6007-class-01-video-null" class="episode-list-item">SOFT6007 Class 01 Video</a>
+                <a href="/episode/online-class-02-html-basics-null" class="episode-list-item">Online Class 02: HTML Basics</a>
+                <a href="/episode/online-class-02-notes-null" class="episode-list-item">Online Class 02: Notes</a>
+                <a href="/episode/online-class-03-images-in-html-documents-null" class="episode-list-item">Online Class 03: Images in HTML Documents</a>
+                <a href="/episode/house-rules-for-html-null" class="episode-list-item">House Rules for HTML</a>
+                <a href="/episode/online-class-06-going-live-null" class="episode-list-item">Online Class 06: Going Live!</a>
+                <a href="/episode/online-class-07-image-maps-exercise-i-null" class="episode-list-item">Online Class 07: Image Maps Exercise I</a>
+                <a href="/episode/online-class-08-digital-color-part-i-null" class="episode-list-item">Online Class 08: Digital Color - Part I</a>
+                <a href="/episode/online-class-09-digital-color-part-ii-null"
+                    class="episode-list-item">Online Class 09: Digital Color - Part II</a>
+                <a href="/episode/online-class-10-adding-color-to-web-pages-null"
+                    class="episode-list-item">Online Class 10: Adding Color to Web Pages</a>
+                <a href="/episode/online-class-11-designing-with-tables-null"
+                    class="episode-list-item">Online Class 11: Designing with Tables</a>
+                <a href="/episode/online-class-12-javascript-i-null" class="episode-list-item">Online Class 12: JavaScript I</a>
+                <a href="/episode/online-class-12-javscript-i-null" class="episode-list-item">Online Class 12: JavScript I</a>
+                <a href="/episode/online-class-13-javascript-ii-null" class="episode-list-item">Online Class 13: JavaScript II</a>
+                <a href="/episode/online-class-14-javascript-iii-null" class="episode-list-item">Online Class 14: JavaScript III</a>
+            </div>
         </div>
-    </header>
-    <main class="main-content container-fluid" role="main">
-        <div class="container">    <div class="row">        <figure class="productbox">            <div class="img-box">                <img srcset="http://is1.mzstatic.com/image/thumb/Music62/v4/b5/de/da/b5deda61-0b77-41e3-04ca-0eb288ab1d7c/source/30x30bb.jpg 30w, http://is1.mzstatic.com/image/thumb/Music62/v4/b5/de/da/b5deda61-0b77-41e3-04ca-0eb288ab1d7c/source/60x60bb.jpg 60w, http://is1.mzstatic.com/image/thumb/Music62/v4/b5/de/da/b5deda61-0b77-41e3-04ca-0eb288ab1d7c/source/100x100bb.jpg 100w, http://is1.mzstatic.com/image/thumb/Music62/v4/b5/de/da/b5deda61-0b77-41e3-04ca-0eb288ab1d7c/source/600x600bb.jpg 600w" sizes="(max-width: 769px) 100vw, (max-width: 1025px) 46vw, 30vw"                    src="http://is1.mzstatic.com/image/thumb/Music62/v4/b5/de/da/b5deda61-0b77-41e3-04ca-0eb288ab1d7c/source/600x600bb.jpg" alt="Cork Institute of Technology: Computing: SOFT6007 Web Development Fundamentals" class="img-responsive">            </div>            <figcaption>                <h3>Cork Institute of Technology: Computing: SOFT6007 Web Development Fundamentals</h3>                <p>Colin Manning</p>            </figcaption>            <i class="fa fa-plus" aria-hidden="true"></i>        </figure>    </div>    <div class="row episode-list">        <a href="/episode/2011-soft6007-class-16-null" class="episode-list-item">2011 SOFT6007 Class 16</a>        <a href="/episode/2011-soft6007-class-13-null" class="episode-list-item">2011 SOFT6007 Class 13</a>        <a href="/episode/2011-soft6007-class-12-null" class="episode-list-item">2011 SOFT6007 Class 12</a>        <a href="/episode/online-class-image-maps-notes-null" class="episode-list-item">Online Class: Image maps Notes</a>        <a href="/episode/online-class-image-maps-null" class="episode-list-item">Online Class: Image maps</a>        <a href="/episode/2011-soft6007-class-08-null" class="episode-list-item">2011 SOFT6007 Class 08</a>        <a href="/episode/online-class-tables-notes-null" class="episode-list-item">Online Class: Tables Notes</a>        <a href="/episode/online-class-tables-null" class="episode-list-item">Online Class: Tables</a>        <a href="/episode/2011-soft6007-class-05-null" class="episode-list-item">2011 SOFT6007 Class 05</a>        <a href="/episode/online-class-lists-null" class="episode-list-item">Online Class: Lists</a>        <a href="/episode/online-class-images-in-html-documents-null" class="episode-list-item">Online Class: Images in HTML documents</a>        <a href="/episode/2011-soft6007-class-01-null" class="episode-list-item">2011 SOFT6007 Class 01</a>        <a href="/episode/online-class-introduction-to-the-internet-notes-null" class="episode-list-item">Online Class: Introduction to the Internet Notes</a>        <a href="/episode/online-class-introduction-to-the-internet-null" class="episode-list-item">Online Class: Introduction to the Internet</a>        <a href="/episode/soft6007-ev-week-10-part-2-video-null" class="episode-list-item">SOFT6007 Ev Week 10 Part 2 Video</a>        <a href="/episode/soft6007-ev-week-10-part-1-video-null" class="episode-list-item">SOFT6007 Ev Week 10 Part 1 Video</a>        <a href="/episode/soft6007-class-37-audio-null" class="episode-list-item">SOFT6007 Class 37 Audio</a>        <a href="/episode/soft6007-class-35-a-video-null" class="episode-list-item">SOFT6007 Class 35 A Video</a>        <a href="/episode/soft6007-class-34-a-video-null" class="episode-list-item">SOFT6007 Class 34 A Video</a>        <a href="/episode/soft6007-class-34-b-video-null" class="episode-list-item">SOFT6007 Class 34 B Video</a>        <a href="/episode/soft6007-ev-week-09-video-part-2-null" class="episode-list-item">SOFT6007 EV Week 09 Video Part 2</a>        <a href="/episode/soft6007-ev-week-09-video-part-1-null" class="episode-list-item">SOFT6007 EV Week 09 Video Part 1</a>        <a href="/episode/soft6007-class-33-video-null" class="episode-list-item">SOFT6007 Class 33 Video</a>        <a href="/episode/soft6007-class-30-a-video-null" class="episode-list-item">SOFT6007 Class 30 A Video</a>        <a href="/episode/soft6007-class-29-audio-null" class="episode-list-item">SOFT6007 Class 29 Audio</a>        <a href="/episode/soft6007-class-28-video-null" class="episode-list-item">SOFT6007 Class 28 Video</a>        <a href="/episode/soft6007-class-25-video-null" class="episode-list-item">SOFT6007 Class 25 Video</a>        <a href="/episode/css-slides-null" class="episode-list-item">CSS Slides</a>        <a href="/episode/soft6007-class-21-video-null" class="episode-list-item">SOFT6007 Class 21 Video</a>        <a href="/episode/soft6007-ev-week-06-video-null" class="episode-list-item">SOFT6007 EV Week 06 Video</a>        <a href="/episode/soft6007-ev-week-05-video-null" class="episode-list-item">SOFT6007 EV Week 05 Video</a>        <a href="/episode/class-17-audio-recorded-20100302-null" class="episode-list-item">Class 17 Audio Recorded 2010.03.02</a>        <a href="/episode/soft6007-ev-week-04-video-null" class="episode-list-item">SOFT6007 EV Week 04 Video</a>        <a href="/episode/soft6007-class-15-b-video-null" class="episode-list-item">SOFT6007 Class 15 B Video</a>        <a href="/episode/soft6007-class-14-b-video-null" class="episode-list-item">SOFT6007 Class 14 B Video</a>        <a href="/episode/soft6007-ev-week-03-video-null" class="episode-list-item">SOFT6007 EV Week 03 Video</a>        <a href="/episode/soft6007-class-07b-video-null" class="episode-list-item">SOFT6007 Class 07B Video</a>        <a href="/episode/soft6007-class-06b-video-null" class="episode-list-item">SOFT6007 Class 06B Video</a>        <a href="/episode/soft6007-class-06b-video-null" class="episode-list-item">SOFT6007 Class 06B Video</a>        <a href="/episode/soft6007-ev-week-02-video-null" class="episode-list-item">SOFT6007 EV Week 02 Video</a>        <a href="/episode/soft6007-class-05-null" class="episode-list-item">SOFT6007 Class 05</a>        <a href="/episode/soft6007-class-04-sample-page-3-source-null" class="episode-list-item">SOFT6007 Class 04 Sample Page 3 Source</a>        <a href="/episode/soft6007-class-04-sample-page-3-null" class="episode-list-item">SOFT6007 Class 04  Sample Page 3</a>        <a href="/episode/soft6007-class-04-audio-null" class="episode-list-item">SOFT6007 Class 04 Audio</a>        <a href="/episode/soft6007-class-03b-video-null" class="episode-list-item">SOFT6007 Class 03B Video</a>        <a href="/episode/soft6007-class-03a-video-null" class="episode-list-item">SOFT6007 Class 03A Video</a>        <a href="/episode/soft6007-class-02b-video-null" class="episode-list-item">SOFT6007 Class 02B Video</a>        <a href="/episode/soft6007-class-02a-video-null" class="episode-list-item">SOFT6007 Class 02A Video</a>        <a href="/episode/soft6007-evening-week-01-null" class="episode-list-item">SOFT6007 Evening Week 01</a>        <a href="/episode/soft6007-class-01-video-null" class="episode-list-item">SOFT6007 Class 01 Video</a>        <a href="/episode/online-class-02-html-basics-null" class="episode-list-item">Online Class 02: HTML Basics</a>        <a href="/episode/online-class-02-notes-null" class="episode-list-item">Online Class 02: Notes</a>        <a href="/episode/online-class-03-images-in-html-documents-null" class="episode-list-item">Online Class 03: Images in HTML Documents</a>        <a href="/episode/house-rules-for-html-null" class="episode-list-item">House Rules for HTML</a>        <a href="/episode/online-class-06-going-live-null" class="episode-list-item">Online Class 06: Going Live!</a>        <a href="/episode/online-class-07-image-maps-exercise-i-null" class="episode-list-item">Online Class 07: Image Maps Exercise I</a>        <a href="/episode/online-class-08-digital-color-part-i-null" class="episode-list-item">Online Class 08: Digital Color - Part I</a>        <a href="/episode/online-class-09-digital-color-part-ii-null" class="episode-list-item">Online Class 09: Digital Color - Part II</a>        <a href="/episode/online-class-10-adding-color-to-web-pages-null" class="episode-list-item">Online Class 10: Adding Color to Web Pages</a>        <a href="/episode/online-class-11-designing-with-tables-null" class="episode-list-item">Online Class 11: Designing with Tables</a>        <a href="/episode/online-class-12-javascript-i-null" class="episode-list-item">Online Class 12: JavaScript I</a>        <a href="/episode/online-class-12-javscript-i-null" class="episode-list-item">Online Class 12: JavScript I</a>        <a href="/episode/online-class-13-javascript-ii-null" class="episode-list-item">Online Class 13: JavaScript II</a>        <a href="/episode/online-class-14-javascript-iii-null" class="episode-list-item">Online Class 14: JavaScript III</a>    </div></div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -147,7 +220,9 @@
     </footer>
     <script>
         var scripts = ["js/libs/jquery.small.js",
-            "js/libs/bootstrap.min.js",
+            "js/libs/index.js",
+            "js/libs/collapse.js",
+            "js/libs/util.js",
             "js/app/app.js",
             "js/app/podcast&#x2F;cork-institute-of-technology-computing-soft6007-web-development-fundamentals.js"
         ];

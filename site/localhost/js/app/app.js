@@ -1,4 +1,9 @@
+
+
 if ('serviceWorker' in navigator) {
+
+    var isSubscribed = false,
+        swRegistration;
 
     //push key
     const applicationServerPublicKey = 'BH2mv3NZwRaO4-fnNAXe212SW8gep402wV4dStk2vewdGtUOrVMrGY0zh-2WNT4_aEVLc12r0bfuABanQRy8bDM';
@@ -10,6 +15,8 @@ if ('serviceWorker' in navigator) {
         // reg.active; // the active worker, or undefined   
 
         console.log("Registration was successful");
+
+        swRegistration = reg;
 
         reg.addEventListener('updatefound', () => {   // A wild service worker has appeared in reg.installing!
 
@@ -52,71 +59,68 @@ if ('serviceWorker' in navigator) {
 
         });
 
-}
 
-var isSubscribed = false;
+    function initialisePush() {  // Set the initial subscription value
 
+        swRegistration.pushManager.getSubscription() .then(function (subscription) {
 
-function initialisePush() {  // Set the initial subscription value
-     
-    swRegistration.pushManager.getSubscription() .then(function (subscription) {  
+            isSubscribed = !(subscription === null);
 
-        isSubscribed = !(subscription === null);
-          
-        if (isSubscribed) {   
-            console.log('User IS subscribed.');  
-        } else {   
-            console.log('User is NOT subscribed.');  
-        }
-   
-        updateBtn(); 
+            if (isSubscribed) {
+                console.log('User IS subscribed.');
+            } else {
+                console.log('User is NOT subscribed.');
+            }
 
-    });
+//            updateBtn();
 
-}
+        });
 
-
-function subscribeUser() {
-
-    const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
-
-    swRegistration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: applicationServerKey
-    }) .then(function (subscription) {
-
-        console.log('User is subscribed.');
-
-        updateSubscriptionOnServer(subscription);
-
-        isSubscribed = true;
-
-        updateBtn();
-
-    }) .catch(function (err) {
-        console.log('Failed to subscribe the user: ', err);
-        updateBtn();
-    });
-}
-
-function getParameterByName(name, url) {
-    if (!url) {
-        url = window.location.href;
     }
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
 
-if ('storage' in navigator && 'estimate' in navigator.storage) {
+    function subscribeUser() {
 
-    navigator.storage.estimate().then(estimate => {
+        const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
 
-        console.log(`Using ${estimate.usage} out of ${estimate.quota} bytes.`);
+        swRegistration.pushManager.subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: applicationServerKey
+        }) .then(function (subscription) {
 
-    });
+            console.log('User is subscribed.');
+
+            updateSubscriptionOnServer(subscription);
+
+            isSubscribed = true;
+
+            updateBtn();
+
+        }) .catch(function (err) {
+            console.log('Failed to subscribe the user: ', err);
+            updateBtn();
+        });
+    }
+
+    function getParameterByName(name, url) {
+        if (!url) {
+            url = window.location.href;
+        }
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    if ('storage' in navigator && 'estimate' in navigator.storage) {
+
+        navigator.storage.estimate().then(estimate => {
+
+            console.log(`Using ${estimate.usage} out of ${estimate.quota} bytes.`);
+
+        });
+
+    }
 
 }

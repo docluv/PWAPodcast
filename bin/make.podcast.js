@@ -128,7 +128,7 @@ class PodcastModule extends SiteModule {
 
     }
 
-    static makePageJSON(srcObj) {
+    makePageJSON(srcObj) {
 
         let ret = {
             "slug": utils.makeSlug(srcObj.collectionName),
