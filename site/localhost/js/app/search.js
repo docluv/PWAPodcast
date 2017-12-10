@@ -1,17 +1,5 @@
 (function () {
 
-    function getParameterByName(name, url) {
-        if (!url) {
-            url = window.location.href;
-        }
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
     function renderResults(results) {
 
         var template = document.getElementById("search-results-template"),
@@ -26,6 +14,11 @@
         fetch("api/search.json?term=" + term)
             .then(function (response) {
 
+                if (response.status !== 200) {     
+                    console.log('Looks like there was a problem. Status Code: ' +       response.status);     
+                    return;    
+                }   
+
                 return response.json();
 
             }).then(function (results) {
@@ -37,9 +30,8 @@
                 console.log('No CORS Fetch Error :-S', err);
             });
 
-
     }
 
-    fetchSearch(getParameterByName("term"));
+    fetchSearch(utils.getParameterByName("term"));
 
 })();

@@ -1,6 +1,6 @@
 
 
-self.addEventListener("install", function (event) {
+self.addEventListener("install", event => {
 
     event.waitUntil(
 
@@ -10,7 +10,7 @@ self.addEventListener("install", function (event) {
 
 });
 
-self.addEventListener("activate", function (event) {
+self.addEventListener("activate", event => {
     //on activate
     event.waitUntil(
 
@@ -21,37 +21,37 @@ self.addEventListener("activate", function (event) {
 });
 
 
-self.addEventListener("fetch", function (event) {
+self.addEventListener("fetch", event => {
 
     console.log("service worker fetching!");
 
 });
 
 
-self.addEventListener("push", function (event) {
+self.addEventListener("push", event => {
 
     console.log('[Service Worker] Push Received.');
     console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
 
     try {
-        var episode = JSON.parse(event.data.text());
+        //        var episode = JSON.parse(event.data.text());
 
-        const title = episode.title;
+        const title = "1. Start Here to Build a Career in Web Development";
         const options = {
             body: 'Yay it works.',
             icon: 'img/pwa-podstr-logo-70x70.png',
             badge: 'img/pwa-podstr-logo-70x70.png',
-            image: episode.image,
+            image: '"http://i1.sndcdn.com/avatars-000227802710-27eerh-original.jpg"',
             vibrate: [200, 100, 200, 100, 200, 100, 200],
             actions: [{
                 action: "listen",
                 title: "Listen Now",
-                icon: 'img/pwa-podstr-logo-70x70.png'
+                icon: 'img/listen-now.png'
             },
             {
                 action: "later",
                 title: "Listen Later",
-                icon: 'img/heart-logo.gif'
+                icon: 'img/listen-later.png'
             }]
         };
 
@@ -64,27 +64,82 @@ self.addEventListener("push", function (event) {
 
 });
 
-function listenToEpisode(notification){
+self.addEventListener("pushsubscriptionchange", event => {
 
-    console.log("listen to episode");
+    console.log("subscription change ", event);
+
+
+});
+
+function makeSlug(src) {
+
+    if (typeof src === "string") {
+
+        return src.replace(/ +/g, "-")
+            .replace(/\'/g, "")
+            .replace(/[^\w-]+/g, "")
+            .replace(/-+/g, "-")
+            .toLowerCase();
+
+    }
+
+    return "";
 
 }
 
-function saveEpisodeForLater(notification){
+function listenToEpisode(notification) {
+
+    console.log("listen to episode: ", notification.title);
+
+    clients.openWindow('/episode/' + makeSlug(notification.title));
+
+}
+
+function saveEpisodeForLater(notification) {
 
     console.log("save episode for later");
 
 }
 
-self.addEventListener('notificationclick', function (event) {
+function persistEpisode(episode, result){
+
+    //store in IDB
+    
+}
+
+function getEpisode(episode) {
+
+    if (episode.link) {
+
+        var self = this;
+
+        fetch(episode.link)
+            .then(function (response) {
+
+                return response.blob();
+
+            }).then(function (result) {
+
+                persistEpisode(episode, result);
+
+            })
+            .catch(function (err) {
+                console.log('Episode Fetch Error :-S', err);
+            });
+
+    }
+
+}
+
+self.addEventListener('notificationclick', event => {
 
     console.log('[Service Worker] Notification click Received. "${event}"');
 
-    if(event.action === "listen"){
+    if (event.action === "listen") {
 
         listenToEpisode(event.notification);
-        
-    }else if(event.action === "later"){
+
+    } else if (event.action === "later") {
 
         saveEpisodeForLater(event.notification);
 
@@ -92,4 +147,12 @@ self.addEventListener('notificationclick', function (event) {
 
     event.notification.close();
 
-})
+});
+
+self.addEventListener('sync', function (event) {
+
+    if (event.tag == 'get-episode') {
+//        event.waitUntil(getEpisode());
+    }
+
+});
