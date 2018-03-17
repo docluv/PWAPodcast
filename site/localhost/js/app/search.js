@@ -5,7 +5,11 @@
         var template = document.getElementById("search-results-template"),
             searchResults = document.querySelector('.search-results');
 
+        if (template && searchResults) {
+
             searchResults.innerHTML = Mustache.render(template.innerHTML, results);
+
+        }
 
     }
 

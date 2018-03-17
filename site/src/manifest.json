@@ -4,7 +4,7 @@
     "name": "PWA Podstr",
     "scope": "/",
     "display": "fullscreen",
-    "start_url": "https://love2dev.com/",
+    "start_url": "/",
     "short_name": "Podstr",
     "theme_color": "transparent",
     "description": "A PWA Podcast Example App",

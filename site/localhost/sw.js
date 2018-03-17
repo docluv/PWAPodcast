@@ -1,29 +1,129 @@
+'use strict';
 
+/*
+Constants used in the functions to ensure consistency
+Adjust values to fit your desired naming and time frame conventions.
+*/
+const VERSION = "v1",
+    PRECACHE_NAME = "pre-cache",
+    // CACHE_MANIFEST = "cache-manifest.json",
+    // CACHE_MANIFEST_KEY = "cache-manifest",
+    // PRECACHE_KEY = "precache-assets",
+    DYNAMIC_CACHE_NAME = "dynamic-cache",
+    MP3_CACHE_NAME = "episode-mp3-cache",
+    DYNAMIC_CACHE_MAX = 20,
+    PRECACHE_URLS = [
+        "css/libs/bootstrap.min.css",
+        "https://fonts.googleapis.com/css?family=Oswald:300,400",
+        "http://localhost:57662/css/libs/font-awesome.min.css",
+        "http://localhost:57662/css/libs/font-awesome.min.css",
+        "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800",
+        "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700",
+        "http://localhost:57662/css/app/site.css",
+        "img/pwa-podstr-logo-144x70.png",
+        "js/app/app.bootstrap.js",
+        "js/libs/jquery.small.js",
+        "js/libs/index.js",
+        "js/libs/collapse.js",
+        "js/libs/util.js",
+        "js/app/app.js",
+        "js/app/podcast.js",
+        "js/app/podcasts.js",
+        "js/app/config.js",
+        "js/app/contact.js",
+        "js/app/home.js",
+        "js/libs/mustache.min.js",
+        "js/app/search.js"
+    ];
+//    IDB_NAME = "sw_cache",
+//    URL_CACHE_DB = "url-meta-cache",
+//    CACHE_UPDATE_TTL_KEY = "cache-manifest-ttl",
+//for development I recommend 1 minute or less ;)
+//   PRECACHE_UPDATE_TTL = 1000; //1000 * 60 * 60 * 24; //1 day, can adjust to your desired time frame
+
+
+function cacheName(key) {
+    return key + "-" + VERSION;
+}
 
 self.addEventListener("install", event => {
 
+    self.skipWaiting();
+
     event.waitUntil(
 
-        console.log("service worker installed")
+        caches.open(cacheName(PRECACHE_NAME)).then(cache => {
+
+            return cache.addAll(PRECACHE_URLS);
+
+        })
 
     );
 
 });
 
 self.addEventListener("activate", event => {
-    //on activate
+
     event.waitUntil(
 
-        console.log("service worker activated")
+        caches.keys().then(cacheNames => {
 
+            cacheNames.forEach(value => {
+
+                if (value.indexOf(VERSION) < 0) {
+                    caches.delete(value);
+                }
+
+            });
+
+            return;
+        })
     );
 
 });
 
-
 self.addEventListener("fetch", event => {
 
-    console.log("service worker fetching!");
+    console.log("fetch url: ", event.request.url);
+
+    let request = event.request;
+
+    event.respondWith(
+
+        caches.match(event.request).then(
+            response => {
+
+                return response || fetch(event.request).then(
+                    response => {
+
+                        let cacheResp = response.clone();
+
+                        for (var pair of response.headers.entries()) {
+                            console.log("header - " + pair[0] + ': ' + pair[1]);
+                        }
+
+                        //only cache is the status is OK & not a chrome-extension URL
+                        if ([0, 200].includes(response.status) &&
+                            request.url.indexOf("chrome-extension")) {
+
+                            caches.open(cacheName(DYNAMIC_CACHE_NAME)).then(
+                                cache => {
+
+                                    cache.put(event.request, cacheResp);
+
+                                });
+
+                        }
+
+                        return response;
+                    }
+                )
+
+            })
+
+        /* end responseWith */
+
+    );
 
 });
 
@@ -44,21 +144,21 @@ self.addEventListener("push", event => {
             image: '"http://i1.sndcdn.com/avatars-000227802710-27eerh-original.jpg"',
             vibrate: [200, 100, 200, 100, 200, 100, 200],
             actions: [{
-                action: "listen",
-                title: "Listen Now",
-                icon: 'img/listen-now.png'
-            },
-            {
-                action: "later",
-                title: "Listen Later",
-                icon: 'img/listen-later.png'
-            }]
+                    action: "listen",
+                    title: "Listen Now",
+                    icon: 'img/listen-now.png'
+                },
+                {
+                    action: "later",
+                    title: "Listen Later",
+                    icon: 'img/listen-later.png'
+                }
+            ]
         };
 
         event.waitUntil(self.registration.showNotification(title, options));
 
-    }
-    catch (e) {
+    } catch (e) {
         console('invalid json - notification supressed');
     }
 
@@ -101,10 +201,10 @@ function saveEpisodeForLater(notification) {
 
 }
 
-function persistEpisode(episode, result){
+function persistEpisode(episode, result) {
 
     //store in IDB
-    
+
 }
 
 function getEpisode(episode) {
@@ -149,10 +249,10 @@ self.addEventListener('notificationclick', event => {
 
 });
 
-self.addEventListener('sync', function (event) {
+self.addEventListener('sync', event => {
 
-    if (event.tag == 'get-episode') {
-//        event.waitUntil(getEpisode());
+    if (event.tag === "get-episode") {
+        //        event.waitUntil(getEpisode());
     }
 
 });

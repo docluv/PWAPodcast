@@ -3,9 +3,12 @@ html {
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
+    font-family: /* 1 */
+    -apple-system, BlinkMacSystemFont, /* 2 */
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", /* 3 */
+    "Helvetica Neue", sans-serif;
+    font-size: 16pt;
+    line-height: 1.5;
     color: #666;
     background-color: #fff;
 }
