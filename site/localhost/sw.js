@@ -1,4 +1,7 @@
-'use strict';
+/*eslint-env es6, serviceworker */
+/*global client, self */
+
+"use strict";
 
 /*
 Constants used in the functions to ensure consistency
@@ -42,76 +45,76 @@ const VERSION = "v1",
 //   PRECACHE_UPDATE_TTL = 1000; //1000 * 60 * 60 * 24; //1 day, can adjust to your desired time frame
 
 
-function cacheName(key) {
+function cacheName( key ) {
     return key + "-" + VERSION;
 }
 
-self.addEventListener("install", event => {
+self.addEventListener( "install", event => {
 
     self.skipWaiting();
 
     event.waitUntil(
 
-        caches.open(cacheName(PRECACHE_NAME)).then(cache => {
+        caches.open( cacheName( PRECACHE_NAME ) ).then( cache => {
 
-            return cache.addAll(PRECACHE_URLS);
+            return cache.addAll( PRECACHE_URLS );
 
-        })
+        } )
 
     );
 
-});
+} );
 
-self.addEventListener("activate", event => {
+self.addEventListener( "activate", event => {
 
     event.waitUntil(
 
-        caches.keys().then(cacheNames => {
+        caches.keys().then( cacheNames => {
 
-            cacheNames.forEach(value => {
+            cacheNames.forEach( value => {
 
-                if (value.indexOf(VERSION) < 0) {
-                    caches.delete(value);
+                if ( value.indexOf( VERSION ) < 0 ) {
+                    caches.delete( value );
                 }
 
-            });
+            } );
 
             return;
-        })
+        } )
     );
 
-});
+} );
 
-self.addEventListener("fetch", event => {
+self.addEventListener( "fetch", event => {
 
-    console.log("fetch url: ", event.request.url);
+    console.log( "fetch url: ", event.request.url );
 
     let request = event.request;
 
     event.respondWith(
 
-        caches.match(event.request).then(
+        caches.match( event.request ).then(
             response => {
 
-                return response || fetch(event.request).then(
+                return response || fetch( event.request ).then(
                     response => {
 
                         let cacheResp = response.clone();
 
-                        for (var pair of response.headers.entries()) {
-                            console.log("header - " + pair[0] + ': ' + pair[1]);
+                        for ( var pair of response.headers.entries() ) {
+                            console.log( "header - " + pair[ 0 ] + ': ' + pair[ 1 ] );
                         }
 
                         //only cache is the status is OK & not a chrome-extension URL
-                        if ([0, 200].includes(response.status) &&
-                            request.url.indexOf("chrome-extension")) {
+                        if ( [ 0, 200 ].includes( response.status ) &&
+                            request.url.indexOf( "chrome-extension" ) ) {
 
-                            caches.open(cacheName(DYNAMIC_CACHE_NAME)).then(
+                            caches.open( cacheName( DYNAMIC_CACHE_NAME ) ).then(
                                 cache => {
 
-                                    cache.put(event.request, cacheResp);
+                                    cache.put( event.request, cacheResp );
 
-                                });
+                                } );
 
                         }
 
@@ -119,31 +122,33 @@ self.addEventListener("fetch", event => {
                     }
                 )
 
-            })
+            } )
 
         /* end responseWith */
 
     );
 
-});
+} );
 
 
-self.addEventListener("push", event => {
+self.addEventListener( "push", event => {
 
-    console.log('[Service Worker] Push Received.');
-    console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+    console.log( '[Service Worker] Push Received.' );
+    console.log( `[Service Worker] Push had this data: "${event.data.text()}"` );
+
+    let data = JSON.parse( event.data );
 
     try {
         //        var episode = JSON.parse(event.data.text());
 
         const title = "1. Start Here to Build a Career in Web Development";
         const options = {
-            body: 'Yay it works.',
+            body: data.body,
             icon: 'img/pwa-podstr-logo-70x70.png',
             badge: 'img/pwa-podstr-logo-70x70.png',
             image: '"http://i1.sndcdn.com/avatars-000227802710-27eerh-original.jpg"',
-            vibrate: [200, 100, 200, 100, 200, 100, 200],
-            actions: [{
+            vibrate: data.vibrate,
+            actions: [ {
                     action: "listen",
                     title: "Listen Now",
                     icon: 'img/listen-now.png'
@@ -156,29 +161,29 @@ self.addEventListener("push", event => {
             ]
         };
 
-        event.waitUntil(self.registration.showNotification(title, options));
+        event.waitUntil( self.registration.showNotification( title, options ) );
 
-    } catch (e) {
-        console('invalid json - notification supressed');
+    } catch ( e ) {
+        console( 'invalid json - notification supressed' );
     }
 
-});
+} );
 
-self.addEventListener("pushsubscriptionchange", event => {
+self.addEventListener( "pushsubscriptionchange", event => {
 
-    console.log("subscription change ", event);
+    console.log( "subscription change ", event );
 
 
-});
+} );
 
-function makeSlug(src) {
+function makeSlug( src ) {
 
-    if (typeof src === "string") {
+    if ( typeof src === "string" ) {
 
-        return src.replace(/ +/g, "-")
-            .replace(/\'/g, "")
-            .replace(/[^\w-]+/g, "")
-            .replace(/-+/g, "-")
+        return src.replace( / +/g, "-" )
+            .replace( /\'/g, "" )
+            .replace( /[^\w-]+/g, "" )
+            .replace( /-+/g, "-" )
             .toLowerCase();
 
     }
@@ -187,72 +192,72 @@ function makeSlug(src) {
 
 }
 
-function listenToEpisode(notification) {
+function listenToEpisode( notification ) {
 
-    console.log("listen to episode: ", notification.title);
+    console.log( "listen to episode: ", notification.title );
 
-    clients.openWindow('/episode/' + makeSlug(notification.title));
-
-}
-
-function saveEpisodeForLater(notification) {
-
-    console.log("save episode for later");
+    clients.openWindow( '/episode/' + makeSlug( notification.title ) );
 
 }
 
-function persistEpisode(episode, result) {
+function saveEpisodeForLater( notification ) {
+
+    console.log( "save episode for later" );
+
+}
+
+function persistEpisode( episode, result ) {
 
     //store in IDB
 
 }
 
-function getEpisode(episode) {
+function getEpisode( episode ) {
 
-    if (episode.link) {
+    if ( episode.link ) {
 
         var self = this;
 
-        fetch(episode.link)
-            .then(function (response) {
+        fetch( episode.link )
+            .then( function ( response ) {
 
                 return response.blob();
 
-            }).then(function (result) {
+            } ).then( function ( result ) {
 
-                persistEpisode(episode, result);
+                persistEpisode( episode, result );
 
-            })
-            .catch(function (err) {
-                console.log('Episode Fetch Error :-S', err);
-            });
+            } )
+            .catch( function ( err ) {
+                console.log( 'Episode Fetch Error :-S', err );
+            } );
 
     }
 
 }
 
-self.addEventListener('notificationclick', event => {
+self.addEventListener( 'notificationclick', event => {
 
-    console.log('[Service Worker] Notification click Received. "${event}"');
+    console.log( '[Service Worker] Notification click Received. "${event}"' );
 
-    if (event.action === "listen") {
+    if ( event.action === "listen" ) {
 
-        listenToEpisode(event.notification);
+        listenToEpisode( event.notification );
 
-    } else if (event.action === "later") {
+    } else if ( event.action === "later" ) {
 
-        saveEpisodeForLater(event.notification);
+        saveEpisodeForLater( event.notification );
 
     }
 
     event.notification.close();
 
-});
+} );
 
-self.addEventListener('sync', event => {
+self.addEventListener( 'sync', event => {
 
-    if (event.tag === "get-episode") {
+    if ( event.tag === "get-episode" ) {
         //        event.waitUntil(getEpisode());
     }
 
-});
+} );
