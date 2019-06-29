@@ -24,12 +24,22 @@ body * {
     -moz-box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #343434;
     line-height: 1.2;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
     color: #343434;
 }
 
@@ -64,8 +74,6 @@ h6 {
 
 a {
     color: #2b3042;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
@@ -73,14 +81,13 @@ a:hover {
     color: #1e212e;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
     outline: none;
     color: #1e212e;
 }
 
 .no-trans * {
-    -webkit-transition: none !important;
-    -o-transition: none !important;
     transition: none !important;
 }
 
@@ -138,7 +145,8 @@ blockquote.inline:after {
     top: 0;
 }
 
-mark, .mark {
+mark,
+.mark {
     background-color: #ED7D31;
     color: #fff;
 }
@@ -172,7 +180,8 @@ pre {
     font-size: 20px;
 }
 
-hr.dark, .main-footer .footer hr {
+hr.dark,
+.main-footer .footer hr {
     border-color: #343434;
 }
 
@@ -199,12 +208,14 @@ ul {
     list-style: square;
 }
 
-.list-icons, .list {
+.list-icons,
+.list {
     list-style: none;
     padding: 0;
 }
 
-.list-icons li, .list li {
+.list-icons li,
+.list li {
     padding: 5px 0;
 }
 
@@ -267,15 +278,24 @@ ul {
     text-shadow: 1px 1px 1px #000;
 }
 
-.footer a, .footer a:hover, .footer a:visited, .footer a:active {
+.footer a,
+.footer a:hover,
+.footer a:visited,
+.footer a:active {
     color: #fff;
 }
 
-.subfooter a, .subfooter a:hover, .subfooter a:visited, .subfooter a:active {
+.subfooter a,
+.subfooter a:hover,
+.subfooter a:visited,
+.subfooter a:active {
     color: #fff;
 }
 
-.form-control-lg, .input-group-lg>.form-control, .input-group-lg>.input-group-addon, .input-group-lg>.input-group-btn>.btn {
+.form-control-lg,
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-addon,
+.input-group-lg>.input-group-btn>.btn {
     padding: 0.75rem 1.5rem;
     font-size: 1.5rem;
     border-radius: 0.3rem;
@@ -283,7 +303,8 @@ ul {
     margin: 10px 0;
 }
 
-.btn-lg, .btn-group-lg>.btn {
+.btn-lg,
+.btn-group-lg>.btn {
     padding: 0.75rem 1.5rem;
     font-size: 1.5rem;
     border-radius: 0.3rem;
@@ -303,6 +324,7 @@ ul {
         width: 100%;
         vertical-align: middle;
     }
+
     .offset-md-2 {
         margin-left: 16.666667%;
     }
@@ -319,6 +341,7 @@ ul {
         line-height: 60px;
         font-size: 60px;
     }
+
     .container {
         width: 90%;
     }
@@ -338,7 +361,12 @@ ul {
     padding: 0;
 } */
 
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link, .navbar-nav .nav-link, .navbar-nav .nav-link:focus, .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link,
+.navbar-nav .nav-link,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
     color: #2F5597;
     background-color: transparent;
     border: none;
@@ -356,11 +384,21 @@ ul {
     margin-top: 3%;
 }
 
-.main-footer h1, .main-footer h2, .main-footer h3, .main-footer h4 {
+.main-footer h1,
+.main-footer h2,
+.main-footer h3,
+.main-footer h4 {
     color: #fff;
 }
 
-.main-footer a, .main-footer a:active, .main-footer a:hover, .main-footer .nav>li>a, .main-footer .nav>li>a:active, .main-footer .nav>li>a:hover, .main-footer .nav>li>a:hover, .main-footer .nav>li>a:focus {
+.main-footer a,
+.main-footer a:active,
+.main-footer a:hover,
+.main-footer .nav>li>a,
+.main-footer .nav>li>a:active,
+.main-footer .nav>li>a:hover,
+.main-footer .nav>li>a:hover,
+.main-footer .nav>li>a:focus {
     color: #fff;
     background-color: transparent;
 }
@@ -384,14 +422,14 @@ ul {
     opacity: 0;
 }
 
-.badgebox + .badge {
+.badgebox+.badge {
     /* Move the check mark away when unchecked */
     text-indent: -999999px;
     /* Makes the badge's width stay the same checked and unchecked */
     width: 27px;
 }
 
-.badgebox:focus + .badge {
+.badgebox:focus+.badge {
     /* Set something to make the badge looks focused */
     /* This really depends on the application, in my case it was: */
     /* Adding a light border */
@@ -399,12 +437,15 @@ ul {
     /* Taking the difference out of the padding */
 }
 
-.badgebox:checked + .badge {
+.badgebox:checked+.badge {
     /* Move the check mark back when checked */
     text-indent: 0;
 }
 
-.btn-orange, .btn-orange:focus, .btn-orange.focus, .btn-orange:hover {
+.btn-orange,
+.btn-orange:focus,
+.btn-orange.focus,
+.btn-orange:hover {
     background-color: #ED7D31;
     color: #fff;
 }
@@ -449,32 +490,39 @@ ul {
     display: block;
 }
 
-.social-wrapper a[href*="twitter.com"], .article-footer a[href*="twitter.com"] {
+.social-wrapper a[href*="twitter.com"],
+.article-footer a[href*="twitter.com"] {
     background-color: #55acee;
 }
 
-.social-wrapper a[href*="facebook.com"], .article-footer a[href*="facebook.com"] {
+.social-wrapper a[href*="facebook.com"],
+.article-footer a[href*="facebook.com"] {
     color: #3b5998;
     background-color: #fff;
 }
 
-.social-wrapper a[href*="google.com"], .article-footer a[href*="google.com"] {
+.social-wrapper a[href*="google.com"],
+.article-footer a[href*="google.com"] {
     background-color: #db4437;
 }
 
-.social-wrapper a[href*="pinterest.com"], .article-footer a[href*="pinterest.com"] {
+.social-wrapper a[href*="pinterest.com"],
+.article-footer a[href*="pinterest.com"] {
     background-color: #c30000;
 }
 
-.social-wrapper a[href*="youtube.com"], .article-footer a[href*="youtube.com"] {
+.social-wrapper a[href*="youtube.com"],
+.article-footer a[href*="youtube.com"] {
     background-color: #c30000;
 }
 
-.social-wrapper a[href*="linkedin.com"], .article-footer a[href*="linkedin.com"] {
+.social-wrapper a[href*="linkedin.com"],
+.article-footer a[href*="linkedin.com"] {
     background-color: blue;
 }
 
-.social-wrapper a[href*="rss"], .article-footer a[href*="rss"] {
+.social-wrapper a[href*="rss"],
+.article-footer a[href*="rss"] {
     background-color: #f60;
 }
 
@@ -526,6 +574,7 @@ ul.share-buttons li {
         margin: 6px 6px 0 0;
         min-width: 110px;
     }
+
     .btn-social {
         font-size: 2em;
         width: 12%;
@@ -541,19 +590,22 @@ ul.share-buttons li {
     justify-content: center;
 }
 
-input[type=radio], input[type=checkbox] {
+input[type=radio],
+input[type=checkbox] {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0;
 }
 
-[type=radio], [type=checkbox] {
+[type=radio],
+[type=checkbox] {
     position: absolute;
     left: -9999px;
     visibility: hidden;
 }
 
-[type=radio]+label, [type=checkbox]+label {
+[type=radio]+label,
+[type=checkbox]+label {
     position: relative;
     padding-left: 35px;
     cursor: pointer;
@@ -567,7 +619,15 @@ input[type=radio], input[type=checkbox] {
     -ms-user-select: none;
 }
 
-[role=button], a, area, button, input, label, select, summary, textarea {
+[role=button],
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
     -ms-touch-action: manipulation;
     touch-action: manipulation;
 }
@@ -613,11 +673,10 @@ input[type=radio], input[type=checkbox] {
     padding-top: 40px;
 }
 
-.card i {
+.card .card-center-circle {
     position: absolute;
     top: 0;
     left: 50%;
-    -webkit-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
     width: 56px;
     line-height: 56px;
@@ -628,12 +687,14 @@ input[type=radio], input[type=checkbox] {
     font-size: 36px;
 }
 
-.card:hover i, .card:hover img, .card:hover img {
+.card:hover .card-center-circle,
+.card:hover img,
+.card:hover img {
     background-color: #2F5597;
 }
 
-.card:hover i, .card.hover i {
-    -webkit-transform: translate(-50%, 5px);
+.card:hover .card-center-circle,
+.card.hover .card-center-circle {
     transform: translate(-50%, 5px);
 }
 
@@ -691,23 +752,29 @@ a.episode-list-item {
     animation: spin 2s infinite linear;
 }
 
-.display-5{
+.display-5 {
     font-size: 2.5rem;
     font-weight: 300;
     line-height: 1.2;
 }
 
-.display-6{
+.display-6 {
     font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 1em;
 }
 
+.episode-favorited {
+    background-color: #ED7D31;
+    color: #fff;
+}
+
 @-moz-keyframes spin {
     from {
         -moz-transform: rotate(0deg);
     }
+
     to {
         -moz-transform: rotate(360deg);
     }
@@ -717,6 +784,7 @@ a.episode-list-item {
     from {
         -webkit-transform: rotate(0deg);
     }
+
     to {
         -webkit-transform: rotate(360deg);
     }
@@ -726,6 +794,7 @@ a.episode-list-item {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -735,9 +804,11 @@ a.episode-list-item {
     .navbar-nav li {
         padding-left: 0;
     }
+
     .podcast-list .card {
         flex: 0 0 50%
     }
+
     html {
         font-size: 1.2rem;
     }
@@ -747,6 +818,7 @@ a.episode-list-item {
     .podcast-list .card {
         flex: 0 0 33.3333%
     }
+
     html {
         font-size: 1.4rem;
     }
@@ -756,6 +828,7 @@ a.episode-list-item {
     .podcast-list .card {
         flex: 0 0 25%
     }
+
     html {
         font-size: 1.6rem;
     }

@@ -1,0 +1,26 @@
+PWA:
+    ☐ inlcude add to homescreen library
+    ☐ run site through PWA Starter
+
+Service Worker:
+    ☐ Update to use newer caching logic
+    ☐ Push Manager Library Integration
+    ☐ Integrate with Love2Dev Push/SMS service
+
+App Shell:
+    ☐ Add Add to Homescreen Prompt
+    ☐ Add A2HS Menu Item
+    ☐ Add Push Prompt
+
+Icons:
+    ☐ Update to use Latest Font Awesome
+
+Favorites:
+    ☐ Save Podcast as a Favorite
+        ☐ Persist in IDB
+    ☐ Save Episode for Listen Later to IDB
+        ☐ Persist Episodes in IDB
+
+Source Code:
+    ☐ Move Source to /src folder
+    ☐ Update build script to generate content from src & data

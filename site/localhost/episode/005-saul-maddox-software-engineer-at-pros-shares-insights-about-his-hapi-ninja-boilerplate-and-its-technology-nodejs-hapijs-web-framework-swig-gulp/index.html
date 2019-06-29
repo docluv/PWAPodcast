@@ -4,14 +4,16 @@
 <head>
     <base href="/">
     <!-- Stylesheets -->
-    <link href="css/libs/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/libs/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800' rel='stylesheet'
+        type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
     <link href="css/app/site.css" rel="stylesheet">
 
-    <title>005 Saul Maddox, Software Engineer at PROS, shares insights about his Hapi-Ninja boilerplate and its technology (Node.js, Hapijs web framework, Swig, Gulp)</title>
+    <title>005 Saul Maddox, Software Engineer at PROS, shares insights about his Hapi-Ninja boilerplate and its
+        technology (Node.js, Hapijs web framework, Swig, Gulp)</title>
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
     <!-- Web Application Manifest -->
@@ -43,8 +45,8 @@
         <a href="/" class="navbar-brand">
             <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -69,91 +71,137 @@
     </nav>
 
     <main class="main-content container-fluid" role="main">
-        <div class="container">  <div class="row">
-    <div class="card">
-      <img src="[object Object]" alt="005 Saul Maddox, Software Engineer at PROS, shares insights about his Hapi-Ninja boilerplate and its technology (Node.js, Hapijs web framework, Swig, Gulp)" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title">005 Saul Maddox, Software Engineer at PROS, shares insights about his Hapi-Ninja boilerplate and its technology (Node.js, Hapijs web framework, Swig, Gulp)</h3>
-      </div>
-      <i class="fa fa-plus" aria-hidden="true"></i>
-    </div>
-  </div>
-  <div class="row">
-    <audio src="https://api.spreaker.com/download/episode/8734727/ep105_mixdown.mp3" controls="controls"></audio>
-  </div>
-  <div class="row">
-    <p><p><img src="https://avatars0.githubusercontent.com/u/1514196" alt="SaulMaddox-Photo" title="Saul Maddox"></p>
-<p>Saul Maddox, a software engineer for <a href="http://pros.com" title="PROS website">PROS</a>, joins me in this episode of CodeWinds to discuss his Hapi-Ninja boilerplate which helps developers get up and running with the Hapi Node.js web framework.</p>
-<p>We discuss in detail the stack he has chosen and the reasons for selecting each:</p>
-<ul>
-<li><a href="http://hapijs.com" title="Hapi Node.js web framework">Hapijs</a> Node.js web framework</li>
-<li><a href="http://paularmstrong.github.io/swig/docs/#browser" title="Swig templates">Swig</a> templates</li>
-<li><a href="http://gulpjs.com/" title="Gulp javascript streaming task runner">Gulp</a> javascript streaming task runner</li>
-<li>Plugins he has included for assets and routes</li>
-</ul>
-<p>Saul explains the file structure of Hapi-Ninja mentioning how to configure and get up and running with Hapi quickly and easily.</p>
-<div id="toc"><ol><li><a href="#episode_info">Episode Info</a></li><li><a href="#episode_notes">Episode Notes</a><ol><li><a href="#episode_timeline">Episode timeline</a></li></ol></li><li><a href="#getting_started_with_hapi-ninja">Getting started with Hapi-Ninja</a></li><li><a href="#links_from_show">Links from Show</a><ol><li><a href="#following_saul_maddox">Following Saul Maddox</a></li></ol></li></ol></div>
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <img src="http://i1.sndcdn.com/avatars-000227802710-27eerh-original.jpg"
+                        alt="005 Saul Maddox, Software Engineer at PROS, shares insights about his Hapi-Ninja boilerplate and its technology (Node.js, Hapijs web framework, Swig, Gulp)"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">005 Saul Maddox, Software Engineer at PROS, shares insights about his
+                            Hapi-Ninja boilerplate and its technology (Node.js, Hapijs web framework, Swig, Gulp)</h3>
+                    </div>
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <audio src="https://api.spreaker.com/download/episode/8734727/ep105_mixdown.mp3"
+                    controls="controls"></audio>
+            </div>
+            <div class="row">
+                <p>
+                    <p><img src="https://avatars0.githubusercontent.com/u/1514196" alt="SaulMaddox-Photo"
+                            title="Saul Maddox"></p>
+                    <p>Saul Maddox, a software engineer for <a href="http://pros.com" title="PROS website">PROS</a>,
+                        joins me in this episode of CodeWinds to discuss his Hapi-Ninja boilerplate which helps
+                        developers get up and running with the Hapi Node.js web framework.</p>
+                    <p>We discuss in detail the stack he has chosen and the reasons for selecting each:</p>
+                    <ul>
+                        <li><a href="http://hapijs.com" title="Hapi Node.js web framework">Hapijs</a> Node.js web
+                            framework</li>
+                        <li><a href="http://paularmstrong.github.io/swig/docs/#browser" title="Swig templates">Swig</a>
+                            templates</li>
+                        <li><a href="http://gulpjs.com/" title="Gulp javascript streaming task runner">Gulp</a>
+                            javascript streaming task runner</li>
+                        <li>Plugins he has included for assets and routes</li>
+                    </ul>
+                    <p>Saul explains the file structure of Hapi-Ninja mentioning how to configure and get up and running
+                        with Hapi quickly and easily.</p>
+                    <div id="toc">
+                        <ol>
+                            <li><a href="#episode_info">Episode Info</a></li>
+                            <li><a href="#episode_notes">Episode Notes</a>
+                                <ol>
+                                    <li><a href="#episode_timeline">Episode timeline</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#getting_started_with_hapi-ninja">Getting started with Hapi-Ninja</a></li>
+                            <li><a href="#links_from_show">Links from Show</a>
+                                <ol>
+                                    <li><a href="#following_saul_maddox">Following Saul Maddox</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
 
-<a name="episode_info"></a><h2 id="episode-info">Episode Info</h2>
-<ul>
-<li>Episode: CW 005</li>
-<li>Published: April 6th, 2014</li>
-<li>Tags: js, nodejs,web,framework,boilerplate</li>
-<li>Duration: 34:17</li>
-</ul>
-<a name="episode_notes"></a><h2 id="episode-notes">Episode Notes</h2>
-<a name="episode_timeline"></a><h3 id="episode-timeline">Episode timeline</h3>
-<ul>
-<li>02:06 - Introduction to the Hapi-Ninja boilerplate</li>
-<li>05:44 - Details of Hapi-Ninja stack</li>
-<li>06:00 - Hapi Node.js web framework</li>
-<li>08:34 - Swig javascript templates</li>
-<li>11:17 - Gulp Node.js streaming task runner</li>
-<li>13:52 - Getting started with Hapi-Ninja boilerplate</li>
-<li>14:44 - Using a watcher like node-supervisor to auto reload</li>
-<li>15:47 - Hapi-Ninja file structure</li>
-<li>18:38 - Configuration</li>
-<li>18:55 - Hapi-Assets plugin for minimizing and concatenating assets</li>
-<li>21:42 - Hapi-Named-Routes plugin</li>
-<li>23:31 - Hapi-Cache Buster plugin for easier browser reloading in development</li>
-<li>25:26 - Easy switching from full frontend app (PhoneGap) to a frontend and server using same folder structure</li>
-<li>27:02 - Hapi-Ninja code is commented heavily to help new users learn</li>
-<li>27:41 - Upgrading from Hapi 2.x to 3.x</li>
-<li>28:37 - Contributing</li>
-<li>30:08 - Other projects</li>
-<li>30:25 - Ever Stain project - legacy website for being remembered</li>
-<li>32:16 - Following Saul</li>
-</ul>
-<a name="getting_started_with_hapi-ninja"></a><h2 id="getting-started-with-hapi-ninja">Getting started with Hapi-Ninja</h2>
-<ul>
-<li>Install <a href="http://nodejs.org" title="Node.js">Nodejs</a></li>
-<li>Clone repo from GitHub</li>
-<li>Change working directory into the new path</li>
-<li>Install dependencies from npm</li>
-</ul>
-<pre class="highlight"><code class="hljs bash"><span class="hljs-comment"># after installing Node.js</span>
+                    <a name="episode_info"></a>
+                    <h2 id="episode-info">Episode Info</h2>
+                    <ul>
+                        <li>Episode: CW 005</li>
+                        <li>Published: April 6th, 2014</li>
+                        <li>Tags: js, nodejs,web,framework,boilerplate</li>
+                        <li>Duration: 34:17</li>
+                    </ul>
+                    <a name="episode_notes"></a>
+                    <h2 id="episode-notes">Episode Notes</h2>
+                    <a name="episode_timeline"></a>
+                    <h3 id="episode-timeline">Episode timeline</h3>
+                    <ul>
+                        <li>02:06 - Introduction to the Hapi-Ninja boilerplate</li>
+                        <li>05:44 - Details of Hapi-Ninja stack</li>
+                        <li>06:00 - Hapi Node.js web framework</li>
+                        <li>08:34 - Swig javascript templates</li>
+                        <li>11:17 - Gulp Node.js streaming task runner</li>
+                        <li>13:52 - Getting started with Hapi-Ninja boilerplate</li>
+                        <li>14:44 - Using a watcher like node-supervisor to auto reload</li>
+                        <li>15:47 - Hapi-Ninja file structure</li>
+                        <li>18:38 - Configuration</li>
+                        <li>18:55 - Hapi-Assets plugin for minimizing and concatenating assets</li>
+                        <li>21:42 - Hapi-Named-Routes plugin</li>
+                        <li>23:31 - Hapi-Cache Buster plugin for easier browser reloading in development</li>
+                        <li>25:26 - Easy switching from full frontend app (PhoneGap) to a frontend and server using same
+                            folder structure</li>
+                        <li>27:02 - Hapi-Ninja code is commented heavily to help new users learn</li>
+                        <li>27:41 - Upgrading from Hapi 2.x to 3.x</li>
+                        <li>28:37 - Contributing</li>
+                        <li>30:08 - Other projects</li>
+                        <li>30:25 - Ever Stain project - legacy website for being remembered</li>
+                        <li>32:16 - Following Saul</li>
+                    </ul>
+                    <a name="getting_started_with_hapi-ninja"></a>
+                    <h2 id="getting-started-with-hapi-ninja">Getting started with Hapi-Ninja</h2>
+                    <ul>
+                        <li>Install <a href="http://nodejs.org" title="Node.js">Nodejs</a></li>
+                        <li>Clone repo from GitHub</li>
+                        <li>Change working directory into the new path</li>
+                        <li>Install dependencies from npm</li>
+                    </ul>
+                    <pre class="highlight"><code class="hljs bash"><span class="hljs-comment"># after installing Node.js</span>
 git <span class="hljs-built_in">clone</span> https://github.com/poeticninja/hapi-ninja.git
 <span class="hljs-built_in">cd</span> hapi-ninja
 npm install
 </code></pre>
-<a name="links_from_show"></a><h2 id="links-from-show">Links from Show</h2>
-<ul>
-<li><a href="https://github.com/poeticninja/hapi-ninja" title="Hapi-Ninja boilerplate GitHub repo">Hapi-Ninja</a> boilerplate GitHub Repo</li>
-<li><a href="http://hapijs.com" title="Hapi Node.js web framework">Hapijs</a> Node.js web framework</li>
-<li><a href="http://paularmstrong.github.io/swig/docs/#browser" title="Swig templates">Swig</a> templates</li>
-<li><a href="http://gulpjs.com/" title="Gulp javascript streaming task runner">Gulp</a> javascript streaming task runner</li>
-<li><a href="https://github.com/poeticninja/hapi-named-routes">Hapi-Named-Routes</a> plugin for using named routes</li>
-<li><a href="https://npmjs.org/package/hapi-assets">Hapi-Assets</a> plugin for automatically minimizing and concatenating assets</li>
-<li><a href="https://npmjs.org/package/hapi-cache-buster">Hapi-Cache-Buster</a> plugin which helps with serving fresh content in development</li>
-<li><a href="http://everstain.com/" title="Ever Stain legacy website">Ever Stain</a> legacy website coming soon by Saul Maddox. How will you be remembered?</li>
-</ul>
-<a name="following_saul_maddox"></a><h3 id="following-saul-maddox">Following Saul Maddox</h3>
-<ul>
-<li><a href="https://github.com/poeticninja" title="Saul Maddox GitHub">Saul Maddox GitHub</a></li>
-<li><a href="https://twitter.com/poeticninja" title="Saul Maddox Twitter">Saul Maddox Twitter</a></li>
-</ul></p>
-  </div>
-</div>
+                    <a name="links_from_show"></a>
+                    <h2 id="links-from-show">Links from Show</h2>
+                    <ul>
+                        <li><a href="https://github.com/poeticninja/hapi-ninja"
+                                title="Hapi-Ninja boilerplate GitHub repo">Hapi-Ninja</a> boilerplate GitHub Repo</li>
+                        <li><a href="http://hapijs.com" title="Hapi Node.js web framework">Hapijs</a> Node.js web
+                            framework</li>
+                        <li><a href="http://paularmstrong.github.io/swig/docs/#browser" title="Swig templates">Swig</a>
+                            templates</li>
+                        <li><a href="http://gulpjs.com/" title="Gulp javascript streaming task runner">Gulp</a>
+                            javascript streaming task runner</li>
+                        <li><a href="https://github.com/poeticninja/hapi-named-routes">Hapi-Named-Routes</a> plugin for
+                            using named routes</li>
+                        <li><a href="https://npmjs.org/package/hapi-assets">Hapi-Assets</a> plugin for automatically
+                            minimizing and concatenating assets</li>
+                        <li><a href="https://npmjs.org/package/hapi-cache-buster">Hapi-Cache-Buster</a> plugin which
+                            helps with serving fresh content in development</li>
+                        <li><a href="http://everstain.com/" title="Ever Stain legacy website">Ever Stain</a> legacy
+                            website coming soon by Saul Maddox. How will you be remembered?</li>
+                    </ul>
+                    <a name="following_saul_maddox"></a>
+                    <h3 id="following-saul-maddox">Following Saul Maddox</h3>
+                    <ul>
+                        <li><a href="https://github.com/poeticninja" title="Saul Maddox GitHub">Saul Maddox GitHub</a>
+                        </li>
+                        <li><a href="https://twitter.com/poeticninja" title="Saul Maddox Twitter">Saul Maddox
+                                Twitter</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -178,7 +226,8 @@ npm install
                     <span class="col-sm-12 social-wrapper circle">
                         <a href="http://twitter.com/chrislove" class="social-icon fa fa-twitter"></a>
                         <a href="https://www.facebook.com/love2dev/" class="social-icon fa fa-facebook"></a>
-                        <a target="_blank" href="https://plus.google.com/b/110904107389779237581/?pageId=110904107389779237581">
+                        <a target="_blank"
+                            href="https://plus.google.com/b/110904107389779237581/?pageId=110904107389779237581">
                             <i class="fa fa-google-plus"></i>
                         </a>
                         <a target="_blank" href="https://www.linkedin.com/in/love2dev">
@@ -220,8 +269,8 @@ npm install
         </div>
     </footer>
     <script>
-        var scripts = ["js/libs/jquery.small.js",
-            "js/libs/index.js",
+        var scripts = [ "js/libs/jquery.small.js",
+            "js/libs/localforage.min.js",
             "js/libs/collapse.js",
             "js/libs/util.js",
             "js/app/app.js",

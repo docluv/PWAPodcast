@@ -7,7 +7,7 @@
 Constants used in the functions to ensure consistency
 Adjust values to fit your desired naming and time frame conventions.
 */
-const VERSION = "v1",
+const VERSION = "v1.02",
     PRECACHE_NAME = "pre-cache",
     // CACHE_MANIFEST = "cache-manifest.json",
     // CACHE_MANIFEST_KEY = "cache-manifest",
@@ -55,9 +55,20 @@ self.addEventListener( "install", event => {
 
     event.waitUntil(
 
-        caches.open( cacheName( PRECACHE_NAME ) ).then( cache => {
+        caches.open( PRECACHE_NAME )
+        .then( cache => {
 
-            return cache.addAll( PRECACHE_URLS );
+            PRECACHE_URLS.forEach( url => {
+
+                fetch( url ).then( function ( response ) {
+
+                    if ( !response.ok ) {
+                        throw new TypeError( 'bad response status - ' + response.url );
+                    }
+                    return cache.put( url, response );
+                } );
+
+            } );
 
         } )
 
@@ -87,49 +98,56 @@ self.addEventListener( "activate", event => {
 
 self.addEventListener( "fetch", event => {
 
-    console.log( "fetch url: ", event.request.url );
-
     let request = event.request;
+    const destination = getDestination( event.request );
+
+    //    if ( !destination || destination === "" ) {
+
+    console.log( "fetch url: ", event.request.url );
+    console.log( "destination: ", destination );
+
+    //    }
 
     event.respondWith(
 
-        caches.match( event.request ).then(
-            response => {
+        fetch( event.request )
 
-                return response || fetch( event.request ).then(
-                    response => {
+        // caches.match( event.request ).then(
+        //     response => {
 
-                        let cacheResp = response.clone();
+        //         return response || fetch( event.request ).then(
+        //             response => {
 
-                        for ( var pair of response.headers.entries() ) {
-                            console.log( "header - " + pair[ 0 ] + ': ' + pair[ 1 ] );
-                        }
+        //                 let cacheResp = response.clone();
 
-                        //only cache is the status is OK & not a chrome-extension URL
-                        if ( [ 0, 200 ].includes( response.status ) &&
-                            request.url.indexOf( "chrome-extension" ) ) {
+        //                 for ( var pair of response.headers.entries() ) {
+        //                     console.log( "header - " + pair[ 0 ] + ': ' + pair[ 1 ] );
+        //                 }
 
-                            caches.open( cacheName( DYNAMIC_CACHE_NAME ) ).then(
-                                cache => {
+        //                 //only cache is the status is OK & not a chrome-extension URL
+        //                 if ( [ 0, 200 ].includes( response.status ) &&
+        //                     request.url.indexOf( "chrome-extension" ) ) {
 
-                                    cache.put( event.request, cacheResp );
+        //                     caches.open( cacheName( DYNAMIC_CACHE_NAME ) ).then(
+        //                         cache => {
 
-                                } );
+        //                             cache.put( event.request, cacheResp );
 
-                        }
+        //                         } );
 
-                        return response;
-                    }
-                )
+        //                 }
 
-            } )
+        //                 return response;
+        //             }
+        //         )
+
+        //     } )
 
         /* end responseWith */
 
     );
 
 } );
-
 
 self.addEventListener( "push", event => {
 
@@ -175,6 +193,49 @@ self.addEventListener( "pushsubscriptionchange", event => {
 
 
 } );
+
+function extensionToDestination( ext ) {
+
+    switch ( ext ) {
+        case "mp3":
+
+            return "audio";
+
+        case "mp4":
+        case "ogg":
+
+            return "video";
+
+        case "gif":
+        case "jpg":
+        case "jpeg":
+        case "png":
+        case "webp":
+
+            return "image";
+
+        default:
+
+            return "";
+    }
+
+}
+
+function getDestination( request ) {
+
+    if ( request.destination ) {
+        return request.destination;
+    }
+
+    let url = new URL( request.url );
+
+    let ext = url.pathname.split( "." );
+
+    ext = ext[ ext.length - 1 ];
+
+    return extensionToDestination( ext );
+
+}
 
 function makeSlug( src ) {
 

@@ -4,14 +4,16 @@
 <head>
     <base href="/">
     <!-- Stylesheets -->
-    <link href="css/libs/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/libs/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800' rel='stylesheet'
+        type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
     <link href="css/app/site.css" rel="stylesheet">
 
-    <title>010 Nico Bevacqua - JS build tooling, development workflow, and his new book JavaScript Application Design</title>
+    <title>010 Nico Bevacqua - JS build tooling, development workflow, and his new book JavaScript Application Design
+    </title>
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
     <!-- Web Application Manifest -->
@@ -43,8 +45,8 @@
         <a href="/" class="navbar-brand">
             <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -69,67 +71,111 @@
     </nav>
 
     <main class="main-content container-fluid" role="main">
-        <div class="container">  <div class="row">
-    <div class="card">
-      <img src="[object Object]" alt="010 Nico Bevacqua - JS build tooling, development workflow, and his new book JavaScript Application Design" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title">010 Nico Bevacqua - JS build tooling, development workflow, and his new book JavaScript Application Design</h3>
-      </div>
-      <i class="fa fa-plus" aria-hidden="true"></i>
-    </div>
-  </div>
-  <div class="row">
-    <audio src="https://api.spreaker.com/download/episode/8734727/ep105_mixdown.mp3" controls="controls"></audio>
-  </div>
-  <div class="row">
-    <p><p><img src="http://codewinds.com/assets/people/nico-bevacqua-jsconf-2014.jpg" alt="nico-photo" title="Nico Bevacqua speaking at JSConf 2014"></p>
-<p>Nico Bevacqua, the author of JavaScript Application Design which is in early access at Manning, explains more about JS continuous development, integration, and deployment. We discuss build tools, module systems, component architectures, MVC, and finally the experience of writing a traditionally published book.</p>
-<div id="toc"><ol><li><a href="#episode_info">Episode Info</a></li><li><a href="#episode_notes">Episode Notes</a><ol><li><a href="#javascript_application_design_-_manning">JavaScript Application Design - Manning</a></li><li><a href="#links">Links</a></li><li><a href="#video_slides">Video / Slides</a></li></ol></li></ol></div>
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <img src="http://i1.sndcdn.com/avatars-000227802710-27eerh-original.jpg"
+                        alt="010 Nico Bevacqua - JS build tooling, development workflow, and his new book JavaScript Application Design"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">010 Nico Bevacqua - JS build tooling, development workflow, and his new
+                            book JavaScript Application Design</h3>
+                    </div>
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <audio src="https://api.spreaker.com/download/episode/8734727/ep105_mixdown.mp3"
+                    controls="controls"></audio>
+            </div>
+            <div class="row">
+                <p>
+                    <p><img src="http://codewinds.com/assets/people/nico-bevacqua-jsconf-2014.jpg" alt="nico-photo"
+                            title="Nico Bevacqua speaking at JSConf 2014"></p>
+                    <p>Nico Bevacqua, the author of JavaScript Application Design which is in early access at Manning,
+                        explains more about JS continuous development, integration, and deployment. We discuss build
+                        tools, module systems, component architectures, MVC, and finally the experience of writing a
+                        traditionally published book.</p>
+                    <div id="toc">
+                        <ol>
+                            <li><a href="#episode_info">Episode Info</a></li>
+                            <li><a href="#episode_notes">Episode Notes</a>
+                                <ol>
+                                    <li><a href="#javascript_application_design_-_manning">JavaScript Application Design
+                                            - Manning</a></li>
+                                    <li><a href="#links">Links</a></li>
+                                    <li><a href="#video_slides">Video / Slides</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
 
-<p><a href="http://bevacqua.io/bf/book" title="Purchase book through Manning"><img src="http://bevacqua.io/img/buildfirst/1a5dcb8c.cover.jpg" alt="JavaScript Application Design" title="JavaScript Application Design Cover"></a></p>
-<a name="episode_info"></a><h2 id="episode-info">Episode Info</h2>
-<ul>
-<li>Episode: CW 010</li>
-<li>Published: August 7th, 2014</li>
-<li>Tags: nodejs, js,jsconf</li>
-<li>Duration: 29:10</li>
-</ul>
-<a name="episode_notes"></a><h2 id="episode-notes">Episode Notes</h2>
-<ul>
-<li>01:35 - Why build first?</li>
-<li>03:25 - Continuous development</li>
-<li>05:00 - Continuous Integration - Travis-CI</li>
-<li>05:20 - Continuous Deployment - Heroku, Amazon EC2</li>
-<li>06:20 - Build tools - grunt, gulp, npm - determining the best choice</li>
-<li>11:35 - JS Modules - AMD, CommonJS (CJS), ES6 Modules, RequireJS, Browserify, AngularJS DI</li>
-<li>15:00 - HTTP/2 efficient parallel streaming potentially reducing need for bundling</li>
-<li>16:30 - Browserify limitations and CommonJS</li>
-<li>18:30 - App design, modularity, package managers (component, bower, npm)</li>
-<li>20:20 - Current state of building components - Bower, Component, Polymer, Web Components, AngularJS, ReactJS</li>
-<li>22:24 - MVC Frameworks - AngularJS, ReactJS and the Virtual DOM</li>
-<li>23:35 - Experience writing JavaScript Application Design published by Manning</li>
-<li>27:35 - Following Nico</li>
-</ul>
-<a name="javascript_application_design_-_manning"></a><h3 id="javascript-application-design-manning">JavaScript Application Design - Manning</h3>
-<p>Published by Manning, currently available as early access edition - <a href="http://bevacqua.io/bf/book" title="Purchase book through Manning">Purchase at Manning</a></p>
-<a name="links"></a><h3 id="links">Links</h3>
-<ul>
-<li><a href="http://browserify.org/" title="Browserify website">Browserify - packaging NPM modules for the browser</a></li>
-<li>Nico Bevacqua’s <a href="http://blog.ponyfoo.com/" title="Nico&apos;s blog">Pony Foo blog</a></li>
-<li><a href="https://github.com/buildfirst/buildfirst" title="Build First Code">Code samples from JavaScript Application Design</a></li>
-<li><a href="http://bevacqua.io/buildfirst/resources" title="Build First Resources">Build first resources</a></li>
-<li><a href="http://bevacqua.io/buildfirst" title="Nico Bevacqua Build First">Build first site</a></li>
-<li>Nico Bevacqua <a href="http://twitter.com/nzgb" title="Nico Bevacqua Twitter">twitter</a></li>
-<li>Jeff Barczewski, Founder, CodeWinds <a href="https://twitter.com/jeffbski">twitter</a></li>
-<li>CodeWinds <a href="https://twitter.com/codewinds">twitter</a></li>
-</ul>
-<a name="video_slides"></a><h3 id="video-slides">Video / Slides</h3>
+                    <p><a href="http://bevacqua.io/bf/book" title="Purchase book through Manning"><img
+                                src="http://bevacqua.io/img/buildfirst/1a5dcb8c.cover.jpg"
+                                alt="JavaScript Application Design" title="JavaScript Application Design Cover"></a></p>
+                    <a name="episode_info"></a>
+                    <h2 id="episode-info">Episode Info</h2>
+                    <ul>
+                        <li>Episode: CW 010</li>
+                        <li>Published: August 7th, 2014</li>
+                        <li>Tags: nodejs, js,jsconf</li>
+                        <li>Duration: 29:10</li>
+                    </ul>
+                    <a name="episode_notes"></a>
+                    <h2 id="episode-notes">Episode Notes</h2>
+                    <ul>
+                        <li>01:35 - Why build first?</li>
+                        <li>03:25 - Continuous development</li>
+                        <li>05:00 - Continuous Integration - Travis-CI</li>
+                        <li>05:20 - Continuous Deployment - Heroku, Amazon EC2</li>
+                        <li>06:20 - Build tools - grunt, gulp, npm - determining the best choice</li>
+                        <li>11:35 - JS Modules - AMD, CommonJS (CJS), ES6 Modules, RequireJS, Browserify, AngularJS DI
+                        </li>
+                        <li>15:00 - HTTP/2 efficient parallel streaming potentially reducing need for bundling</li>
+                        <li>16:30 - Browserify limitations and CommonJS</li>
+                        <li>18:30 - App design, modularity, package managers (component, bower, npm)</li>
+                        <li>20:20 - Current state of building components - Bower, Component, Polymer, Web Components,
+                            AngularJS, ReactJS</li>
+                        <li>22:24 - MVC Frameworks - AngularJS, ReactJS and the Virtual DOM</li>
+                        <li>23:35 - Experience writing JavaScript Application Design published by Manning</li>
+                        <li>27:35 - Following Nico</li>
+                    </ul>
+                    <a name="javascript_application_design_-_manning"></a>
+                    <h3 id="javascript-application-design-manning">JavaScript Application Design - Manning</h3>
+                    <p>Published by Manning, currently available as early access edition - <a
+                            href="http://bevacqua.io/bf/book" title="Purchase book through Manning">Purchase at
+                            Manning</a></p>
+                    <a name="links"></a>
+                    <h3 id="links">Links</h3>
+                    <ul>
+                        <li><a href="http://browserify.org/" title="Browserify website">Browserify - packaging NPM
+                                modules for the browser</a></li>
+                        <li>Nico Bevacqua’s <a href="http://blog.ponyfoo.com/" title="Nico&apos;s blog">Pony Foo
+                                blog</a></li>
+                        <li><a href="https://github.com/buildfirst/buildfirst" title="Build First Code">Code samples
+                                from JavaScript Application Design</a></li>
+                        <li><a href="http://bevacqua.io/buildfirst/resources" title="Build First Resources">Build first
+                                resources</a></li>
+                        <li><a href="http://bevacqua.io/buildfirst" title="Nico Bevacqua Build First">Build first
+                                site</a></li>
+                        <li>Nico Bevacqua <a href="http://twitter.com/nzgb" title="Nico Bevacqua Twitter">twitter</a>
+                        </li>
+                        <li>Jeff Barczewski, Founder, CodeWinds <a href="https://twitter.com/jeffbski">twitter</a></li>
+                        <li>CodeWinds <a href="https://twitter.com/codewinds">twitter</a></li>
+                    </ul>
+                    <a name="video_slides"></a>
+                    <h3 id="video-slides">Video / Slides</h3>
 
 
-<p><a href="https://www.youtube.com/watch?v=Y0DCZdAruvo" title="Nico Bevacqua: Front End Ops Tooling - JSConf 2014">Watch Nico Bevacqua’s JSConf talk on YouTube</a></p>
-<p><a href="https://speakerdeck.com/bevacqua/front-end-ops-tooling" title="JSConf US 2014: Front End Ops Tooling">Slides from Nico Bevacqua JSConf 2014: Front End Ops Tooling - Slideshare</a></p></p>
-  </div>
-</div>
+                    <p><a href="https://www.youtube.com/watch?v=Y0DCZdAruvo"
+                            title="Nico Bevacqua: Front End Ops Tooling - JSConf 2014">Watch Nico Bevacqua’s JSConf talk
+                            on YouTube</a></p>
+                    <p><a href="https://speakerdeck.com/bevacqua/front-end-ops-tooling"
+                            title="JSConf US 2014: Front End Ops Tooling">Slides from Nico Bevacqua JSConf 2014: Front
+                            End Ops Tooling - Slideshare</a></p>
+                </p>
+            </div>
+        </div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -154,7 +200,8 @@
                     <span class="col-sm-12 social-wrapper circle">
                         <a href="http://twitter.com/chrislove" class="social-icon fa fa-twitter"></a>
                         <a href="https://www.facebook.com/love2dev/" class="social-icon fa fa-facebook"></a>
-                        <a target="_blank" href="https://plus.google.com/b/110904107389779237581/?pageId=110904107389779237581">
+                        <a target="_blank"
+                            href="https://plus.google.com/b/110904107389779237581/?pageId=110904107389779237581">
                             <i class="fa fa-google-plus"></i>
                         </a>
                         <a target="_blank" href="https://www.linkedin.com/in/love2dev">
@@ -196,8 +243,8 @@
         </div>
     </footer>
     <script>
-        var scripts = ["js/libs/jquery.small.js",
-            "js/libs/index.js",
+        var scripts = [ "js/libs/jquery.small.js",
+            "js/libs/localforage.min.js",
             "js/libs/collapse.js",
             "js/libs/util.js",
             "js/app/app.js",

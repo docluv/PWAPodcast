@@ -4,10 +4,11 @@
 <head>
     <base href="/">
     <!-- Stylesheets -->
-    <link href="css/libs/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/libs/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800' rel='stylesheet'
+        type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
     <link href="css/app/site.css" rel="stylesheet">
 
@@ -43,8 +44,8 @@
         <a href="/" class="navbar-brand">
             <img src="img/pwa-podstr-logo-144x70.png" alt="PWA Pdstr" class="img-responsive">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -69,45 +70,106 @@
     </nav>
 
     <main class="main-content container-fluid" role="main">
-        <div class="container">  <div class="row">
-    <div class="card">
-      <img src="[object Object]" alt="003 SQLBits - lightweight SQL builder for Node.js for use with Postgres or other ANSI SQL databases" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title">003 SQLBits - lightweight SQL builder for Node.js for use with Postgres or other ANSI SQL databases</h3>
-      </div>
-      <i class="fa fa-plus" aria-hidden="true"></i>
-    </div>
-  </div>
-  <div class="row">
-    <audio src="https://api.spreaker.com/download/episode/8734727/ep105_mixdown.mp3" controls="controls"></audio>
-  </div>
-  <div class="row">
-    <p><p>SQLBits, a lightweight SQL builder for Node.js built by <a href="https://github.com/williamwicks" title="William Wicks GitHub prifile">William Wicks</a>, is a great compromise between using native SQL and going to a full ORM (object relational mapping tool). It is small and focused on doing one job, to help you create parameterized queries. One of its unique and killer features is that it can help you create any combination of filter queries from a single complex query based on the parameters used.</p>
-<p>My goal with this podcast is to introduce you to <a href="https://github.com/williamwicks/sqlbits" title="SQLBits GitHub project page">SQLBits</a> and provide some insight as to why it could be a valuable tool in your Node.js toolbox.</p>
-<div id="toc"><ol><li><a href="#episode_info">Episode Info</a></li><li><a href="#episode_notes">Episode Notes</a><ol><li><a href="#background_-_sql_builder_vs_orm">Background - SQL Builder vs ORM</a></li><li><a href="#sqlbits_-_node_js_sql_builder">SQLBits - Node.js SQL builder</a></li><li><a href="#sqlbits_install">SQLBits Install</a></li><li><a href="#simple_example">Simple example</a></li><li><a href="#additional_criteria">Additional criteria</a></li><li><a href="#joins">Joins</a></li><li><a href="#filters_driven_by_defined_parameters">Filters driven by defined parameters</a></li><li><a href="#inserts">Inserts</a></li><li><a href="#updates">Updates</a></li><li><a href="#deletes">Deletes</a></li></ol></li><li><a href="#quick_reference">Quick Reference</a></li><li><a href="#resources">Resources</a></li><li><a href="#summary">Summary</a></li></ol></div>
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <img src="http://i1.sndcdn.com/avatars-000227802710-27eerh-original.jpg"
+                        alt="003 SQLBits - lightweight SQL builder for Node.js for use with Postgres or other ANSI SQL databases"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">003 SQLBits - lightweight SQL builder for Node.js for use with Postgres
+                            or other ANSI SQL databases</h3>
+                    </div>
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <audio src="https://api.spreaker.com/download/episode/8734727/ep105_mixdown.mp3"
+                    controls="controls"></audio>
+            </div>
+            <div class="row">
+                <p>
+                    <p>SQLBits, a lightweight SQL builder for Node.js built by <a href="https://github.com/williamwicks"
+                            title="William Wicks GitHub prifile">William Wicks</a>, is a great compromise between using
+                        native SQL and going to a full ORM (object relational mapping tool). It is small and focused on
+                        doing one job, to help you create parameterized queries. One of its unique and killer features
+                        is that it can help you create any combination of filter queries from a single complex query
+                        based on the parameters used.</p>
+                    <p>My goal with this podcast is to introduce you to <a
+                            href="https://github.com/williamwicks/sqlbits"
+                            title="SQLBits GitHub project page">SQLBits</a> and provide some insight as to why it could
+                        be a valuable tool in your Node.js toolbox.</p>
+                    <div id="toc">
+                        <ol>
+                            <li><a href="#episode_info">Episode Info</a></li>
+                            <li><a href="#episode_notes">Episode Notes</a>
+                                <ol>
+                                    <li><a href="#background_-_sql_builder_vs_orm">Background - SQL Builder vs ORM</a>
+                                    </li>
+                                    <li><a href="#sqlbits_-_node_js_sql_builder">SQLBits - Node.js SQL builder</a></li>
+                                    <li><a href="#sqlbits_install">SQLBits Install</a></li>
+                                    <li><a href="#simple_example">Simple example</a></li>
+                                    <li><a href="#additional_criteria">Additional criteria</a></li>
+                                    <li><a href="#joins">Joins</a></li>
+                                    <li><a href="#filters_driven_by_defined_parameters">Filters driven by defined
+                                            parameters</a></li>
+                                    <li><a href="#inserts">Inserts</a></li>
+                                    <li><a href="#updates">Updates</a></li>
+                                    <li><a href="#deletes">Deletes</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#quick_reference">Quick Reference</a></li>
+                            <li><a href="#resources">Resources</a></li>
+                            <li><a href="#summary">Summary</a></li>
+                        </ol>
+                    </div>
 
-<a name="episode_info"></a><h2 id="episode-info">Episode Info</h2>
-<ul>
-<li>Episode: CW 003</li>
-<li>Published: February 17th, 2014</li>
-<li>Tags: nodejs, database</li>
-<li>Duration: 17:17</li>
-</ul>
-<a name="episode_notes"></a><h2 id="episode-notes">Episode Notes</h2>
-<a name="background_-_sql_builder_vs_orm"></a><h3 id="background-sql-builder-vs-orm">Background - SQL Builder vs ORM</h3>
-<p>What is a SQL builder and how does that compare to an ORM (Object Relational Mapper)?</p>
-<p>A SQL builder like SQLBits is designed to help you to build safe parameterized SQL with a minimal abstraction layer that still allows you to write optimized SQL queries. Using parameters is important in create SQL to prevent SQL injection attacks where users enter malicious data into forms to gain access to your database. SQL builders help you to use parameters and avoid these attacks.</p>
-<p>Having used Hibernate for Java and Active Record with Rails (a couple of popular Object Relational Mappers, I’ve seen what a ORM’s can do and they are nice when they do what you want, but all to often once you get into more advanced uses, they tend to get in your way and you are fighting with the tool to try to get it to generate the SQL you want.</p>
-<p>So a SQL builder which allows you to create just the right queries but helps you deal with parameterization and tokens, provides a great balance. It stays out of your way and just helps with the bookkeeping. The sql it generates and the parameter array can be used directly with your database module like the <code>pg</code> Postgres client.</p>
-<a name="sqlbits_-_node_js_sql_builder"></a><h3 id="sqlbits-node-js-sql-builder">SQLBits - Node.js SQL builder</h3>
-<p>I reviewed a bunch of Node.js SQL builders listed in NPM and I was not happy with any of them until I found <a href="https://github.com/williamwicks/sqlbits" title="SQLBits GitHub project page">SQLBits</a>.</p>
-<p>Too many of them seemed complicated or too integrated bordering on ORM capabilities. I wanted something that was simple and just server a single purpose to help me build good parameterized queries. I didn’t want it to run my queries or perform schema manipulation. I don’t want a complete new DSL (domain specific language) or API that I need to learn. SQL is already a DSL that does that just fine, but it can get tricky to manage as queries get complex.</p>
-<p>SQLBits is a simple tool which helps you generate SQL but stays out of your way. You can create custom tuned SQL which pulls back only what is needed over the wire and have it manage the parameters and tokens.</p>
-<a name="sqlbits_install"></a><h3 id="sqlbits-install">SQLBits Install</h3>
-<pre class="highlight"><code class="hljs bash">npm install sqlbits --save <span class="hljs-comment"># install and add to package.json</span>
+                    <a name="episode_info"></a>
+                    <h2 id="episode-info">Episode Info</h2>
+                    <ul>
+                        <li>Episode: CW 003</li>
+                        <li>Published: February 17th, 2014</li>
+                        <li>Tags: nodejs, database</li>
+                        <li>Duration: 17:17</li>
+                    </ul>
+                    <a name="episode_notes"></a>
+                    <h2 id="episode-notes">Episode Notes</h2>
+                    <a name="background_-_sql_builder_vs_orm"></a>
+                    <h3 id="background-sql-builder-vs-orm">Background - SQL Builder vs ORM</h3>
+                    <p>What is a SQL builder and how does that compare to an ORM (Object Relational Mapper)?</p>
+                    <p>A SQL builder like SQLBits is designed to help you to build safe parameterized SQL with a minimal
+                        abstraction layer that still allows you to write optimized SQL queries. Using parameters is
+                        important in create SQL to prevent SQL injection attacks where users enter malicious data into
+                        forms to gain access to your database. SQL builders help you to use parameters and avoid these
+                        attacks.</p>
+                    <p>Having used Hibernate for Java and Active Record with Rails (a couple of popular Object
+                        Relational Mappers, I’ve seen what a ORM’s can do and they are nice when they do what you want,
+                        but all to often once you get into more advanced uses, they tend to get in your way and you are
+                        fighting with the tool to try to get it to generate the SQL you want.</p>
+                    <p>So a SQL builder which allows you to create just the right queries but helps you deal with
+                        parameterization and tokens, provides a great balance. It stays out of your way and just helps
+                        with the bookkeeping. The sql it generates and the parameter array can be used directly with
+                        your database module like the <code>pg</code> Postgres client.</p>
+                    <a name="sqlbits_-_node_js_sql_builder"></a>
+                    <h3 id="sqlbits-node-js-sql-builder">SQLBits - Node.js SQL builder</h3>
+                    <p>I reviewed a bunch of Node.js SQL builders listed in NPM and I was not happy with any of them
+                        until I found <a href="https://github.com/williamwicks/sqlbits"
+                            title="SQLBits GitHub project page">SQLBits</a>.</p>
+                    <p>Too many of them seemed complicated or too integrated bordering on ORM capabilities. I wanted
+                        something that was simple and just server a single purpose to help me build good parameterized
+                        queries. I didn’t want it to run my queries or perform schema manipulation. I don’t want a
+                        complete new DSL (domain specific language) or API that I need to learn. SQL is already a DSL
+                        that does that just fine, but it can get tricky to manage as queries get complex.</p>
+                    <p>SQLBits is a simple tool which helps you generate SQL but stays out of your way. You can create
+                        custom tuned SQL which pulls back only what is needed over the wire and have it manage the
+                        parameters and tokens.</p>
+                    <a name="sqlbits_install"></a>
+                    <h3 id="sqlbits-install">SQLBits Install</h3>
+                    <pre class="highlight"><code class="hljs bash">npm install sqlbits --save <span class="hljs-comment"># install and add to package.json</span>
 </code></pre>
-<a name="simple_example"></a><h3 id="simple-example">Simple example</h3>
-<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
+                    <a name="simple_example"></a>
+                    <h3 id="simple-example">Simple example</h3>
+                    <pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
 <span class="hljs-keyword">var</span> SQL = bits.SQL;
 <span class="hljs-keyword">var</span> $ = bits.$;
 <span class="hljs-keyword">var</span> AND = bits.AND;
@@ -122,18 +184,23 @@
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'sql: '</span>, query.sql);
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'params: '</span>, query.params); <span class="hljs-comment">// params: [ 10, true ]</span>
 </code></pre>
-<a name="additional_criteria"></a><h3 id="additional-criteria">Additional criteria</h3>
-<p>You can add in additional filter criteria with:</p>
-<ul>
-<li><code>AND</code> - bits.AND</li>
-<li><code>OR</code> - bits.OR</li>
-<li><code>BETWEEN</code> - bits.BETWEEN (discussed in depth later)</li>
-<li><code>.IN(array)</code></li>
-<li><code>$</code> - bits.$ - used to specify that something is a parameter <code>$(params.foo)</code></li>
-</ul>
-<a name="joins"></a><h3 id="joins">Joins</h3>
-<p>With relational data, you will often need to join tables together, and to maintain good performance these joins may need to be optimized. SQLBits allows you to perform any joins you need (left, right, inner, outer) just like you would normally with raw SQL.</p>
-<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
+                    <a name="additional_criteria"></a>
+                    <h3 id="additional-criteria">Additional criteria</h3>
+                    <p>You can add in additional filter criteria with:</p>
+                    <ul>
+                        <li><code>AND</code> - bits.AND</li>
+                        <li><code>OR</code> - bits.OR</li>
+                        <li><code>BETWEEN</code> - bits.BETWEEN (discussed in depth later)</li>
+                        <li><code>.IN(array)</code></li>
+                        <li><code>$</code> - bits.$ - used to specify that something is a parameter
+                            <code>$(params.foo)</code></li>
+                    </ul>
+                    <a name="joins"></a>
+                    <h3 id="joins">Joins</h3>
+                    <p>With relational data, you will often need to join tables together, and to maintain good
+                        performance these joins may need to be optimized. SQLBits allows you to perform any joins you
+                        need (left, right, inner, outer) just like you would normally with raw SQL.</p>
+                    <pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
 <span class="hljs-keyword">var</span> SQL = bits.SQL;
 <span class="hljs-keyword">var</span> query =
  SQL(<span class="hljs-string">'select w.name, c.type from widgets w '</span> +
@@ -150,27 +217,36 @@
 <span class="hljs-comment">// sql: select w.name, c.type from widgets w join category c on w.categoryID = c.categoryID ORDER BY w.name asc</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'sql: '</span>, query.sql);
 </code></pre>
-<p>The <code>._()</code> is another way to concatenate sql together.</p>
-<a name="filters_driven_by_defined_parameters"></a><h3 id="filters-driven-by-defined-parameters">Filters driven by defined parameters</h3>
-<p>If you have ever had to create SQL with filter clauses that was driven by user input, you should really appreciate this next feature.</p>
-<p>Let’s say for instance that you have a report or catalog that you want to allow the user to provide filter criteria to limit by.</p>
-<ul>
-<li>If the user doesn’t enter any criteria then return the whole list unfiltered.</li>
-<li>If they add a minimum price use that in the filter</li>
-<li>If they add a maximum price limit the rows with that criteria</li>
-<li>If they include a clearance boolean, use that in the criteria</li>
-</ul>
-<p>Even in this simple example, there are many combinations of possible filters depending on whether the user enters any of the filter data points.</p>
-<p>If you were building this SQL by hand, typically you would create a series of <code>if</code> statements to conditionally include the filter, and you would build up an array of params which you have to manually keep track of.</p>
-<p>However with SQLBits this is child’s play. You only have to create one complex query that includes all the possible filter criteria, and SQLBits will eliminate the parts where the parameters involved are <code>undefined</code>.</p>
-<p>Also by using the <code>BETWEEN</code> command, SQLBits handles all four scenarios automatically:</p>
-<ul>
-<li>min and max are defined: <code>price BETWEEN $1 AND $2</code></li>
-<li>only min is defined: <code>price &gt;= $1</code></li>
-<li>only max is defined: <code>price &lt;= $1</code></li>
-<li>neither min or max is defined: the criteria is eliminated</li>
-</ul>
-<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
+                    <p>The <code>._()</code> is another way to concatenate sql together.</p>
+                    <a name="filters_driven_by_defined_parameters"></a>
+                    <h3 id="filters-driven-by-defined-parameters">Filters driven by defined parameters</h3>
+                    <p>If you have ever had to create SQL with filter clauses that was driven by user input, you should
+                        really appreciate this next feature.</p>
+                    <p>Let’s say for instance that you have a report or catalog that you want to allow the user to
+                        provide filter criteria to limit by.</p>
+                    <ul>
+                        <li>If the user doesn’t enter any criteria then return the whole list unfiltered.</li>
+                        <li>If they add a minimum price use that in the filter</li>
+                        <li>If they add a maximum price limit the rows with that criteria</li>
+                        <li>If they include a clearance boolean, use that in the criteria</li>
+                    </ul>
+                    <p>Even in this simple example, there are many combinations of possible filters depending on whether
+                        the user enters any of the filter data points.</p>
+                    <p>If you were building this SQL by hand, typically you would create a series of <code>if</code>
+                        statements to conditionally include the filter, and you would build up an array of params which
+                        you have to manually keep track of.</p>
+                    <p>However with SQLBits this is child’s play. You only have to create one complex query that
+                        includes all the possible filter criteria, and SQLBits will eliminate the parts where the
+                        parameters involved are <code>undefined</code>.</p>
+                    <p>Also by using the <code>BETWEEN</code> command, SQLBits handles all four scenarios automatically:
+                    </p>
+                    <ul>
+                        <li>min and max are defined: <code>price BETWEEN $1 AND $2</code></li>
+                        <li>only min is defined: <code>price &gt;= $1</code></li>
+                        <li>only max is defined: <code>price &lt;= $1</code></li>
+                        <li>neither min or max is defined: the criteria is eliminated</li>
+                    </ul>
+                    <pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
 <span class="hljs-keyword">var</span> SQL = bits.SQL;
 <span class="hljs-keyword">var</span> $ = bits.$;
 <span class="hljs-keyword">var</span> AND = bits.AND;
@@ -210,11 +286,17 @@
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'sql: '</span>, query.sql);
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'params: '</span>, query.params); <span class="hljs-comment">// params: [ 2, true ]</span>
 </code></pre>
-<p>In my opinion, this is one of the killer features of SQLBits. You create a single complex query with all the possible filters and then just provide a params object to SQLBits with a parameters object having the keys that the user wants to filter by, and it provides the customized query.</p>
-<p>This eliminates all the conditional logic which is hard to test and debug when it fails and you are left with a single complex query to maintain.</p>
-<a name="inserts"></a><h3 id="inserts">Inserts</h3>
-<p>Inserting data into your tables by key is as simple as providing an object to SQLBits and it will add all the keys and values.</p>
-<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
+                    <p>In my opinion, this is one of the killer features of SQLBits. You create a single complex query
+                        with all the possible filters and then just provide a params object to SQLBits with a parameters
+                        object having the keys that the user wants to filter by, and it provides the customized query.
+                    </p>
+                    <p>This eliminates all the conditional logic which is hard to test and debug when it fails and you
+                        are left with a single complex query to maintain.</p>
+                    <a name="inserts"></a>
+                    <h3 id="inserts">Inserts</h3>
+                    <p>Inserting data into your tables by key is as simple as providing an object to SQLBits and it will
+                        add all the keys and values.</p>
+                    <pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
 <span class="hljs-keyword">var</span> INSERT = bits.INSERT;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">insertWidget</span>(<span class="hljs-params">obj</span>) </span>{
@@ -236,9 +318,11 @@
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'sql: '</span>, query.sql);
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'params: '</span>, query.params); <span class="hljs-comment">// params: ['bar']</span>
 </code></pre>
-<a name="updates"></a><h3 id="updates">Updates</h3>
-<p>Updating data works just like the inserts but uses the <code>UPDATE</code> and <code>.SET()</code></p>
-<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
+                    <a name="updates"></a>
+                    <h3 id="updates">Updates</h3>
+                    <p>Updating data works just like the inserts but uses the <code>UPDATE</code> and
+                        <code>.SET()</code></p>
+                    <pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
 <span class="hljs-keyword">var</span> UPDATE = bits.UPDATE;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateWidget</span>(<span class="hljs-params">id, updateValues</span>) </span>{
@@ -257,10 +341,13 @@
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'sql: '</span>, query.sql);
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'params: '</span>, query.params); <span class="hljs-comment">// [ 'cat', 1.12, 2 ]</span>
 </code></pre>
-<p>Note: with update’s we don’t want to have the WHERE clause collapse so it is safer to use a non-conditional string with <code>._(&#39;where id = &#39;, $(obj.id))</code> to there is no chance of the filter clause being collapsed.</p>
-<a name="deletes"></a><h3 id="deletes">Deletes</h3>
-<p>Finally deletes use <code>DELETE.FROM</code> to specify a deletion.</p>
-<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
+                    <p>Note: with update’s we don’t want to have the WHERE clause collapse so it is safer to use a
+                        non-conditional string with <code>._(&#39;where id = &#39;, $(obj.id))</code> to there is no
+                        chance of the filter clause being collapsed.</p>
+                    <a name="deletes"></a>
+                    <h3 id="deletes">Deletes</h3>
+                    <p>Finally deletes use <code>DELETE.FROM</code> to specify a deletion.</p>
+                    <pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
 <span class="hljs-keyword">var</span> DELETE = bits.DELETE;
 <span class="hljs-keyword">var</span> params = { <span class="hljs-attr">id</span>: <span class="hljs-number">10</span> };
 
@@ -271,9 +358,12 @@
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'sql: '</span>, query.sql);
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'params: '</span>, query.params); <span class="hljs-comment">// [ 10 ]</span>
 </code></pre>
-<p>Note: with delete’s we don’t want to have the WHERE clause collapse so it is safer to use a non-conditional string with <code>._(&#39;where id = &#39;, $(obj.id))</code> to there is no chance of the filter clause being collapsed.</p>
-<a name="quick_reference"></a><h2 id="quick-reference">Quick Reference</h2>
-<pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
+                    <p>Note: with delete’s we don’t want to have the WHERE clause collapse so it is safer to use a
+                        non-conditional string with <code>._(&#39;where id = &#39;, $(obj.id))</code> to there is no
+                        chance of the filter clause being collapsed.</p>
+                    <a name="quick_reference"></a>
+                    <h2 id="quick-reference">Quick Reference</h2>
+                    <pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> bits = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sqlbits'</span>);
 <span class="hljs-keyword">var</span> SQL = bits.SQL; <span class="hljs-comment">// SQL('select name, desc from widgets')</span>
 <span class="hljs-keyword">var</span> $ = bits.$; <span class="hljs-comment">// SQL('...').WHERE('id=', $(obj.id));</span>
 <span class="hljs-keyword">var</span> AND = bits.AND; <span class="hljs-comment">// .WHERE('id=', $(obj.id), AND, 'type=', $(obj.type));</span>
@@ -284,31 +374,45 @@
 <span class="hljs-keyword">var</span> UPDATE = bits.UPDATE; <span class="hljs-comment">// UPDATE('widgets').SET(updateValues)._('where id = ', $(obj.id))</span>
 <span class="hljs-keyword">var</span> DELETE = bits.DELETE; <span class="hljs-comment">// DELETE.FROM('widgets')._('where id = ', $(obj.id))</span>
 </code></pre>
-<p>Methods to help chain</p>
-<ul>
-<li><code>._()</code> - appends to the SQL after adding a space</li>
-<li><code>.WHERE(...)</code> - add a <code>where</code> clause which checks the params that are defined to conditionally add the filter criteria</li>
-<li><code>.SET(updateValues)</code> - used with <code>UPDATE</code> to provide the field names and values to update</li>
-<li><code>.FROM(&#39;mytable&#39;)</code> - used with <code>DELETE</code> to specify table</li>
-<li><code>.ORDERBY(&#39;name asc, qty desc&#39;)</code> - add sorting criteria</li>
-<li><code>.LIMIT(number)</code> - limit the max rows returned, defaults to 0</li>
-<li><code>.OFFSET(number)</code> - start rows at offset (for paging), defaults to 0</li>
-</ul>
-<p>Accessor properties</p>
-<ul>
-<li><code>.sql</code> - get the parameterized SQL string</li>
-<li><code>.params</code> - get the array of parameters to use with the SQL</li>
-</ul>
-<a name="resources"></a><h2 id="resources">Resources</h2>
-<ul>
-<li><a href="https://github.com/williamwicks/sqlbits" title="SQLBits GitHub project page">SQLBits</a> - GitHub repo and project readme. This brief page provides examples of how to use SQLBits and is a great place to get started</li>
-</ul>
-<a name="summary"></a><h2 id="summary">Summary</h2>
-<p>SQLBits is a nice lightweight way to create safe parameterized SQL for Postgres or other ANSI SQL databases. It focuses on simply helping you build the SQL by managing the parameterization process, but you can still use the full power of SQL to create optimized queries and even special features that a particular SQL engine provides.</p>
-<p>One of its killer features is the ability to create custom filter queries based on whether parameters are defined, so you can create one complex query which is relaxed based on the parameters defined at runtime.</p>
-<p>Check out SQLBits, and let me know what you think. You can leave a comment in the discussion secion of this episode. I find it to be a great tool to help me generate SQL for Postgres and hope you will too.</p></p>
-  </div>
-</div>
+                    <p>Methods to help chain</p>
+                    <ul>
+                        <li><code>._()</code> - appends to the SQL after adding a space</li>
+                        <li><code>.WHERE(...)</code> - add a <code>where</code> clause which checks the params that are
+                            defined to conditionally add the filter criteria</li>
+                        <li><code>.SET(updateValues)</code> - used with <code>UPDATE</code> to provide the field names
+                            and values to update</li>
+                        <li><code>.FROM(&#39;mytable&#39;)</code> - used with <code>DELETE</code> to specify table</li>
+                        <li><code>.ORDERBY(&#39;name asc, qty desc&#39;)</code> - add sorting criteria</li>
+                        <li><code>.LIMIT(number)</code> - limit the max rows returned, defaults to 0</li>
+                        <li><code>.OFFSET(number)</code> - start rows at offset (for paging), defaults to 0</li>
+                    </ul>
+                    <p>Accessor properties</p>
+                    <ul>
+                        <li><code>.sql</code> - get the parameterized SQL string</li>
+                        <li><code>.params</code> - get the array of parameters to use with the SQL</li>
+                    </ul>
+                    <a name="resources"></a>
+                    <h2 id="resources">Resources</h2>
+                    <ul>
+                        <li><a href="https://github.com/williamwicks/sqlbits"
+                                title="SQLBits GitHub project page">SQLBits</a> - GitHub repo and project readme. This
+                            brief page provides examples of how to use SQLBits and is a great place to get started</li>
+                    </ul>
+                    <a name="summary"></a>
+                    <h2 id="summary">Summary</h2>
+                    <p>SQLBits is a nice lightweight way to create safe parameterized SQL for Postgres or other ANSI SQL
+                        databases. It focuses on simply helping you build the SQL by managing the parameterization
+                        process, but you can still use the full power of SQL to create optimized queries and even
+                        special features that a particular SQL engine provides.</p>
+                    <p>One of its killer features is the ability to create custom filter queries based on whether
+                        parameters are defined, so you can create one complex query which is relaxed based on the
+                        parameters defined at runtime.</p>
+                    <p>Check out SQLBits, and let me know what you think. You can leave a comment in the discussion
+                        secion of this episode. I find it to be a great tool to help me generate SQL for Postgres and
+                        hope you will too.</p>
+                </p>
+            </div>
+        </div>
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -333,7 +437,8 @@
                     <span class="col-sm-12 social-wrapper circle">
                         <a href="http://twitter.com/chrislove" class="social-icon fa fa-twitter"></a>
                         <a href="https://www.facebook.com/love2dev/" class="social-icon fa fa-facebook"></a>
-                        <a target="_blank" href="https://plus.google.com/b/110904107389779237581/?pageId=110904107389779237581">
+                        <a target="_blank"
+                            href="https://plus.google.com/b/110904107389779237581/?pageId=110904107389779237581">
                             <i class="fa fa-google-plus"></i>
                         </a>
                         <a target="_blank" href="https://www.linkedin.com/in/love2dev">
@@ -375,8 +480,8 @@
         </div>
     </footer>
     <script>
-        var scripts = ["js/libs/jquery.small.js",
-            "js/libs/index.js",
+        var scripts = [ "js/libs/jquery.small.js",
+            "js/libs/localforage.min.js",
             "js/libs/collapse.js",
             "js/libs/util.js",
             "js/app/app.js",
