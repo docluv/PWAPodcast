@@ -3,17 +3,35 @@
     orange - ED7D31
 */
 
-html {
+
+:root {
+    --podstr-blue: #2F5597;
+    --podstr-orange: #ED7D31;
+
+    --podstr-white: #FEFEFE;
+    --podstr-dark: #666;
+    --podstr-real-dark: #343434;
+    --podstr-dark-one: #2b3042;
+    --podstr-dark-two: #1e212e;
+    --podstr-grey: #808080;
+
+    --white: #fff;
+
+}
+
+html,
+body {
     height: 100%;
-    font-size: 1rem;
+    width: 100%;
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
+    margin: 0;
+    background: var(--podstr-white);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: calc(0.9rem + .5vw);
     line-height: 1.42857143;
-    color: #666;
-    background-color: #fff;
+    color: var(--podstr-dark);
 }
 
 body * {
@@ -21,7 +39,6 @@ body * {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
 }
 
 h1,
@@ -30,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #343434;
+    color: var(--podstr-real-dark);
     line-height: 1.2;
 }
 
@@ -40,7 +57,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: #343434;
+    color: var(--podstr-real-dark);
 }
 
 h1 {
@@ -73,18 +90,18 @@ h6 {
 }
 
 a {
-    color: #2b3042;
+    color: var(--podstr-dark-one);
     transition: all 0.2s ease-in-out;
 }
 
 a:hover {
-    color: #1e212e;
+    color: var(--podstr-dark-two);
 }
 
 a:focus,
 a:active {
     outline: none;
-    color: #1e212e;
+    color: var(--podstr-dark-two);
 }
 
 .no-trans * {
@@ -113,14 +130,14 @@ blockquote:after {
     height: 25px;
     line-height: 64px;
     font-size: 64px;
-    font-family: "PT Serif", serif;
+
     position: absolute;
     top: 12px;
     left: -45px;
 }
 
 .blockquote:before {
-    font-family: "PT Serif", serif;
+
     content: "“";
     font-size: 40px;
 }
@@ -147,46 +164,41 @@ blockquote.inline:after {
 
 mark,
 .mark {
-    background-color: #ED7D31;
-    color: #fff;
+    background-color: var(--podstr-orange);
+    color: var(--white);
 }
 
 pre {
     padding: 20px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
     border-radius: 0px;
 }
 
 .text-muted {
-    color: #808080;
+    color: var(--podstr-grey);
 }
 
 .text-default {
-    color: #ED7D31;
+    color: var(--podstr-orange);
 }
 
 .well {
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
     border-radius: 0px;
     background-color: #f2f2f2;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .icons-page i {
-    color: #343434;
+    color: var(--podstr-real-dark);
     font-size: 20px;
 }
 
 hr.dark,
 .main-footer .footer hr {
-    border-color: #343434;
+    border-color: var(--podstr-real-dark);
 }
 
 .main-footer hr {
-    border-color: #fff;
+    border-color: var(--white);
 }
 
 .page-header {
@@ -255,7 +267,7 @@ ul {
     font-size: 28px;
     visibility: visible;
     opacity: 1;
-    color: #fff;
+    color: var(--white);
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
     font-weight: 700;
     border-style: none;
@@ -273,7 +285,7 @@ ul {
     font-size: 18px;
     visibility: visible;
     opacity: 0;
-    color: #fff;
+    color: var(--white);
     font-weight: 300;
     text-shadow: 1px 1px 1px #000;
 }
@@ -282,14 +294,14 @@ ul {
 .footer a:hover,
 .footer a:visited,
 .footer a:active {
-    color: #fff;
+    color: var(--white);
 }
 
 .subfooter a,
 .subfooter a:hover,
 .subfooter a:visited,
 .subfooter a:active {
-    color: #fff;
+    color: var(--white);
 }
 
 .form-control-lg,
@@ -314,7 +326,6 @@ ul {
     line-height: 1.42857143;
     position: relative;
     -webkit-appearance: none;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
 }
 
@@ -347,30 +358,15 @@ ul {
     }
 }
 
-
-/* end featured products */
-
-
-/* .navbar-brand {
-    padding: 0;
-}
-
-.navbar-collapse {
-    margin-left: -10px;
-    margin-right: -10px;
-    padding: 0;
-} */
-
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link,
 .navbar-nav .nav-link,
 .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link:hover {
-    color: #2F5597;
+    color: var(--podstr-blue);
     background-color: transparent;
     border: none;
-    font-size: 2em;
     margin: auto .25em;
 }
 
@@ -378,8 +374,8 @@ ul {
 /*  Main Footer */
 
 .main-footer {
-    background-color: #2F5597;
-    color: #fff;
+    background-color: var(--podstr-blue);
+    color: var(--white);
     padding: 3%;
     margin-top: 3%;
 }
@@ -388,7 +384,7 @@ ul {
 .main-footer h2,
 .main-footer h3,
 .main-footer h4 {
-    color: #fff;
+    color: var(--white);
 }
 
 .main-footer a,
@@ -399,7 +395,7 @@ ul {
 .main-footer .nav>li>a:hover,
 .main-footer .nav>li>a:hover,
 .main-footer .nav>li>a:focus {
-    color: #fff;
+    color: var(--white);
     background-color: transparent;
 }
 
@@ -446,18 +442,18 @@ ul {
 .btn-orange:focus,
 .btn-orange.focus,
 .btn-orange:hover {
-    background-color: #ED7D31;
-    color: #fff;
+    background-color: var(--podstr-orange);
+    color: var(--white);
 }
 
 .btn-orange .badge {
-    background-color: #fff;
-    color: #2F5597;
+    background-color: var(--white);
+    color: var(--podstr-blue);
 }
 
 .btn-blue {
-    background-color: #2F5597;
-    color: #fff;
+    background-color: var(--podstr-blue);
+    color: var(--white);
 }
 
 
@@ -478,8 +474,8 @@ ul {
 
 .social-wrapper a:hover {
     background-color: transparent;
-    border-color: #2F5597;
-    color: #2F5597;
+    border-color: var(--podstr-blue);
+    color: var(--podstr-blue);
     transform: rotate(180deg);
 }
 
@@ -498,7 +494,7 @@ ul {
 .social-wrapper a[href*="facebook.com"],
 .article-footer a[href*="facebook.com"] {
     color: #3b5998;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 .social-wrapper a[href*="google.com"],
@@ -534,7 +530,7 @@ ul {
     font-size: 20px;
     display: inline-block;
     margin: 0 .25%;
-    color: #fff;
+    color: var(--white);
 }
 
 
@@ -542,7 +538,7 @@ ul {
 
 .btn-social {
     text-align: center;
-    color: #fff;
+    color: var(--white);
     font-size: 14px;
     padding: 1%;
     margin: 1%;
@@ -628,7 +624,6 @@ label,
 select,
 summary,
 textarea {
-    -ms-touch-action: manipulation;
     touch-action: manipulation;
 }
 
@@ -643,7 +638,6 @@ textarea {
     border: 1.5px solid #8a8a8a;
     border-radius: 1px;
     margin-top: 2px;
-    -webkit-transition: .2s;
     transition: .2s;
 }
 
@@ -655,12 +649,8 @@ textarea {
     border-style: solid;
     border-width: 2px;
     border-color: transparent #4285F4 #4285F4 transparent;
-    -webkit-transform: rotate(40deg);
-    -ms-transform: rotate(40deg);
     transform: rotate(40deg);
     -webkit-backface-visibility: hidden;
-    -webkit-transform-origin: 100% 100%;
-    -ms-transform-origin: 100% 100%;
     transform-origin: 100% 100%;
 }
 
@@ -669,7 +659,7 @@ textarea {
     min-width: 100%;
     vertical-align: top;
     position: relative;
-    background-color: #ED7D31;
+    background-color: var(--podstr-orange);
     padding-top: 40px;
 }
 
@@ -682,15 +672,15 @@ textarea {
     line-height: 56px;
     text-align: center;
     border-radius: 50%;
-    background-color: #ED7D31;
-    color: #fff;
+    background-color: var(--podstr-orange);
+    color: var(--white);
     font-size: 36px;
 }
 
 .card:hover .card-center-circle,
 .card:hover img,
 .card:hover img {
-    background-color: #2F5597;
+    background-color: var(--podstr-blue);
 }
 
 .card:hover .card-center-circle,
@@ -705,7 +695,7 @@ a.episode-list-item {
     margin: 2% 0;
     font-size: 1.5em;
     line-height: 1.75em;
-    border-bottom: solid 1px #2F5597;
+    border-bottom: solid 1px var(--podstr-blue);
 }
 
 .playa input[type="range"] {
@@ -738,17 +728,7 @@ a.episode-list-item {
     overflow: hidden;
 }
 
-
-/* Acknowledgements:
-  To Glyphicons (http://glyphicons.com/) for the Halflings glyphs font */
-
-
-/* .spin is used to rotate glyphicon glyphicon-refresh */
-
 .spin {
-    -webkit-animation: spin 2s infinite linear;
-    -moz-animation: spin 2s infinite linear;
-    -o-animation: spin 2s infinite linear;
     animation: spin 2s infinite linear;
 }
 
@@ -766,28 +746,8 @@ a.episode-list-item {
 }
 
 .episode-favorited {
-    background-color: #ED7D31;
-    color: #fff;
-}
-
-@-moz-keyframes spin {
-    from {
-        -moz-transform: rotate(0deg);
-    }
-
-    to {
-        -moz-transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-
-    to {
-        -webkit-transform: rotate(360deg);
-    }
+    background-color: var(--podstr-orange);
+    color: var(--white);
 }
 
 @keyframes spin {
